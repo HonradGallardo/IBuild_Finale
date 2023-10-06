@@ -3,6 +3,7 @@ package com.example.finalproject
 import Adapters.amdbuilderAdapter
 import DataClass.AmdBuilderDataClass
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -32,6 +33,8 @@ class AmdProcessorProducts : AppCompatActivity() {
         amdProducts()
 
     }
+
+
     private fun amdProducts(){
         var amdProductModel = AmdBuilderDataClass("Ryzen 3 3200g", "Socket: AM4\nBase clock: 3.6 GHz\nBoost clock: 4 GHz\nL3 cache: 4 MB\nTDP: 65 W", "₱10,000.00", R.drawable.ryzen33200g)
         amd_processorList.add(amdProductModel)

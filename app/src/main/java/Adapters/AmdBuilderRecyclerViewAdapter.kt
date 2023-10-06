@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.result.contract.ActivityResultContract
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.AmdBuilderRecyclerView
@@ -21,6 +23,7 @@ class AmdBuilderRecyclerViewAdapter constructor(private val getActivity: AmdBuil
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.amd_builder_layout, parent, false)
         return MyViewHolder(view)
+
     }
 
     override fun getItemCount(): Int {
@@ -34,6 +37,8 @@ class AmdBuilderRecyclerViewAdapter constructor(private val getActivity: AmdBuil
         holder.image.setImageResource(DataClass[position].image)
 
         holder.add_button.setOnClickListener {
+
+
             val intent: Intent
             if (position == 0) {
                 intent = Intent(getActivity, AmdProcessorProducts::class.java)
@@ -56,5 +61,7 @@ class AmdBuilderRecyclerViewAdapter constructor(private val getActivity: AmdBuil
         val cardView : CardView = itemView.findViewById(R.id.amdBuilder_cardView)
         val add_button : ImageView = itemView.findViewById(R.id.img_add_processor_amdbuilder)
 
+
     }
+
 }

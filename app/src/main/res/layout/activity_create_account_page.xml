@@ -27,13 +27,13 @@
         android:id="@+id/tv_createAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Create Account"
         android:textColor="@color/navyblue"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/et_email_createAccountPage"
-        app:layout_constraintEnd_toEndOf="@+id/et_email_createAccountPage"
-        app:layout_constraintStart_toStartOf="@+id/et_email_createAccountPage"
+        app:layout_constraintEnd_toEndOf="@+id/logo_createAccountPage"
+        app:layout_constraintStart_toStartOf="@+id/logo_createAccountPage"
         app:layout_constraintTop_toBottomOf="@+id/logo_createAccountPage" />
 
     <TextView
@@ -66,16 +66,16 @@
         android:id="@+id/et_username_createAccountPage"
         android:layout_width="327dp"
         android:layout_height="63dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_background_for_edittext"
         android:ems="10"
         android:hint="Username"
+        android:inputType="text"
         android:paddingLeft="15dp"
         android:textSize="18sp"
-        android:inputType="text"
-        android:background="@drawable/custom_background_for_edittext"
-        app:layout_constraintEnd_toEndOf="@+id/et_email_createAccountPage"
-        app:layout_constraintStart_toStartOf="@+id/et_email_createAccountPage"
-        app:layout_constraintTop_toBottomOf="@+id/et_email_createAccountPage" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_createAccount" />
 
     <ImageView
         android:id="@+id/logo_createAccountPage"
@@ -89,21 +89,6 @@
         app:layout_constraintVertical_bias="0.18"
         app:srcCompat="@drawable/logonamin" />
 
-
-    <EditText
-        android:id="@+id/et_email_createAccountPage"
-        android:layout_width="327dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="70dp"
-        android:ems="10"
-        android:hint="Email"
-        android:paddingLeft="15dp"
-        android:textSize="18sp"
-        android:background="@drawable/custom_background_for_edittext"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_createAccountPage" />
 
     <Button
         android:id="@+id/bt_createAccount"

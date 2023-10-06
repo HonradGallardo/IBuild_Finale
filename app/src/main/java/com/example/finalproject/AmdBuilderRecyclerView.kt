@@ -18,6 +18,8 @@ class AmdBuilderRecyclerView : AppCompatActivity() {
 
     private lateinit var back_arrow : ImageView
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_amd_builder_recycler_view)
@@ -40,11 +42,14 @@ class AmdBuilderRecyclerView : AppCompatActivity() {
 
         builder_processor()
         builder_mobo()
+        builder_gpu()
 
     }
 
 
+
     private fun builder_processor(){
+
 
         var amd_builder = AmdBuilderDataClass("AMD Processor", "", "", R.drawable.amdbuilderimage)
 
@@ -74,7 +79,7 @@ class AmdBuilderRecyclerView : AppCompatActivity() {
         val getMoboName = intent.getStringExtra("moboName")
         amd_motherboard.title = getMoboName.toString()
 
-        val getMoboPrice = intent.getStringExtra("moboPrice")
+        val  getMoboPrice = intent.getStringExtra("moboPrice")
         amd_motherboard.price = getMoboPrice.toString()
 
         val getMoboDescription = intent.getStringExtra("moboDescription")
@@ -88,6 +93,14 @@ class AmdBuilderRecyclerView : AppCompatActivity() {
         amd_motherboard.title = getMoboName?: "Motherboard"
         amd_motherboard.description = getMoboDescription?: ""
         amd_motherboard.price = getMoboPrice ?: ""
+        setResult(RESULT_OK)
+
+
         Data_Class.add(amd_motherboard)
+    }
+
+    private fun builder_gpu(){
+        var amd_gpu = AmdBuilderDataClass("Graphics Card", "", "", R.drawable.amdbuilderimage)
+        Data_Class.add(amd_gpu)
     }
 }

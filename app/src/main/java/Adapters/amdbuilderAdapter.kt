@@ -47,10 +47,7 @@ class amdbuilderAdapter constructor(private val getActivity: AmdProcessorProduct
             getActivity.startActivity(int)
             getActivity.finish()
         }
-
-
     }
-
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
          val title: TextView = itemView.findViewById(R.id.tv_r9)
          val card_view : CardView = itemView.findViewById(R.id.amd_product_layout_cardView)
