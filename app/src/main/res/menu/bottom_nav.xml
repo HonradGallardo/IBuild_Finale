@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home" />
+    <item android:title="Marketplace"
+        android:id="@+id/marketplace"
+        android:icon="@drawable/baseline_marketplace_24"/>
+    <item android:title="Sell Product"
+        android:id="@+id/sell_product"
+        android:icon="@drawable/baseline_sell_24"/>
+    <item android:title="Me"
+        android:id="@+id/me_profile"
+        android:icon="@drawable/baseline_account_circle_24"/>
+</menu>

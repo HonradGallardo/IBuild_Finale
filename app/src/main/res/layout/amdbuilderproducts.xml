@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@color/white"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    android:id="@+id/amd_product_layout_cardView"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_ryzen9"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/amdryzen"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_r9"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Ryzen 9 5900x"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/img_ryzen9"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_r9_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="₱10,000.00"
+                android:textColor="@color/navyblue"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_ryzen9">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_r9_description"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Base clock frequency: 3.7 GHz\nMax turbo frequency: 4.8 GHz\nL3 cache: 64 MB\nThreads: 24\nTDP: 105 W\nTransistor size: 7 nm"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toTopOf="@+id/tv_r9_price"
+                app:layout_constraintStart_toEndOf="@+id/img_ryzen9"
+                app:layout_constraintTop_toBottomOf="@+id/tv_r9"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/bt_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/navyblue"
+                android:text="Select"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

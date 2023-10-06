@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_color"
+    tools:context=".CreateAccountPage">
+
+
+    <EditText
+        android:id="@+id/et_password_createAccountPage"
+        android:layout_width="325dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_background_for_edittext"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/et_username_createAccountPage"
+        app:layout_constraintStart_toStartOf="@+id/et_username_createAccountPage"
+        app:layout_constraintTop_toBottomOf="@+id/et_username_createAccountPage" />
+
+    <TextView
+        android:id="@+id/tv_createAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:textColor="@color/navyblue"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/et_email_createAccountPage"
+        app:layout_constraintEnd_toEndOf="@+id/et_email_createAccountPage"
+        app:layout_constraintStart_toStartOf="@+id/et_email_createAccountPage"
+        app:layout_constraintTop_toBottomOf="@+id/logo_createAccountPage" />
+
+    <TextView
+        android:id="@+id/tv_alreadyHave_anAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="70dp"
+        android:text="ALREADY HAVE AN ACCOUNT?"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/bt_createAccount"
+        app:layout_constraintStart_toStartOf="@+id/bt_createAccount"
+        app:layout_constraintTop_toBottomOf="@+id/bt_createAccount" />
+
+    <TextView
+        android:id="@+id/tv_already_have_an_account_logIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:text="LOG IN"
+        android:textColor="@color/navyblue"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_alreadyHave_anAccount"
+        app:layout_constraintTop_toBottomOf="@+id/bt_createAccount" />
+
+    <EditText
+        android:id="@+id/et_username_createAccountPage"
+        android:layout_width="327dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Username"
+        android:paddingLeft="15dp"
+        android:textSize="18sp"
+        android:inputType="text"
+        android:background="@drawable/custom_background_for_edittext"
+        app:layout_constraintEnd_toEndOf="@+id/et_email_createAccountPage"
+        app:layout_constraintStart_toStartOf="@+id/et_email_createAccountPage"
+        app:layout_constraintTop_toBottomOf="@+id/et_email_createAccountPage" />
+
+    <ImageView
+        android:id="@+id/logo_createAccountPage"
+        android:layout_width="300dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18"
+        app:srcCompat="@drawable/logonamin" />
+
+
+    <EditText
+        android:id="@+id/et_email_createAccountPage"
+        android:layout_width="327dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:hint="Email"
+        android:paddingLeft="15dp"
+        android:textSize="18sp"
+        android:background="@drawable/custom_background_for_edittext"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_createAccountPage" />
+
+    <Button
+        android:id="@+id/bt_createAccount"
+        android:layout_width="325dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button"
+        android:text="CONFIRM"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/et_password_createAccountPage"
+        app:layout_constraintStart_toStartOf="@+id/et_password_createAccountPage"
+        app:layout_constraintTop_toBottomOf="@+id/et_password_createAccountPage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
