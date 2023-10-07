@@ -20,6 +20,7 @@ class AmdBuilderRecyclerView : AppCompatActivity() {
 
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_amd_builder_recycler_view)

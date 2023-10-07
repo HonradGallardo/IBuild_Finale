@@ -36,20 +36,39 @@ class AmdProcessorProducts : AppCompatActivity() {
 
 
     private fun amdProducts(){
-        var amdProductModel = AmdBuilderDataClass("Ryzen 3 3200g", "Socket: AM4\nBase clock: 3.6 GHz\nBoost clock: 4 GHz\nL3 cache: 4 MB\nTDP: 65 W", "₱10,000.00", R.drawable.ryzen33200g)
+        var amdProductModel = AmdBuilderDataClass("Ryzen 3 3100", "Socket: AM4\nBase clock: 3.6 GHz\nBoost clock: 4 GHz\nL3 cache: 4 MB\nTDP: 65 W", "₱10,000.00", R.drawable.ryzen33200g)
+        amd_processorList.add(amdProductModel)
+
+        amdProductModel = AmdBuilderDataClass("Ryzen 3 3200g", "Socket: AM4\nBase clock: 3.6 GHz\nBoost clock: 4 GHz\nL3 cache: 4 MB\nTDP: 65 W", "₱10,000.00", R.drawable.ryzen33200g)
+        amd_processorList.add(amdProductModel)
+
+        amdProductModel = AmdBuilderDataClass("Ryzen 3 3300x", "Socket: AM4\nBase clock: 3.6 GHz\nBoost clock: 4 GHz\nL3 cache: 4 MB\nTDP: 65 W", "₱10,000.00", R.drawable.ryzen33200g)
         amd_processorList.add(amdProductModel)
 
         amdProductModel = AmdBuilderDataClass("Ryzen 5 3400g", "4 cores and 8 threads\n3.7 GHz base clock and 4.2 GHz boost clock\n11 GPU cores\n65 W TDP and 95°C max temperature", "₱10,000.00", R.drawable.ryzen53400g )
         amd_processorList.add(amdProductModel)
 
+        amdProductModel = AmdBuilderDataClass("Ryzen 5 2600", "Socket: AM4\nClockspeed: 3.9 GHz\nTurbo Speed: 4.4 GHz\nCores: 6\nThreads: 12\nTDP: 65 W", "₱10,000.00", R.drawable.ryzen52600)
+        amd_processorList.add(amdProductModel)
+
+        amdProductModel = AmdBuilderDataClass("Ryzen 5 2700", "Socket: AM4\nClockspeed: 3.9 GHz\nTurbo Speed: 4.4 GHz\nCores: 6\nThreads: 12\nTDP: 65 W", "₱10,000.00", R.drawable.ryzen52600)
+        amd_processorList.add(amdProductModel)
+
         amdProductModel = AmdBuilderDataClass("Ryzen 5 3600", "Has 1 PCIe 3.0 x16, 1 PCIe 2.0 x16, 1 PCIe 2.0 x1, and 4 SATA3 slots\nSupports AMD Quad CrossFireX™", "₱10,000.00", R.drawable.ryzen53600)
+        amd_processorList.add(amdProductModel)
+
+        amdProductModel = AmdBuilderDataClass("Ryzen 5 5600", "Socket: AM4\nClockspeed: 3.9 GHz\nTurbo Speed: 4.4 GHz\nCores: 6\nThreads: 12\nTDP: 65 W", "₱10,000.00", R.drawable.ryzen55600)
         amd_processorList.add(amdProductModel)
 
         amdProductModel = AmdBuilderDataClass("Ryzen 5 5600G", "Socket: AM4\nClockspeed: 3.9 GHz\nTurbo Speed: 4.4 GHz\nCores: 6\nThreads: 12\nTDP: 65 W", "₱10,000.00", R.drawable.ryzen55600g)
         amd_processorList.add(amdProductModel)
 
-        amdProductModel = AmdBuilderDataClass("Ryzen 5 5600", "Socket: AM4\nClockspeed: 3.9 GHz\nTurbo Speed: 4.4 GHz\nCores: 6\nThreads: 12\nTDP: 65 W", "₱10,000.00", R.drawable.ryzen55600)
+        amdProductModel = AmdBuilderDataClass("Ryzen 5 5600x", "Socket: AM4\nClockspeed: 3.9 GHz\nTurbo Speed: 4.4 GHz\nCores: 6\nThreads: 12\nTDP: 65 W", "₱10,000.00", R.drawable.ryzen55600)
         amd_processorList.add(amdProductModel)
+
+
+
+
 
         //DESCRIPTION NEED PA AYUSIN
 
