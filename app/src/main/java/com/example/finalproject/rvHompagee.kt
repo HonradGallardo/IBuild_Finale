@@ -153,5 +153,10 @@ class rvHompagee : AppCompatActivity() {
 
         images = HomepageCategoriesDataClass(R.drawable.monitoricon)
         categories_dataClass.add(images)
+
+        images = HomepageCategoriesDataClass(R.drawable.chasisicon)
+        categories_dataClass.add(images)
+
+
     }
 }

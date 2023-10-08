@@ -5,6 +5,11 @@
     <color name="white">#FFFFFFFF</color>
     <color NavyBlue="navyblue" name="navyblue">#000080</color>
     <color LightBlue="lightblue" name="lightblue">#87cefa</color>
+    <color name="navy">#000080</color>
+    <color name="royal_blue">#4169E1</color>
+    <color name="arctic">#82EEFD</color>
+    <color name="lapis">#2832C2</color>
+    <color name="stone">#89788E</color>
 
 </resources>
 
