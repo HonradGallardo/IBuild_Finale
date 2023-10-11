@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.R
 import com.example.finalproject.rvHompagee
-import java.util.Collections
 
 class Monitor_products_holder : AppCompatActivity() {
 
@@ -46,64 +45,64 @@ class Monitor_products_holder : AppCompatActivity() {
     }
 
     private fun monitorProducts() {
-        var monitorModels = Monitor_Data_Class("Dell S2417DG","₱90,655.31", R.drawable.monitor_img1_dell_s2417dg)
+        var monitorModels = Monitor_Data_Class("AOC CQ32G1","₱24,337.17", R.drawable.monitor_img1)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("ASUS VG279Q","₱39,950.00", R.drawable.monitor_img2_asus_vg279q)
+        monitorModels = Monitor_Data_Class("ViewSonic VX3276-MHD","₱11,969.46", R.drawable.monitor_img2)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("Acer Predator XB271HU","₱39,950.00", R.drawable.monitor_img3_acer_predator_xb271hu)
+        monitorModels = Monitor_Data_Class("LG 24MP88HV-S","₱10,670.35", R.drawable.monitor_img3)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("LG 27GL83A-B","₱39,950.00", R.drawable.monitor_img4__lg27gl83a_b)
+        monitorModels = Monitor_Data_Class("ASUS VZ239H-W","₱7,318.17", R.drawable.monitor_img4)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("MSI Optix MAG271CQR","₱39,950.00", R.drawable.monitor_img5_msi_optix_mag271cqr)
+        monitorModels = Monitor_Data_Class("Dell S2418H","₱13,615.20", R.drawable.monitor_img5)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("Samsung Odyssey G7","₱39,950.00", R.drawable.monitor_img6_samsung_odyssey_g7)
+        monitorModels = Monitor_Data_Class("Acer R240HY","₱3,970.53", R.drawable.monitor_img6)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("ASUS ROG Swift PG279Q","₱39,950.00", R.drawable.monitor_img7_asus_rog_swift_pg279q)
+        monitorModels = Monitor_Data_Class("Sceptre E275W-19203R","₱17,018.43", R.drawable.monitor_img7)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("ViewSonic XG2402","₱39,950.00", R.drawable.monitor_img8_viewsonic_xg2402)
+        monitorModels = Monitor_Data_Class("HP 24mh","₱7,091.25", R.drawable.monitor_img8)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("AOC CQ32G1","₱39,950.00", R.drawable.monitor_img9_aoc_cq32g1)
+        monitorModels = Monitor_Data_Class("BenQ GW2480","₱11,345.43", R.drawable.monitor_img9)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("Alienware AW3420DW","₱39,950.00", R.drawable.monitor_img10_alienware_aw3420dw)
+        monitorModels = Monitor_Data_Class("Philips 246E9QDSB","₱5,673.00", R.drawable.monitor_img10)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("BenQ EX2780Q","₱39,950.00", R.drawable.monitor_img11_benq_ex2780q)
+        monitorModels = Monitor_Data_Class("Samsung SF350","₱6,055.00", R.drawable.monitor_img11)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("ASUS TUF VG27AQ","₱39,950.00", R.drawable.monitor_img12_asus_tuf_vg27aq)
+        monitorModels = Monitor_Data_Class("ASUS VS239H-P","₱7,374.90", R.drawable.monitor_img12)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("Pixio PX329","₱39,950.00", R.drawable.monitor_img13_pixio_px329)
+        monitorModels = Monitor_Data_Class("Dell SE2416HX","₱6,807.60", R.drawable.monitor_img13)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("LG 34GN850-B","₱39,950.00", R.drawable.monitor_img14_lg_34gn850_b)
+        monitorModels = Monitor_Data_Class("HP Pavilion 22cwa","₱4,537.83", R.drawable.monitor_img14)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("Acer Nitro VG240Y Pbiip","₱39,950.00", R.drawable.monitor_img15_acer_nitro_vg240y_pbiip)
+        monitorModels = Monitor_Data_Class("BenQ GW2270","₱4,875.94", R.drawable.monitor_img15)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("ASUS VG245H","₱39,950.00", R.drawable.monitor_img16_asus_vg245h)
+        monitorModels = Monitor_Data_Class("Sceptre E248W-19203R","₱5,104.00", R.drawable.monitor_img16)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("Dell Alienware AW3418DW","₱39,950.00", R.drawable.monitor_img17_dell_alienware_aw3418dw)
+        monitorModels = Monitor_Data_Class("LG 24MK400H-B","₱6,523.95", R.drawable.monitor_img17)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("Samsung CRG9","₱39,950.00", R.drawable.monitor_img18_samsung_crg9)
+        monitorModels = Monitor_Data_Class("MSI Optix MAG241C","₱11,912.73", R.drawable.monitor_img18)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("MSI Optix MPG341CQR","₱39,950.00", R.drawable.monitor_img19_msi_optix_mpg341cqr)
+        monitorModels = Monitor_Data_Class("Samsung SF350","₱8,508.93", R.drawable.monitor_img19)
         data.add(monitorModels)
 
-        monitorModels = Monitor_Data_Class("ViewSonic Elite XG240R","₱39,950.00", R.drawable.monitor_img20_viewsonic_elite_xg240r)
+        monitorModels = Monitor_Data_Class("Acer SB220Q","₱5,105.70", R.drawable.monitor_img20)
         data.add(monitorModels)
 
         cartAdapter!!.notifyDataSetChanged()

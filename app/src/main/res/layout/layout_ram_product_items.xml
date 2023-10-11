@@ -47,7 +47,7 @@
                 android:text="Ryzen 9 5900x"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="12.5dp"
+                android:textSize="10.5dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

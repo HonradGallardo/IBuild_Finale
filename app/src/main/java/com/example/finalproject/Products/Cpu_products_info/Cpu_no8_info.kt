@@ -16,13 +16,10 @@ class Cpu_no8_info : AppCompatActivity() {
 
         val viewPager2: ViewPager2 = findViewById(R.id.viewPager2)
         val images = listOf(
-            R.drawable.cpu_img6,
-            R.drawable.cpu_info5_img1,
-            R.drawable.cpu_info5_img2,
-            R.drawable.cpu_info5_img3,
-            R.drawable.cpu_info5_img4,
-            R.drawable.cpu_info5_img5,
-            R.drawable.cpu_info5_img6)
+            R.drawable.cpu_img8,
+            R.drawable.cpu_info8_img1,
+            R.drawable.cpu_info8_img2,
+            R.drawable.cpu_info8_img3,)
 
         viewPager2.adapter = ViewPager_Adapter(images)
 

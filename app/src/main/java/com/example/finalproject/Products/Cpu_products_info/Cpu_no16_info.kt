@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import androidx.viewpager2.widget.ViewPager2
 import com.example.finalproject.Categories.Cpu_Category.Cpu_products_holder
 import com.example.finalproject.R
 
@@ -12,6 +13,16 @@ class Cpu_no16_info : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cpu_no16_info)
+
+        val viewPager2: ViewPager2 = findViewById(R.id.viewPager2)
+        val images = listOf(
+            R.drawable.cpu_img16,
+            R.drawable.cpu_info16_img1,
+            R.drawable.cpu_info16_img2,
+            R.drawable.cpu_info16_img3,
+            R.drawable.cpu_info16_img4,)
+
+        viewPager2.adapter = ViewPager_Adapter(images)
 
         backbt = findViewById(R.id.Cpu_Products_Back_to_Category)
         backbt.setOnClickListener {
