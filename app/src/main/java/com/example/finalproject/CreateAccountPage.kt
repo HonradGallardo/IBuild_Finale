@@ -20,6 +20,7 @@ class CreateAccountPage : AppCompatActivity() {
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_account_page)
 
@@ -42,7 +43,12 @@ class CreateAccountPage : AppCompatActivity() {
         createAccount.setOnClickListener {
             val signUpUsername = username.text.toString()
             val signUpPassword = password.text.toString()
-            signUpDatabase(signUpUsername, signUpPassword)
+
+            if (isUsernameAndPasswordValid(signUpUsername, signUpPassword)) {
+                signUpDatabase(signUpUsername, signUpPassword)
+            } else {
+                Toast.makeText(this, "Username & Password should contain at least 10 characters", Toast.LENGTH_SHORT).show()
+            }
         }
 
         alreadyHaveAnAccountLogIn.setOnClickListener{
@@ -50,6 +56,16 @@ class CreateAccountPage : AppCompatActivity() {
             startActivity(int)
             finish()
         }
+    }
+    private fun isUsernameAndPasswordValid(username: String, password: String): Boolean {
+        val USERNAME_MIN_LENGTH = 10
+        val USERNAME_MAX_LENGTH = 20
+        val PASSWORD_MAX_LENGTH = 10
+
+        val isUsernameValid = username.length in USERNAME_MIN_LENGTH..USERNAME_MAX_LENGTH
+        val isPasswordValid = password.length >= PASSWORD_MAX_LENGTH
+
+        return isUsernameValid && isPasswordValid
     }
     private fun signUpDatabase(username : String, password : String){
         val insertedRowId = databaseHelper.insertUser(username, password)

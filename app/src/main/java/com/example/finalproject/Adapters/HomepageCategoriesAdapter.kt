@@ -1,4 +1,4 @@
-package Adapters
+package com.example.finalproject.Adapters
 
 import DataClass.HomepageCategoriesDataClass
 import android.content.Intent

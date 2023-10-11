@@ -76,7 +76,7 @@ class Ssd_products_holder : AppCompatActivity() {
         ssdModels = Ssd_Data_Class("Teamgroup GX2", "₱3,049 - ₱3,199", R.drawable.ssd_img10)
         data.add(ssdModels)
 
-        ssdModels = Ssd_Data_Class("Samsung 970 EVO Plus", "₱8,550.00 - ", R.drawable.ssd_img11)
+        ssdModels = Ssd_Data_Class("Samsung 970 EVO Plus", "₱8,550.00", R.drawable.ssd_img11)
         data.add(ssdModels)
 
         ssdModels =

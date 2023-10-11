@@ -1,6 +1,6 @@
 package com.example.finalproject
 
-import Adapters.amdbuilderAdapter
+import com.example.finalproject.Adapters.amdbuilderAdapter
 import DataClass.AmdBuilderDataClass
 import android.annotation.SuppressLint
 import android.content.Intent

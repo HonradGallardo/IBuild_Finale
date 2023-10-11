@@ -1,5 +1,6 @@
 package com.example.finalproject.Categories.Hdd_Category
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +9,36 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no10_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no11_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no12_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no13_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no14_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no15_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no16_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no17_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no18_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no19_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no1_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no20_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no2_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no3_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no4_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no5_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no6_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no7_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no8_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no9_info
+import com.example.finalproject.Products.Hdd_products_info.Hdd_no1_info
+import com.example.finalproject.Products.Hdd_products_info.Hdd_no2_info
+import com.example.finalproject.Products.Hdd_products_info.Hdd_no3_info
+import com.example.finalproject.Products.Hdd_products_info.Hdd_no4_info
+import com.example.finalproject.Products.Hdd_products_info.Hdd_no5_info
+import com.example.finalproject.Products.Hdd_products_info.Hdd_no6_info
+import com.example.finalproject.Products.Hdd_products_info.Hdd_no7_info
+import com.example.finalproject.Products.Hdd_products_info.Hdd_no8_info
 import com.example.finalproject.R
+import com.example.finalproject.rvHompagee
 
 class Hdd_Adapter constructor(private val getActivity: Hdd_products_holder, private val data: List<Hdd_Data_Class>) :
     RecyclerView.Adapter<Hdd_Adapter.MyViewHolder>() {
@@ -25,7 +55,43 @@ class Hdd_Adapter constructor(private val getActivity: Hdd_products_holder, priv
         holder.imageView.setImageResource(data[position].hddImage)
 
         holder.cardViewer.setOnClickListener {
-            Toast.makeText(getActivity, data[position].hddModelt, Toast.LENGTH_LONG).show()
+            if(position == 0){
+                val int = Intent(getActivity, Hdd_no1_info::class.java)
+                getActivity.startActivity(int)
+                getActivity.finish()
+            } else if(position == 1){
+                val int = Intent(getActivity, Hdd_no2_info::class.java)
+                getActivity.startActivity(int)
+                getActivity.finish()
+            }else if(position == 2){
+                val int = Intent(getActivity, Hdd_no3_info::class.java)
+                getActivity.startActivity(int)
+                getActivity.finish()
+            }else if(position == 3){
+                val int = Intent(getActivity, Hdd_no4_info::class.java)
+                getActivity.startActivity(int)
+                getActivity.finish()
+            }else if(position == 4){
+                val int = Intent(getActivity, Hdd_no5_info::class.java)
+                getActivity.startActivity(int)
+                getActivity.finish()
+            }else if(position == 5){
+                val int = Intent(getActivity, Hdd_no6_info::class.java)
+                getActivity.startActivity(int)
+                getActivity.finish()
+            }else if(position == 6){
+                val int = Intent(getActivity, Hdd_no7_info::class.java)
+                getActivity.startActivity(int)
+                getActivity.finish()
+            }else if(position == 7){
+                val int = Intent(getActivity, Hdd_no8_info::class.java)
+                getActivity.startActivity(int)
+                getActivity.finish()
+            }else{
+                val int = Intent (getActivity, rvHompagee::class.java)
+                getActivity.startActivity(int)
+                getActivity.finish()
+            }
         }
     }
 

@@ -14,6 +14,13 @@ class DatabaseHelper(private val context: Context) : SQLiteOpenHelper(context, D
         private const val COLUMN_ID = "id"
         private const val COLUMN_USERNAME = "username"
         private const val COLUMN_PASSWORD = "password"
+
+        private const val USERNAME_MIN_LENGTH = 10
+        private const val USERNAME_MAX_LENGTH = 20
+        private const val PASSWORD_MIN_LENGTH = 6
+        private const val PASSWORD_MAX_LENGTH = 30
+
+
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
@@ -32,6 +39,16 @@ class DatabaseHelper(private val context: Context) : SQLiteOpenHelper(context, D
     }
 
     fun insertUser(username : String, password : String): Long{
+
+        if (username.length < USERNAME_MIN_LENGTH || username.length > USERNAME_MAX_LENGTH) {
+            throw IllegalArgumentException("Username must be between $USERNAME_MIN_LENGTH and $USERNAME_MAX_LENGTH characters.")
+        }
+
+        // Validate password length
+        if (password.length > PASSWORD_MAX_LENGTH) {
+            throw IllegalArgumentException("Password must be up to $PASSWORD_MAX_LENGTH characters.")
+        }
+
         val values = ContentValues().apply {
             put(COLUMN_USERNAME, username)
             put(COLUMN_PASSWORD, password)

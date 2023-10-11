@@ -1,4 +1,4 @@
-package Adapters
+package com.example.finalproject.Adapters
 
 import DataClass.AmdMotherboardDataClass
 import android.content.Intent

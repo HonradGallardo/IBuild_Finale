@@ -51,10 +51,10 @@ class Hdd_products_holder : AppCompatActivity() {
         hddModels = Hdd_Data_Class("WD Black HDD","₱1,699.00 - ₱6,950.02", R.drawable.hdd_img2)
         data.add(hddModels)
 
-        hddModels = Hdd_Data_Class("WD Blue HDD","1,594.00 - ₱3,090.00", R.drawable.hdd_img3)
+        hddModels = Hdd_Data_Class("WD Blue WD10EZRZ HDD","1,594.00 - ₱3,090.00", R.drawable.hdd_img3)
         data.add(hddModels)
 
-        hddModels = Hdd_Data_Class("2 TB WD Red Pro HDD","₱2,450.00", R.drawable.hdd_img4)
+        hddModels = Hdd_Data_Class("1 TB WD Red Pro WD4003FFBX HDD","₱2,450.00", R.drawable.hdd_img4)
         data.add(hddModels)
 
         hddModels = Hdd_Data_Class("1 TB Seagate SkyHawk HDD","₱5,195.00", R.drawable.hdd_img5)
@@ -63,10 +63,10 @@ class Hdd_products_holder : AppCompatActivity() {
         hddModels = Hdd_Data_Class("Seagate BarraCuda HDD","₱1,400 - ₱3,195", R.drawable.hdd_img6)
         data.add(hddModels)
 
-        hddModels = Hdd_Data_Class("Toshiba Canvio Basics","₱2,990.00 - 6,900.00", R.drawable.hdd_img7)
+        hddModels = Hdd_Data_Class("Toshiba P300 HDD","₱2,990.00 - 6,900.00", R.drawable.hdd_img7)
         data.add(hddModels)
 
-        hddModels = Hdd_Data_Class("Seagate Exos 4tb ST10000NM0528","₱3,379.00", R.drawable.hdd_img_8)
+        hddModels = Hdd_Data_Class("Seagate Exos 1TB 7E2000","₱3,379.00", R.drawable.hdd_img8)
         data.add(hddModels)
 
         cartAdapter!!.notifyDataSetChanged()

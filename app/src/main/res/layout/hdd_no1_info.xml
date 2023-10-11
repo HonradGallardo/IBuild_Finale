@@ -80,7 +80,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif-light"
-                android:text="Gigabyte Gaming DC 6G NVIDIA GeForce GTX 1660 Super"
+                android:text="Seagate FireCuda"
                 android:textColor="@color/navy"
                 android:textSize="22.5dp"
                 android:textStyle="bold"
@@ -95,7 +95,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:text="Price: ₱15,500.00"
+                android:text="Price: ₱6,190.00"
                 android:textColor="@color/navy"
                 android:textSize="15dp"
                 android:textStyle="italic"
@@ -118,63 +118,16 @@
                 android:layout_marginEnd="31dp"
                 android:layout_marginBottom="0dp"
                 android:gravity="start"
-                android:text="Graphics Processor
-\nGPU Name: TU116
-\nGPU Variant:
-\nTU116-300-A1
-\nArchitecture: Turing
-\nFoundry: TSMC
-\nProcess Size: 12 nm
-\nTransistors: 6,600 million
-\nDensity: 23.2M / mm²
-\nDie Size: 284 mm²
-\nChip Package: BGA-2228\n
+                android:text="Product Info-
+\nDimensions: L x W x D
+\n5.787 in × 4.010 in × 5.787in
 
-\nGraphics Card
-\nRelease Date: Oct 29th, 2019
-\nGeneration: GeForce 16
-\nPredecessor: GeForce 10
-\nSuccessor: GeForce 20
-\nProduction: Active
-\nBus Interface: PCIe 3.0 x16\n
+\nWeight: 716g / 1.58lb\n
 
-\nMemory
-\nMemory Size: 6 GB
-\nMemory Type: GDDR6
-\nMemory Bus: 192 bit
-\nBandwidth: 336.0 GB/s\n
-
-\nClock Speeds
-\nBase Clock: 1530 MHz
-\nBoost Clock: 1860 MHz (+4%)
-\nMemory Clock: 1750 MHz / 14 Gbps effective\n
-
-\nRender Config
-\nShading Units: 1408
-\nTMUs: 88
-\nROPs: 48
-\nSM Count: 22
-\nL1 Cache: 64 KB (per SM)
-\nL2 Cache: 1536 KB\n
-
-\nGraphics Features
-\nDirectX: 12 (12_1)
-\nOpenGL: 4.6
-\nOpenCL: 3.0
-\nVulkan: 1.3
-\nCUDA:7.5
-\nShader Model: 6.7\n
-
-\nBoard Design
-\nSlot Width: Dual-slot
-\nLength: 280 mm / 11 inches
-\nWidth: 117 mm / 4.6 inches
-\nHeight: 40 mm / 1.6 inches
-\nTDP: 125 W
-\nSuggested PSU: 300 W
-\nOutputs: 1x HDMI 2.0 / 3x DisplayPort 1.4a
-\nPower Connectors: 1x 8-pin
-\nBoard Number: PG161 SKU 26"
+\nSystem Requirements-
+Compatible with:
+\n             * Windows
+\n             * macOS systems."
                 android:textColor="@color/black"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"

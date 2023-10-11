@@ -8,8 +8,8 @@
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="5dp"
     app:cardElevation="5dp"
-    android:id="@+id/Cpu_cardView"
-    >
+    android:id="@+id/Cpu_cardView">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

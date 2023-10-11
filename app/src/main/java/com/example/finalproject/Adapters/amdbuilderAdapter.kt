@@ -1,4 +1,4 @@
-package Adapters
+package com.example.finalproject.Adapters
 
 import DataClass.AmdBuilderDataClass
 import android.content.Intent

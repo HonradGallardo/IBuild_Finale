@@ -1,7 +1,7 @@
 package com.example.finalproject
 
-import Adapters.HomepageCategoriesAdapter
-import Adapters.RecyclerViewApater
+import com.example.finalproject.Adapters.HomepageCategoriesAdapter
+import com.example.finalproject.Adapters.RecyclerViewApater
 import DataClass.HomepageCategoriesDataClass
 import DataClass.Product
 import android.annotation.SuppressLint
@@ -83,47 +83,44 @@ class rvHompagee : AppCompatActivity() {
             val int = Intent(this, AmdBuilderRecyclerView::class.java)
             startActivity(int)
         }
-
-
-
     }
 
 
     private fun prepareProductList(){
-        var shopProducts = Product("G.Skill Tridentz rgb 2x8 3200mhz", "The G.Skill Trident Z RAM has a speed of 7200...", R.drawable.tridentzrgb2x83200mhz, "₱500.00")
+        var shopProducts = Product("AMD RYZEN 5 5600",  R.drawable.cpu_img1, "₱8,150.00")
         productList.add(shopProducts)
 
-        shopProducts = Product("AMD Ryzen 7 5700X 3.4GHz 65W", "8 CPU cores and 16 threads, 3.4GHz base clock...", R.drawable.amdryzen75700x, "₱10,000.00")
+        shopProducts = Product("ASUS ROG Strix B450-F Gaming",  R.drawable.mobo_img1, "₱7,850.00")
         productList.add(shopProducts)
 
-        shopProducts = Product("B450m Steel Legend AM4 Socket", "Supports DDR4 3533+ (OC) RAM, up to 64GB...", R.drawable.b450msteellegend, "₱5,450.00")
+        shopProducts = Product("B450m Steel Legend AM4 Socket",  R.drawable.gpu_img1, "₱5,450.00")
         productList.add(shopProducts)
 
-        shopProducts = Product("Corsair Force Series MP500 M.2 NVMe", "Available in 120GB, 240GB and 480GB capacities...", R.drawable.corsairmp500m2nvmepciegen3x4ssd, "₱3,000.00")
+        shopProducts = Product("Corsair Vengeance LPX",  R.drawable.ram_img1, "₱4,160.00")
         productList.add(shopProducts)
 
-        shopProducts = Product("GALAX GeForce RTX 3060TI 1-Click OC", "2nd Gen Ray Tracing Cores, 3rd Gen Tensor Cores...", R.drawable.galaxrtx3060ti, "₱15,000.00")
+        shopProducts = Product("EVGA SuperNOVA 650 G5",  R.drawable.psu_img1, "₱6,240.83")
         productList.add(shopProducts)
 
-        shopProducts = Product("GALAX GeForce RTX 3060TI 1-Click OC", "2nd Gen Ray Tracing Cores, 3rd Gen Tensor Cores...", R.drawable.galaxrtx3060ti, "₱15,000.00")
+        shopProducts = Product("Seagate BarraCuda HDD",  R.drawable.hdd_img6, "₱1,400")
         productList.add(shopProducts)
 
-        shopProducts = Product("GALAX GeForce RTX 3060TI 1-Click OC", "2nd Gen Ray Tracing Cores, 3rd Gen Tensor Cores...", R.drawable.galaxrtx3060ti, "₱15,000.00")
+        shopProducts = Product("Samsung 970 EVO Plus",  R.drawable.ssd_img11, "₱8,550.00")
         productList.add(shopProducts)
 
-        shopProducts = Product("GALAX GeForce RTX 3060TI 1-Click OC", "2nd Gen Ray Tracing Cores, 3rd Gen Tensor Cores...", R.drawable.galaxrtx3060ti, "₱15,000.00")
+        shopProducts = Product("MSI Optix MAG241C",  R.drawable.monitor_img18, "₱11,912.73")
         productList.add(shopProducts)
 
-        shopProducts = Product("GALAX GeForce RTX 3060TI 1-Click OC", "2nd Gen Ray Tracing Cores, 3rd Gen Tensor Cores...", R.drawable.galaxrtx3060ti, "₱15,000.00")
+        shopProducts = Product("GALAX GeForce RTX 3060TI 1-Click OC", R.drawable.galaxrtx3060ti, "₱15,000.00")
         productList.add(shopProducts)
 
-        shopProducts = Product("GALAX GeForce RTX 3060TI 1-Click OC", "2nd Gen Ray Tracing Cores, 3rd Gen Tensor Cores...", R.drawable.galaxrtx3060ti, "₱15,000.00")
+        shopProducts = Product("GALAX GeForce RTX 3060TI 1-Click OC",  R.drawable.galaxrtx3060ti, "₱15,000.00")
         productList.add(shopProducts)
 
-        shopProducts = Product("GALAX GeForce RTX 3060TI 1-Click OC", "2nd Gen Ray Tracing Cores, 3rd Gen Tensor Cores...", R.drawable.galaxrtx3060ti, "₱15,000.00")
+        shopProducts = Product("GALAX GeForce RTX 3060TI 1-Click OC",  R.drawable.galaxrtx3060ti, "₱15,000.00")
         productList.add(shopProducts)
 
-        shopProducts = Product("GALAX GeForce RTX 3060TI 1-Click OC", "2nd Gen Ray Tracing Cores, 3rd Gen Tensor Cores...", R.drawable.galaxrtx3060ti, "₱15,000.00")
+        shopProducts = Product("GALAX GeForce RTX 3060TI 1-Click OC",  R.drawable.galaxrtx3060ti, "₱15,000.00")
         productList.add(shopProducts)
 
     }
