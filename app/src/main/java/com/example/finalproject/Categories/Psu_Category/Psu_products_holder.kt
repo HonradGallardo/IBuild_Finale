@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.R
 import com.example.finalproject.rvHompagee
-import java.util.Collections
 
 class Psu_products_holder : AppCompatActivity() {
 
@@ -46,67 +45,67 @@ class Psu_products_holder : AppCompatActivity() {
     }
 
     private fun hddProducts() {
-        var psuModels = Psu_Data_Class("EVGA SuperNOVA 650 G5","₱90,655.31", R.drawable.psu_img1_evga_supernova650_g5)
+        var psuModels = Psu_Data_Class("EVGA SuperNOVA 650 G5","₱6,240.83", R.drawable.psu_img1)
         data.add(psuModels)
 
-        psuModels = Psu_Data_Class("Corsair RM750x","₱39,950.00", R.drawable.psu_img2_corsair_rm750x)
+        psuModels = Psu_Data_Class("Corsair RM750x","₱7,943.03", R.drawable.psu_img2)
         data.add(psuModels)
 
-        psuModels = Psu_Data_Class("Seasonic Focus GX-650","₱39,950.00", R.drawable.psu_img3_seasonic_focus_gx_650)
+        psuModels = Psu_Data_Class("Seasonic Focus GX-650","₱5,106.03", R.drawable.psu_img3)
         data.add(psuModels)
 
-        psuModels = Psu_Data_Class("NZXT C750","₱39,950.00", R.drawable.psu_img4_nzxt_c750)
+        psuModels = Psu_Data_Class("NZXT C750","₱5,673.43", R.drawable.psu_img4)
         data.add(psuModels)
 
-        psuModels = Psu_Data_Class("Thermaltake Toughpower Grand RGB 750W","₱39,950.00", R.drawable.psu_img5_thermaltake_toughpower_grand_rgb_750w)
+        psuModels = Psu_Data_Class("Thermaltake Toughpower Grand RGB 750W","₱5,389.73", R.drawable.psu_img5)
         data.add(psuModels)
 
-        psuModels = Psu_Data_Class("EVGA SuperNOVA 750 G5","₱39,950.00", R.drawable.psu_img6_evga_supernova_750_g5)
+        psuModels = Psu_Data_Class("EVGA SuperNOVA 750 G5","₱4,822.33", R.drawable.psu_img6)
         data.add(psuModels)
 
-        psuModels = Psu_Data_Class("Corsair TX650M","₱39,950.00", R.drawable.psu_img7_corsair_tx650m)
+        psuModels = Psu_Data_Class("Corsair TX650M","₱11,563.61", R.drawable.psu_img7)
         data.add(psuModels)
 
-        psuModels = Psu_Data_Class("Seasonic Prime Ultra 750W Titanium","₱39,950.00", R.drawable.psu_img8_seasonic_prime_ultra_750w_titanium)
+        psuModels = Psu_Data_Class("Seasonic Prime Ultra 750W Titanium","₱10,240.00", R.drawable.psu_img8)
         data.add(psuModels)
 
-        psuModels = Psu_Data_Class("be quiet! Straight Power 11 650W","₱39,950.00", R.drawable.psu_img9_be_quiet_straight_power_11_650w)
+        psuModels = Psu_Data_Class("be quiet! Straight Power 11 650W","₱7,086.83", R.drawable.psu_img9)
         data.add(psuModels)
 
-        psuModels = Psu_Data_Class("Corsair SF750","₱39,950.00", R.drawable.psu_img10_corsair_sf750)
+        psuModels = Psu_Data_Class("Corsair SF750","₱10,496.33", R.drawable.psu_img10)
         data.add(psuModels)
 
-        psuModels = Psu_Data_Class("EVGA SuperNOVA 850 G3","₱39,950.00", R.drawable.psu_img11_evga_supernova_850_g3)
+        psuModels = Psu_Data_Class("EVGA SuperNOVA 850 G3","₱10,105.96", R.drawable.psu_img11)
         data.add(psuModels)
 
-        psuModels = Psu_Data_Class("Cooler Master MWE Gold 650","₱39,950.00", R.drawable.psu_img12_cooler_master_mwe_gold_650)
+        psuModels = Psu_Data_Class("Cooler Master MWE Gold 650","₱4,850.00", R.drawable.psu_img12)
         data.add(psuModels)
 
-        psuModels = Psu_Data_Class("SeaSonic S12III 550W","₱39,950.00", R.drawable.psu_img13_seasonic_s12iii_550w)
+        psuModels = Psu_Data_Class("SeaSonic S12III 550W","₱3,403.83", R.drawable.psu_img13)
         data.add(psuModels)
 
-        psuModels = Psu_Data_Class("EVGA B5 550W","₱39,950.00", R.drawable.psu_img14_evga_b5_550w)
+        psuModels = Psu_Data_Class("EVGA B5 550W","₱5,106.03", R.drawable.psu_img14)
         data.add(psuModels)
 
-        psuModels = Psu_Data_Class("FSP Dagger 600W","₱39,950.00", R.drawable.psu_img15_fsp_dagger_600w)
+        psuModels = Psu_Data_Class("FSP Dagger 600W","₱6,240.83", R.drawable.psu_img15)
         data.add(psuModels)
 
-        psuModels = Psu_Data_Class("SilverStone Technology SST-ST60F-TI","₱39,950.00", R.drawable.psu_img16_silverstone_technology_sst_st60f_ti)
+        psuModels = Psu_Data_Class("SilverStone Technology SST-ST60F-TI","₱11,346.87", R.drawable.psu_img16)
         data.add(psuModels)
 
-        psuModels = Psu_Data_Class("Corsair CV550","₱39,950.00", R.drawable.psu_img17_corsair_cv550)
-        data.add(psuModels)
-
-
-        psuModels = Psu_Data_Class("Seasonic SSR-600TL","₱39,950.00", R.drawable.psu_img18_seasonic_ssr_600tl)
+        psuModels = Psu_Data_Class("Corsair CV550","₱2,899.00", R.drawable.psu_img17)
         data.add(psuModels)
 
 
-        psuModels = Psu_Data_Class("Cooler Master MasterWatt 650","₱39,950.00", R.drawable.psu_img19_cooler_master_masterwatt_650)
+        psuModels = Psu_Data_Class("Seasonic SSR-600TL","₱10,780.60", R.drawable.psu_img18)
         data.add(psuModels)
 
 
-        psuModels = Psu_Data_Class("Antec Earthwatts Gold Pro 750W","₱39,950.00", R.drawable.psu_img20_antec_earthwatts_gold_pro_750w)
+        psuModels = Psu_Data_Class("Cooler Master MasterWatt 650","₱3,120.13", R.drawable.psu_img19)
+        data.add(psuModels)
+
+
+        psuModels = Psu_Data_Class("Antec Earthwatts Gold Pro 750W","₱13,613.63", R.drawable.psu_img20)
         data.add(psuModels)
 
 

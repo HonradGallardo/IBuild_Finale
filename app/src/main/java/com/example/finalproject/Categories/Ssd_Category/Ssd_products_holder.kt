@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.R
 import com.example.finalproject.rvHompagee
-import java.util.Collections
 
 class Ssd_products_holder : AppCompatActivity() {
 
@@ -46,10 +45,10 @@ class Ssd_products_holder : AppCompatActivity() {
 
     private fun ssdProducts() {
         var ssdModels =
-            Ssd_Data_Class("Samsung 860 EVO", "₱4,160.00", R.drawable.ssd_img1_samsung_860evo)
+            Ssd_Data_Class("Samsung 860 EVO", "₱4,160.00", R.drawable.ssd_img1)
         data.add(ssdModels)
 
-        ssdModels = Ssd_Data_Class("Crucial MX500", "₱2,799.00", R.drawable.ssd_img2_crucial_mx500)
+        ssdModels = Ssd_Data_Class("Crucial MX500", "₱2,799.00", R.drawable.ssd_img2)
         data.add(ssdModels)
 
         ssdModels = Ssd_Data_Class("WD Blue 3D NAND", "₱5,690.00", R.drawable.ssd_img3)

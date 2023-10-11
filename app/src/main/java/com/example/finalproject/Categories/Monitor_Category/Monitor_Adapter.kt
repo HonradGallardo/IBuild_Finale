@@ -32,6 +32,7 @@ class Monitor_Adapter constructor(private val getActivity: Monitor_products_hold
 
     override fun getItemCount(): Int {
         return data.size
+
     }
 
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){

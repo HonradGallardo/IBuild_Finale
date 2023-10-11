@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.R
 import com.example.finalproject.rvHompagee
-import java.util.Collections
 
 class Hdd_products_holder : AppCompatActivity() {
 
@@ -46,35 +45,28 @@ class Hdd_products_holder : AppCompatActivity() {
     }
 
     private fun hddProducts() {
-        var hddModels = Hdd_Data_Class("Seagate FireCuda HDD","₱90,655.31", R.drawable.hdd_img1_seagate_firecuda)
+        var hddModels = Hdd_Data_Class("Seagate FireCuda HDD","₱6,190.00", R.drawable.hdd_img1)
         data.add(hddModels)
 
-        hddModels = Hdd_Data_Class("WD Black HDD","₱39,950.00", R.drawable.hdd_img2_wd_black)
+        hddModels = Hdd_Data_Class("WD Black HDD","₱1,699.00 - ₱6,950.02", R.drawable.hdd_img2)
         data.add(hddModels)
 
-        hddModels = Hdd_Data_Class("WD Blue HDD","₱39,950.00", R.drawable.hdd_img3_wd_blue)
+        hddModels = Hdd_Data_Class("WD Blue HDD","1,594.00 - ₱3,090.00", R.drawable.hdd_img3)
         data.add(hddModels)
 
-        hddModels = Hdd_Data_Class("Seagate IronWolf Pro HDD","₱39,950.00", R.drawable.hdd_img4_seagate_ironwolf_pro)
+        hddModels = Hdd_Data_Class("2 TB WD Red Pro HDD","₱2,450.00", R.drawable.hdd_img4)
         data.add(hddModels)
 
-        hddModels = Hdd_Data_Class("WD Red Pro HDD","₱39,950.00", R.drawable.hdd_img5_wd_red_pro)
+        hddModels = Hdd_Data_Class("1 TB Seagate SkyHawk HDD","₱5,195.00", R.drawable.hdd_img5)
         data.add(hddModels)
 
-        hddModels = Hdd_Data_Class("Seagate Exos X20 HDD","₱39,950.00", R.drawable.hdd_img6_seagate_exos_x20)
+        hddModels = Hdd_Data_Class("Seagate BarraCuda HDD","₱1,400 - ₱3,195", R.drawable.hdd_img6)
         data.add(hddModels)
 
-        hddModels = Hdd_Data_Class("Seagate SkyHawk AI HDD","₱39,950.00", R.drawable.hdd_img7_seagate_skyhawk_ai)
+        hddModels = Hdd_Data_Class("Toshiba Canvio Basics","₱2,990.00 - 6,900.00", R.drawable.hdd_img7)
         data.add(hddModels)
 
-        hddModels = Hdd_Data_Class("Seagate BarraCuda HDD","₱39,950.00", R.drawable.hdd_img8_seagate_barracuda)
-        data.add(hddModels)
-
-        hddModels = Hdd_Data_Class("Toshiba","₱39,950.00", R.drawable.hdd_img9_toshiba)
-        data.add(hddModels)
-
-
-        hddModels = Hdd_Data_Class("Seagate Exos X14 ST10000NM0528","₱39,950.00", R.drawable.hdd_img_10_seagate_exos_x14_st10000nm0528)
+        hddModels = Hdd_Data_Class("Seagate Exos 4tb ST10000NM0528","₱3,379.00", R.drawable.hdd_img_8)
         data.add(hddModels)
 
         cartAdapter!!.notifyDataSetChanged()

@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.R
 import com.example.finalproject.rvHompagee
-import java.util.Collections
 
 class Gpu_products_holder : AppCompatActivity() {
 
@@ -46,64 +45,64 @@ class Gpu_products_holder : AppCompatActivity() {
 }
 
     private fun gpuProducts() {
-        var gpuModels = Gpu_Data_Class("NVIDIA GeForce GTX 1660 Super","₱90,655.31", R.drawable.gpu_img1_nvidia_geforce_gtx_1660_super)
+        var gpuModels = Gpu_Data_Class("Gigabyte Gaming DC 6G NVIDIA GeForce GTX 1660 Super","₱15,500.00", R.drawable.gpu_img1)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("AMD Radeon RX 5600 XT","₱39,950.00", R.drawable.gpu_img2_amd_radeon_rx_5600_xt)
+        gpuModels = Gpu_Data_Class("MSI AMD Radeon MECH RX 5600 XT","₱23,750.00", R.drawable.gpu_img2)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("NVIDIA GeForce RTX 3060","₱39,950.00", R.drawable.gpu_img3_nvidia_geforce_rtx_3060)
+        gpuModels = Gpu_Data_Class("Gigabyte Gaming OC 12 G NVIDIA GeForce RTX 3060","₱22,950.00", R.drawable.gpu_img3)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("AMD Radeon RX 5700 XT","₱39,950.00", R.drawable.gpu_img4_amd_radeon_rx_5700_xt)
+        gpuModels = Gpu_Data_Class("MSI AMD Radeon MECH RX 5700 XT","₱24,461.00", R.drawable.gpu_img4)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("NVIDIA GeForce RTX 3070","₱39,950.00", R.drawable.gpu_img5_nvidia_geforce_gtx_3070)
+        gpuModels = Gpu_Data_Class("Gigabyte Gaming OC 8G NVIDIA GeForce RTX 3070","₱29,500.00", R.drawable.gpu_img5)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("AMD Radeon RX 6600 XT","₱39,950.00", R.drawable.gpu_img6_amd_radeon_rx_6600_xt)
+        gpuModels = Gpu_Data_Class("ASUS AMD DUAL Radeon RX 6600 XT","₱19,306.00", R.drawable.gpu_img6)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("NVIDIA GeForce GTX 1050 Ti","₱39,950.00", R.drawable.gpu_img7_nvidia_geforce_gtx_1050_ti)
+        gpuModels = Gpu_Data_Class("PYN NVIDIA GeForce GTX 1050 Ti","₱12,945.00", R.drawable.gpu_img7)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("AMD Radeon RX 580","₱39,950.00", R.drawable.gpu_img8_amd_radeon_rx_580)
+        gpuModels = Gpu_Data_Class("MSI twin frozr Gaming 8G AMD Radeon RX 580","₱12,130.00", R.drawable.gpu_img8)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("NVIDIA GeForce RTX 3080","₱39,950.00", R.drawable.gpu_img9_nvidia_geforce_rtx_3080)
+        gpuModels = Gpu_Data_Class("NVIDIA GeForce RTX 3080","₱29,500.00", R.drawable.gpu_img9)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("AMD Radeon RX 6700 XT","₱39,950.00", R.drawable.gpu_img10_amd_radeon_rx_6700_xt)
+        gpuModels = Gpu_Data_Class("Gigabyte 12GB AMD Radeon RX 6700 XT","₱23,234.00", R.drawable.gpu_img10)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("NVIDIA GeForce GTX 1660 Ti","₱39,950.00", R.drawable.gpu_img11_nvidia_geforce_gtx_1660_ti)
+        gpuModels = Gpu_Data_Class("Asus Tuf NVIDIA GeForce GTX 1660 Ti","₱16,999.00", R.drawable.gpu_img11)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("AMD Radeon RX 5500 XT","₱39,950.00", R.drawable.gpu_img12_amd_radeon_rx_5500_xt)
+        gpuModels = Gpu_Data_Class("ASROCK OC Edition 8GB AMD Radeon RX 5500 XT","₱10,960.00", R.drawable.gpu_img12)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("NVIDIA GeForce RTX 3050","₱39,950.00", R.drawable.gpu_img13_nvidia_geforce_rtx_3050)
+        gpuModels = Gpu_Data_Class("Asus ROG STRIX OC 8GB NVIDIA GeForce RTX 3050","₱15,000.00", R.drawable.gpu_img13)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("AMD Radeon RX 590","₱39,950.00", R.drawable.gpu_img14_amd_radeon_rx_590)
+        gpuModels = Gpu_Data_Class("Gigabyte Gaming 8G Radeon RX 590","₱15,500.00", R.drawable.gpu_img14)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("NVIDIA GeForce GTX 1650 Super","₱39,950.00", R.drawable.gpu_img15_nvidia_geforce_gtx_1650_super)
+        gpuModels = Gpu_Data_Class("MSI GAMING TWIN FROZR7 NVIDIA GeForce GTX 1650 Super","₱12,320.00", R.drawable.gpu_img15)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("AMD Radeon RX 6800","₱39,950.00", R.drawable.gpu_img16_amd_radeon_rx_6800)
+        gpuModels = Gpu_Data_Class("ASUS 16GB GPU Tweak Radeon RX 6800","₱33,681.00", R.drawable.gpu_img16)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("NVIDIA GeForce GTX 1660","₱39,950.00", R.drawable.gpu_img17_nvidia_geforce_gtx_1660)
+        gpuModels = Gpu_Data_Class("Gigabyte OC 6G NVIDIA GeForce GTX 1660","₱11,500.00", R.drawable.gpu_img17)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("AMD Radeon RX Vega 56","₱39,950.00", R.drawable.gpu_img18_amd_radeon_rx_vega_56)
+        gpuModels = Gpu_Data_Class("ASROCK Phantom Gaming Radeon RX Vega 56","₱25,199.50", R.drawable.gpu_img18)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("NVIDIA GeForce RTX 3060 Ti","₱39,950.00", R.drawable.gpu_img19_nvidia_geforce_rtx_3060_ti)
+        gpuModels = Gpu_Data_Class("Gigabyte Eagle OC 12G NVIDIA GeForce RTX 3060 Ti","₱28,990.00", R.drawable.gpu_img19)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("AMD Radeon RX 6700","₱39,950.00", R.drawable.gpu_img20_amd_radeon_rx_6700)
+        gpuModels = Gpu_Data_Class("UAORUS ELITE Radeon RX 6700","₱29,950.00", R.drawable.gpu_img20)
         data.add(gpuModels)
 
         cartAdapter!!.notifyDataSetChanged()
