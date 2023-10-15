@@ -49,7 +49,9 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="590dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginBottom="80dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/divider3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +82,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif-light"
-                android:text="WD 2TB RED PRO WD4003FFBX HDD"
+                android:text="WD Red Pro WD4003FFBX HDD 4TB"
                 android:textColor="@color/navy"
                 android:textSize="22.5dp"
                 android:textStyle="bold"
@@ -116,24 +118,21 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="31dp"
+                android:textSize="12sp"
                 android:layout_marginBottom="0dp"
                 android:gravity="start"
-                android:text="Capacity: 2TB
-\nForm Factor: 3.5-Inch
-\nConnector: SATA
-\nCompatibility: RAID-optimized NAS systems with unlimited # of bays
-\nInterface: SATA
-\nTransfer Rate: up to 164MB/s
-\nDisk Speed (RPM): 7200 RPM
-\nRecording Technology: CMR
-\nCache Size: 64MB
-\nWarranty: 5-Year Limited Warranty
-\nDimensions (L x W x H)
-\n5.79 x 4 x 1.03
-            \nWeight: 1.59lbs
-            \nModel Number: WD2002FFSX
-            \nOperating Temperature: 0°C to 65°C
-            \nNon-Operating Temperature: -40°C to 70°C"
+                android:text="Capacity: 4TB\n
+\nDrive Type: Traditional Hard Disk Drive (HDD)\n
+\nForm Factor: 3.5 inches (suitable for desktop NAS systems)\n
+\nInterface: SATA 6.0 Gb/s\n
+\nRotational Speed: 7200 RPM (Rotations Per Minute)\n
+\nCache Size: 256MB\n
+\nData Transfer Rate: Up to 214 MB/s\n
+\nAdvanced Format Technology: Yes (improves performance and reliability)\n
+\nNAS Compatibility: Specifically designed for use in NAS systems, optimized for RAID environments.\n
+\nNoise Level: Not specified (typically designed for low-noise operation)\n
+\nWorkload Rate: The drive is optimized for 24x7 environments and has a higher workload rate compared to standard desktop drives.\n
+\nWarranty: WD typically provides a limited warranty; check the specific model for details."
                 android:textColor="@color/black"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"

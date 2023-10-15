@@ -26,9 +26,19 @@ class Hdd_no4_info : AppCompatActivity() {
 
         backbt = findViewById(R.id.Gpu_Products_Back_to_Category)
         backbt.setOnClickListener {
-            val int = Intent(this, Hdd_products_holder::class.java)
-            startActivity(int)
-            finish()
+            val intent = Intent(this, Hdd_products_holder::class.java)
+            startActivityWithAnimation(intent)
         }
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, Hdd_products_holder::class.java)
+        startActivityWithAnimation(intent)
+    }
+
+    fun startActivityWithAnimation(intent: Intent) {
+        startActivity(intent)
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+        finish()
     }
 }

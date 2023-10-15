@@ -49,7 +49,9 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="590dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginBottom="80dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/divider3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,19 +118,20 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="31dp"
+                android:textSize="12sp"
                 android:layout_marginBottom="0dp"
                 android:gravity="start"
-                android:text="Capacity: 1 TB
-                \nForm Factor: 3.5
-                \nInterface: SATA 6Gb/s
-                \nData Transfer: Rate: 600 MBps
-                \nBuffer Size: 64 MB
-                \nSpindle Speed: 5900 rpm
-                \nFeatures: 24x7 availability, ImagePerfect firmware
-                \nDimensions (WxDxH):
-                \n          101.85 mm x
-                \n          146.99 mm x
-                \n          20.2 mm"
+                android:text="Capacity: 1TB\n
+\nDrive Type: Traditional Hard Disk Drive (HDD)\n
+\nForm Factor: 3.5 inches (suitable for desktop surveillance systems)\n
+\nInterface: SATA 6.0 Gb/s\n
+\nRotational Speed: 5900 RPM (Rotations Per Minute)\n
+\nCache Size: Typically 64MB (varies depending on the specific model)\n
+\nData Transfer Rate: Up to 180 MB/s\n
+\nWorkload Rating: Designed for a workload of up to 180TB per year, which is higher than standard desktop drives.\n
+\nSurveillance-Optimized Features: The SkyHawk series is designed to handle the rigors of 24/7 surveillance environments with features like enhanced firmware, vibration tolerance, and support for multiple HD video streams.\n
+\nNoise Level: Not specified, but typically designed for low-noise operation.\n
+\nWarranty: Seagate typically provides a limited warranty; check the specific model for details."
                 android:textColor="@color/black"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"

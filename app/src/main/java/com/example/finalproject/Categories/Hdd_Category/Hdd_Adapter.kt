@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.finalproject.Categories.Cpu_Category.Cpu_Data_Class
 import com.example.finalproject.Products.Gpu_products_info.Gpu_no10_info
 import com.example.finalproject.Products.Gpu_products_info.Gpu_no11_info
 import com.example.finalproject.Products.Gpu_products_info.Gpu_no12_info
@@ -40,7 +41,7 @@ import com.example.finalproject.Products.Hdd_products_info.Hdd_no8_info
 import com.example.finalproject.R
 import com.example.finalproject.rvHompagee
 
-class Hdd_Adapter constructor(private val getActivity: Hdd_products_holder, private val data: List<Hdd_Data_Class>) :
+class Hdd_Adapter constructor(private val getActivity: Hdd_products_holder, private var data: List<Hdd_Data_Class>) :
     RecyclerView.Adapter<Hdd_Adapter.MyViewHolder>() {
 
 
@@ -49,49 +50,27 @@ class Hdd_Adapter constructor(private val getActivity: Hdd_products_holder, priv
         return MyViewHolder(view)
     }
 
+    fun setFilteredListCpu(hdd_prod:List<Hdd_Data_Class>){
+        this.data=hdd_prod
+        notifyDataSetChanged()
+    }
+
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.hddModel.text = data[position].hddModelt
-        holder.hddPrice.text = data[position].hddPricet
+        holder.hddPrice.text = data[position].hddPricet.toString()
         holder.imageView.setImageResource(data[position].hddImage)
 
         holder.cardViewer.setOnClickListener {
-            if(position == 0){
-                val int = Intent(getActivity, Hdd_no1_info::class.java)
-                getActivity.startActivity(int)
+                val selectedCpu = data[position]
+
+                // Create an intent to start the new activity
+                val intent = Intent(getActivity, selectedCpu.targetActivity)
+
+                // Pass any additional information if needed
+
+                // Start the new activity
+                getActivity.startActivity(intent)
                 getActivity.finish()
-            } else if(position == 1){
-                val int = Intent(getActivity, Hdd_no2_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 2){
-                val int = Intent(getActivity, Hdd_no3_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 3){
-                val int = Intent(getActivity, Hdd_no4_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 4){
-                val int = Intent(getActivity, Hdd_no5_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 5){
-                val int = Intent(getActivity, Hdd_no6_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 6){
-                val int = Intent(getActivity, Hdd_no7_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 7){
-                val int = Intent(getActivity, Hdd_no8_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else{
-                val int = Intent (getActivity, rvHompagee::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }
         }
     }
 

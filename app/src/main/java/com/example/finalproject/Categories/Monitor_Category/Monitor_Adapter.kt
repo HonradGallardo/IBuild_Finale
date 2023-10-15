@@ -1,5 +1,6 @@
 package com.example.finalproject.Categories.Monitor_Category
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.R
 
 
-class Monitor_Adapter constructor(private val getActivity: Monitor_products_holder, private val data: List<Monitor_Data_Class>) :
+class Monitor_Adapter constructor(private val getActivity: Monitor_products_holder, private var data: List<Monitor_Data_Class>) :
     RecyclerView.Adapter<Monitor_Adapter.MyViewHolder>() {
 
 
@@ -20,13 +21,27 @@ class Monitor_Adapter constructor(private val getActivity: Monitor_products_hold
         return MyViewHolder(view)
     }
 
+    fun setFilteredListCpu(monitor_prod:List<Monitor_Data_Class>){
+        this.data=monitor_prod
+        notifyDataSetChanged()
+    }
+
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.monitorModel.text = data[position].monitorModelt
-        holder.monitorPrice.text = data[position].monitorPricet
+        holder.monitorPrice.text = data[position].monitorPricet.toString()
         holder.imageView.setImageResource(data[position].monitorImage)
 
         holder.cardViewer.setOnClickListener {
-            Toast.makeText(getActivity, data[position].monitorModelt, Toast.LENGTH_LONG).show()
+            val selectedCpu = data[position]
+
+            // Create an intent to start the new activity
+            val intent = Intent(getActivity, selectedCpu.targetActivity)
+
+            // Pass any additional information if needed
+
+            // Start the new activity
+            getActivity.startActivity(intent)
+            getActivity.finish()
         }
     }
 

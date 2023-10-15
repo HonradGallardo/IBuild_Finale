@@ -49,7 +49,9 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="590dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginBottom="80dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/divider3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +82,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif-light"
-                android:text="Seagate FireCuda"
+                android:text="Seagate Exos 2TB"
                 android:textColor="@color/navy"
                 android:textSize="22.5dp"
                 android:textStyle="bold"
@@ -115,16 +117,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
+                android:textSize="12sp"
                 android:layout_marginEnd="31dp"
                 android:layout_marginBottom="0dp"
                 android:gravity="start"
-                android:text="Storage Capacity : 1 Tb
-                \nEnclosure : Internal
-                \nInterface : Sata-6gbps
-                \nBytes Per
-                \nSector : 512n
-                \nDrive Dimensions : 2.5 Inch
-                \nMtbf : 1.4 Million Hours"
+                android:text="Capacity: 2TB\n
+\nDrive Type: Traditional Hard Disk Drive (HDD)\n
+\nForm Factor: 3.5 inches (suitable for enterprise storage systems)\n
+\nInterface: SATA 6.0 Gb/s or SAS (Serial Attached SCSI)\n
+\nRotational Speed: Typically 7200 RPM (Rotations Per Minute)\n
+\nCache Size: Typically with a large cache, but the exact size may vary depending on the specific model.\n
+\nData Transfer Rate: Up to 226 MB/s (varies depending on the specific model)\n
+\nReliability and Performance Features: The Exos series is designed for high reliability, with features such as PowerChoice for power savings, RAID Rebuild for quick data recovery, and a robust design for 24/7 operation in enterprise environments.\n
+\nWarranty: Seagate typically provides a limited warranty; check the specific model for details."
                 android:textColor="@color/black"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"

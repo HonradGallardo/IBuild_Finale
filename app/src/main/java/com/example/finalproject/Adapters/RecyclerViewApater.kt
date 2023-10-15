@@ -55,7 +55,7 @@ class RecyclerViewApater(private val getActivity: rvHompagee, private val produc
                 getActivity.startActivity(int)
                 getActivity.finish()
             }else if(position==1){
-                val int = Intent(getActivity,Mobo_no1_info::class.java)
+                val int = Intent(getActivity, Mobo_no1_info::class.java)
                 getActivity.startActivity(int)
                 getActivity.finish()
             }else if(position==2){

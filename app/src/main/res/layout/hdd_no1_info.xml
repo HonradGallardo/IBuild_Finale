@@ -49,7 +49,9 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="590dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginBottom="80dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/divider3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +82,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif-light"
-                android:text="Seagate FireCuda"
+                android:text="Seagate FireCuda HDD 2TB"
                 android:textColor="@color/navy"
                 android:textSize="22.5dp"
                 android:textStyle="bold"
@@ -115,19 +117,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
+                android:textSize="12sp"
                 android:layout_marginEnd="31dp"
                 android:layout_marginBottom="0dp"
                 android:gravity="start"
-                android:text="Product Info-
-\nDimensions: L x W x D
-\n5.787 in × 4.010 in × 5.787in
-
-\nWeight: 716g / 1.58lb\n
-
-\nSystem Requirements-
-Compatible with:
-\n             * Windows
-\n             * macOS systems."
+                android:text="Capacity: 2TB
+\nDrive Type: Hybrid drive (HDD with SSD cache)\n
+\nForm Factor: 3.5 inches (suitable for desktop computers)\n
+\nInterface: SATA 6.0 Gb/s\n
+\nRotational Speed: 7200 RPM (Rotations Per Minute)\n
+\nSSD Cache: Typically includes a small NAND flash SSD cache (commonly 8GB)\n
+\nData Transfer Rate: Up to 210 MB/s (varies depending on the specific model)\n
+\nAverage Latency: Not specified (but typically lower than standard HDDs due to the SSD cache)\n
+\nBuffer Size: Not specified (but likely includes a DRAM cache)\n
+\nWarranty: Seagate typically provides a limited warranty, check the specific model for details."
                 android:textColor="@color/black"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"

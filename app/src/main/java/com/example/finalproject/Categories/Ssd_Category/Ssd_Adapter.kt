@@ -1,5 +1,6 @@
 package com.example.finalproject.Categories.Ssd_Category
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,9 +9,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.finalproject.Categories.MoBo_Category.Mobo_Data_Class
 import com.example.finalproject.R
 
-class Ssd_Adapter constructor(private val getActivity: Ssd_products_holder, private val data: List<Ssd_Data_Class>) :
+class Ssd_Adapter constructor(private val getActivity: Ssd_products_holder, private var data: List<Ssd_Data_Class>) :
     RecyclerView.Adapter<Ssd_Adapter.MyViewHolder>() {
 
 
@@ -19,13 +21,27 @@ class Ssd_Adapter constructor(private val getActivity: Ssd_products_holder, priv
         return MyViewHolder(view)
     }
 
+    fun setFilteredListCpu(ssd_prod:List<Ssd_Data_Class>){
+        this.data=ssd_prod
+        notifyDataSetChanged()
+    }
+
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.ssdModel.text = data[position].ssdModelt
-        holder.ssdPrice.text = data[position].ssdPricet
+        holder.ssdPrice.text = data[position].ssdPricet.toString()
         holder.imageView.setImageResource(data[position].ssdImage)
 
         holder.cardViewer.setOnClickListener {
-            Toast.makeText(getActivity, data[position].ssdModelt, Toast.LENGTH_LONG).show()
+            val selectedCpu = data[position]
+
+            // Create an intent to start the new activity
+            val intent = Intent(getActivity, selectedCpu.targetActivity)
+
+            // Pass any additional information if needed
+
+            // Start the new activity
+            getActivity.startActivity(intent)
+            getActivity.finish()
         }
     }
 

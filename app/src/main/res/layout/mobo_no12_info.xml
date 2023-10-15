@@ -4,6 +4,232 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MoBo_products_info.Mobo_no12_info">
+    android:background="@drawable/gradient_color"
+    tools:context=".Products.MoBo_products_info.Mobo_no12_info">
+
+
+    <ImageView
+        android:id="@+id/Mobo_Products_Back_to_Category"
+        android:layout_width="41dp"
+        android:layout_height="43dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.014"
+        app:srcCompat="@drawable/back_arrow_back_24"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/Mobo_Cart"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.959"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        app:srcCompat="@drawable/blue_shopping_cart_24"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="60dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="61dp"
+        android:layout_marginBottom="80dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/divider3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager2"
+                android:layout_width="match_parent"
+                android:layout_height="275dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-light"
+                android:text="MSI MPG B550 Gaming Edge WiFi"
+                android:textColor="@color/navy"
+                android:textSize="22.5dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/divider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="Price: ₱9,950.00"
+                android:textColor="@color/navy"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toTopOf="@+id/divider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.529" />
+
+            <View
+                android:id="@+id/divider23"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="31dp"
+                android:textSize="12sp"
+                android:layout_marginBottom="0dp"
+                android:gravity="start"
+                android:text="Chipset: AMD B550 Chipset
+\nSocket: AM4 socket for AMD Ryzen processors\n
+\nMemory:
+\n4 x DDR4 memory slots, supporting up to 128GB
+\n          * Supports DDR4 1866/ 2133/ 2400/ 2667/ 2800/
+\n              2933/ 3000/ 3066/ 3200 MHz by JEDEC\n
+\n          * Supports DDR4 2667/ 2800/ 2933/ 3000/ 3066/
+\n              3200/ 3466/ 3600/ 3733/ 3866/ 4000/ 4133/
+\n              4266/ 4400/ 4533/ 4600/ 4733/ 4800/ 4866/
+\n              5000/ 5066/ 5200 MHz by A-XMP OC MODE\n
+\n          * Dual channel memory architecture
+\n          * Supports non-ECC UDIMM memory
+\n          * Supports ECC UDIMM memory (non-ECC mode)
+\n          * Supports un-buffered memory\n
+
+\nExpansion Slots:
+\n          1 x PCIe 4.0/3.0 x16 slot (PCI_E1)
+\n          1 x PCIe 3.0 x16 slot (PCI_E3, supports x4 mode)
+\n          2 x PCIe 3.0 x1 slots\n
+
+\nMulti-GPU Support:
+\n          Supports 2-Way AMD CrossFire Technology\n
+
+\nStorage:
+\n          1 x M.2 slot (Key M)
+\n          6 x SATA 6Gb/s ports\n
+
+\nNetworking:
+\n          Realtek® RTL8125B 2.5G LAN
+\n          Intel® Wi-Fi 6 AX200
+\n          Bluetooth 5.1\n
+
+\nAudio:
+\n          Realtek® ALC1200 Codec
+\n          7.1-Channel High Definition Audio
+\n          Supports optical S/PDIF output\n
+
+\nUSB:
+\n          1 x USB 3.2 Gen 2 10Gbps Type-C port-back panel
+\n          1 x USB 3.2 Gen 2 10Gbps Type-A port-back panel
+\n          2 x USB 3.2 Gen 1 5Gbps ports-back panel
+\n          2 x USB 3.2 Gen 1 5Gbps ports available through
+\n                   the internal USB 3.2 Gen 1 connector
+\n          6 x USB 2.0 ports (2 Type-A ports on the back panel,
+\n          4 ports available through the internal
+\n                   USB 2.0 connectors)\n
+
+\nWireless LAN and Bluetooth:
+\n          Intel® Wi-Fi 6 AX200 module
+\n          Supports Wi-Fi 802.11 a/b/g/n/ac/ax, dual band
+\n              (2.4GHz, 5GHz) up to 2.4 Gbps speed
+\n          Supports Bluetooth 5.1\n
+
+\nRGB Lighting:
+\n          Mystic Light RGB LED lighting control\n
+
+\nForm Factor: ATX Form Factor (12 in. x 9.6 in.)"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="80dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:background="@color/navy"
+        android:text="Add to Cart"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:background="@color/navy"
+        android:text="Buy Now"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toStartOf="@+id/Mobo_Cart"
+        app:layout_constraintStart_toEndOf="@+id/Mobo_Products_Back_to_Category"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logonamin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

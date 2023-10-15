@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.finalproject.Categories.Cpu_Category.Cpu_Data_Class
 import com.example.finalproject.R
 import com.example.finalproject.Categories.Gpu_Category.Gpu_products_holder
 import com.example.finalproject.Products.Cpu_products_info.Cpu_no10_info
@@ -53,7 +54,7 @@ import com.example.finalproject.Products.Gpu_products_info.Gpu_no8_info
 import com.example.finalproject.Products.Gpu_products_info.Gpu_no9_info
 import com.example.finalproject.rvHompagee
 
-class Gpu_Adapter constructor(private val getActivity: Gpu_products_holder, private val data: List<Gpu_Data_Class>) :
+class Gpu_Adapter constructor(private val getActivity: Gpu_products_holder, private var data: List<Gpu_Data_Class>) :
     RecyclerView.Adapter<Gpu_Adapter.MyViewHolder>() {
 
 
@@ -62,97 +63,28 @@ class Gpu_Adapter constructor(private val getActivity: Gpu_products_holder, priv
         return MyViewHolder(view)
     }
 
+    fun setFilteredListCpu(Gpu_prod:List<Gpu_Data_Class>){
+        this.data=Gpu_prod
+        notifyDataSetChanged()
+    }
+
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.gpuModel.text = data[position].gpuModelt
-        holder.gpuPrice.text = data[position].gpuPricet
+        holder.gpuPrice.text = data[position].gpuPricet.toString()
         holder.imageView.setImageResource(data[position].gpuImage)
 
         holder.cardViewer.setOnClickListener {
-            if(position == 0){
-                val int = Intent(getActivity, Gpu_no1_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            } else if(position == 1){
-                val int = Intent(getActivity, Gpu_no2_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 2){
-                val int = Intent(getActivity, Gpu_no3_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 3){
-                val int = Intent(getActivity, Gpu_no4_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 4){
-                val int = Intent(getActivity, Gpu_no5_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 5){
-                val int = Intent(getActivity, Gpu_no6_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 6){
-                val int = Intent(getActivity, Gpu_no7_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 7){
-                val int = Intent(getActivity, Gpu_no8_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 8){
-                val int = Intent(getActivity, Gpu_no9_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 9){
-                val int = Intent(getActivity, Gpu_no10_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 10){
-                val int = Intent(getActivity, Gpu_no11_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 11){
-                val int = Intent(getActivity, Gpu_no12_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 12){
-                val int = Intent(getActivity, Gpu_no13_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 13){
-                val int = Intent(getActivity, Gpu_no14_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 14){
-                val int = Intent(getActivity, Gpu_no15_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 15){
-                val int = Intent(getActivity, Gpu_no16_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 16){
-                val int = Intent(getActivity, Gpu_no17_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 17){
-                val int = Intent(getActivity, Gpu_no18_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 18){
-                val int = Intent(getActivity, Gpu_no19_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position == 19){
-                val int = Intent(getActivity, Gpu_no20_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else{
-                val int = Intent (getActivity, rvHompagee::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }
+            val selectedGpu = data[position]
+
+            // Create an intent to start the new activity
+            val intent = Intent(getActivity, selectedGpu.targetActivity)
+
+            // Pass any additional information if needed
+
+            // Start the new activity
+            getActivity.startActivity(intent)
+            getActivity.finish()
+
         }
     }
 

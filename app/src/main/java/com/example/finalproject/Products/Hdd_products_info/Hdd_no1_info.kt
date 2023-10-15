@@ -7,6 +7,7 @@ import android.widget.ImageView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.finalproject.Categories.Gpu_Category.Gpu_products_holder
 import com.example.finalproject.Categories.Hdd_Category.Hdd_products_holder
+import com.example.finalproject.Categories.MoBo_Category.Mobo_products_holder
 import com.example.finalproject.Products.Cpu_products_info.ViewPager_Adapter
 import com.example.finalproject.R
 
@@ -19,19 +20,27 @@ class Hdd_no1_info : AppCompatActivity() {
 
         val viewPager2: ViewPager2 = findViewById(R.id.viewPager2)
         val images = listOf(
-            R.drawable.hdd_img1,
             R.drawable.hdd_info1_img1,
-            R.drawable.hdd_info1_img2,
-            R.drawable.hdd_info1_img3,
-            R.drawable.hdd_info1_img4)
+            R.drawable.hdd_img1,
+            R.drawable.hdd_info1_img2)
 
         viewPager2.adapter = ViewPager_Adapter(images)
 
         backbt = findViewById(R.id.Gpu_Products_Back_to_Category)
         backbt.setOnClickListener {
-            val int = Intent(this, Hdd_products_holder::class.java)
-            startActivity(int)
-            finish()
+            val intent = Intent(this, Hdd_products_holder::class.java)
+            startActivityWithAnimation(intent)
         }
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, Hdd_products_holder::class.java)
+        startActivityWithAnimation(intent)
+    }
+
+    fun startActivityWithAnimation(intent: Intent) {
+        startActivity(intent)
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+        finish()
     }
 }

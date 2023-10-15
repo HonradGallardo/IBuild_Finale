@@ -49,7 +49,9 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="590dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginBottom="80dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/divider3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,26 +118,19 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="31dp"
+                android:textSize="12sp"
                 android:layout_marginBottom="0dp"
                 android:gravity="start"
-                android:text="Manufacturer: Western Digital
-\nPart Number: WD10EZRZ-00HTKB0
-\nProduct Line: Blue
-\nProduct Type: Internal Hard Drive
-\nForm Factor: 3.5-inch
-\nCapacity: 1TB
-\nCache: 64MB
-\nSpindle Speed: 5400 RPM
-\nAverage Seek Time: 12ms
-\nDrive Interface Type: SATA 6Gbps\n
-
-\nKey Features:
-\nTested for Compatibility
-\nIntelliSeek Technology
-\nLower Power Consumption
-\nNo Touch RAM Lead Technology
-\nEasy Upgrade Your Drive Storage
-\nWD FIT Lab Testing Quality Assurance"
+                android:text="Capacity: 1TB\n
+\nDrive Type: Traditional Hard Disk Drive (HDD)\n
+\nForm Factor: 3.5 inches (suitable for desktop computers)\n
+\nInterface: SATA 6.0 Gb/s\n
+\nRotational Speed: 5400 RPM (Rotations Per Minute)\n
+\nCache Size: 64MB\n
+\nData Transfer Rate: Up to 150 MB/s\n
+\nAdvanced Format Technology: Yes (improves performance and reliability)\n
+\nNoise Level: Not specified (but generally lower than 7200 RPM HDDs)\n
+\nWarranty: WD typically provides a limited warranty, check the specific model for details."
                 android:textColor="@color/black"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"

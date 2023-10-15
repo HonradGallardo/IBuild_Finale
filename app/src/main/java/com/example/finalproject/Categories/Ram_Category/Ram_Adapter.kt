@@ -1,5 +1,6 @@
 package com.example.finalproject.Categories.Ram_Category
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,9 +9,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.finalproject.Categories.MoBo_Category.Mobo_Data_Class
 import com.example.finalproject.R
 
-class Ram_Adapter constructor(private val getActivity: Ram_products_holder, private val data: List<Ram_Data_Class>) :
+class Ram_Adapter constructor(private val getActivity: Ram_products_holder, private var data: List<Ram_Data_Class>) :
     RecyclerView.Adapter<Ram_Adapter.MyViewHolder>() {
 
 
@@ -19,13 +21,27 @@ class Ram_Adapter constructor(private val getActivity: Ram_products_holder, priv
         return MyViewHolder(view)
     }
 
+    fun setFilteredListCpu(ram_prod:List<Ram_Data_Class>){
+        this.data=ram_prod
+        notifyDataSetChanged()
+    }
+
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.ramModel.text = data[position].ramModelt
-        holder.ramPrice.text = data[position].ramPricet
+        holder.ramPrice.text = data[position].ramPricet.toString()
         holder.imageView.setImageResource(data[position].ramImage)
 
         holder.cardViewer.setOnClickListener {
-            Toast.makeText(getActivity, data[position].ramModelt, Toast.LENGTH_LONG).show()
+            val selectedCpu = data[position]
+
+            // Create an intent to start the new activity
+            val intent = Intent(getActivity, selectedCpu.targetActivity)
+
+            // Pass any additional information if needed
+
+            // Start the new activity
+            getActivity.startActivity(intent)
+            getActivity.finish()
         }
     }
 
