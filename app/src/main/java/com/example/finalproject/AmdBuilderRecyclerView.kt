@@ -1,7 +1,7 @@
 package com.example.finalproject
 
 import com.example.finalproject.Adapters.AmdBuilderRecyclerViewAdapter
-import DataClass.AmdBuilderDataClass
+import com.example.finalproject.DataClass.AmdBuilderDataClass
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

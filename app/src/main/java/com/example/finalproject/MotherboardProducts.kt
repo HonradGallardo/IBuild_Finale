@@ -1,7 +1,7 @@
 package com.example.finalproject
 
 import com.example.finalproject.Adapters.AmdMotherboardAdapter
-import DataClass.AmdMotherboardDataClass
+import com.example.finalproject.DataClass.AmdMotherboardDataClass
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

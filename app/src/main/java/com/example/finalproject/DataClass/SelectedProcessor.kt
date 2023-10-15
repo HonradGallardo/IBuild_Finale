@@ -1,4 +1,4 @@
-package DataClass
+package com.example.finalproject.DataClass
 
 data class SelectedProcessor(
     var title: String = "",

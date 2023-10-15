@@ -1,6 +1,6 @@
 package com.example.finalproject.Adapters
 
-import DataClass.AmdBuilderDataClass
+import com.example.finalproject.DataClass.AmdBuilderDataClass
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View

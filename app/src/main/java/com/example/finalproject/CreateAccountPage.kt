@@ -1,6 +1,6 @@
 package com.example.finalproject
 
-import Database.DatabaseHelper
+import com.example.finalproject.Database.DatabaseHelper
 import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

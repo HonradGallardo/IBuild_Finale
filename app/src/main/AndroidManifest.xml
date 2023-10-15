@@ -12,6 +12,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProject"
         tools:targetApi="31">
+
+        <activity
+            android:name=".Products.Case_products_info.Case_no10_info"
+            android:exported="false" />
+        <activity
+            android:name=".Products.Case_products_info.Case_no9_info"
+            android:exported="false" />
+        <activity
+            android:name=".Products.Case_products_info.Case_no8_info"
+            android:exported="false" />
+        <activity
+            android:name=".Products.Case_products_info.Case_no7_info"
+            android:exported="false" />
+        <activity
+            android:name=".Products.Case_products_info.Case_no6_info"
+            android:exported="false" />
+        <activity
+            android:name=".Products.Case_products_info.Case_no5_info"
+            android:exported="false" />
+        <activity
+            android:name=".Products.Case_products_info.Case_no4_info"
+            android:exported="false" />
+        <activity
+            android:name=".Products.Case_products_info.Case_no3_info"
+            android:exported="false" />
+        <activity
+            android:name=".Products.Case_products_info.Case_no2_info"
+            android:exported="false" />
+        <activity
+            android:name=".Products.Case_products_info.Case_no1_info"
+            android:exported="false" />
         <activity
             android:name=".AmdBuilderRecyclerView"
             android:screenOrientation="portrait"
@@ -21,7 +52,7 @@
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".AmdMotherboardProducts"
+            android:name=".Categories.Case_Category.Case_product_holder"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
@@ -29,7 +60,7 @@
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".amdbuilder"
+            android:name=".AmdBuild.amd_build"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
