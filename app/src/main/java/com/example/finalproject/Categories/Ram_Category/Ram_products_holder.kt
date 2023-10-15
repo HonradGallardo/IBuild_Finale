@@ -121,7 +121,7 @@ class Ram_products_holder : AppCompatActivity() {
         data.add(ramModels)
 
         ramModels = Ram_Data_Class(
-            "Kingston HyperX Fury", 3450.00, R.drawable.ram_img4, Ram_no4_info::class.java)
+            "Kingston HyperX Fury RGB", 3450.00, R.drawable.ram_img4, Ram_no4_info::class.java)
         data.add(ramModels)
 
         ramModels = Ram_Data_Class("ADATA XPG Spectrix D80", 4950.00, R.drawable.ram_img5, Ram_no5_info::class.java)
