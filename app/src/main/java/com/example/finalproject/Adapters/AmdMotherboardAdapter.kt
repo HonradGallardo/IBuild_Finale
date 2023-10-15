@@ -1,6 +1,6 @@
 package com.example.finalproject.Adapters
 
-import DataClass.AmdMotherboardDataClass
+import com.example.finalproject.DataClass.AmdMotherboardDataClass
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View

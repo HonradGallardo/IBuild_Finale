@@ -1,14 +1,13 @@
 package com.example.finalproject.Adapters
 
-import DataClass.HomepageCategoriesDataClass
+import com.example.finalproject.DataClass.HomepageCategoriesDataClass
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.finalproject.AmdProcessorProducts
+import com.example.finalproject.Categories.Case_Category.Case_product_holder
 import com.example.finalproject.Categories.Cpu_Category.Cpu_products_holder
 import com.example.finalproject.Categories.Gpu_Category.Gpu_products_holder
 import com.example.finalproject.Categories.Hdd_Category.Hdd_products_holder
@@ -38,30 +37,39 @@ class HomepageCategoriesAdapter constructor(private val getActivity: rvHompagee,
             if(position == 0){
                 val int = Intent(getActivity, Cpu_products_holder::class.java)
                 getActivity.startActivity(int)
+                getActivity.finish()
             } else if(position == 1){
                 val int = Intent(getActivity, Mobo_products_holder::class.java)
                 getActivity.startActivity(int)
+                getActivity.finish()
             }else if(position == 2){
                 val int = Intent(getActivity, Gpu_products_holder::class.java)
                 getActivity.startActivity(int)
+                getActivity.finish()
             }else if(position == 3){
                 val int = Intent(getActivity, Ram_products_holder::class.java)
                 getActivity.startActivity(int)
+                getActivity.finish()
             }else if(position == 4){
                 val int = Intent(getActivity, Psu_products_holder::class.java)
                 getActivity.startActivity(int)
+                getActivity.finish()
             }else if(position == 5){
                 val int = Intent(getActivity, Ssd_products_holder::class.java)
                 getActivity.startActivity(int)
+                getActivity.finish()
             }else if(position == 6){
                 val int = Intent(getActivity, Hdd_products_holder::class.java)
                 getActivity.startActivity(int)
+                getActivity.finish()
             }else if(position == 7){
                 val int = Intent(getActivity, Monitor_products_holder::class.java)
                 getActivity.startActivity(int)
+                getActivity.finish()
             }else{
-                val int = Intent (getActivity, rvHompagee::class.java)
+                val int = Intent (getActivity, Case_product_holder::class.java)
                 getActivity.startActivity(int)
+                getActivity.finish()
             }
         }
     }

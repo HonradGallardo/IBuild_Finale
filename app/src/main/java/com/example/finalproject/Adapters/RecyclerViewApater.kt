@@ -1,6 +1,6 @@
 package com.example.finalproject.Adapters
 
-import DataClass.Product
+import com.example.finalproject.DataClass.Product
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -25,7 +25,7 @@ import com.example.finalproject.R
 import com.example.finalproject.rvHompagee
 
 
-class RecyclerViewApater(private val getActivity: rvHompagee, private val productList: List<Product> )
+class RecyclerViewApater(private val getActivity: rvHompagee, private var productList: List<Product> )
     : RecyclerView.Adapter<RecyclerViewApater.MyViewHolder>(){
 
 
@@ -47,50 +47,19 @@ class RecyclerViewApater(private val getActivity: rvHompagee, private val produc
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.productImage.setImageResource(productList[position].image)
         holder.title.text = productList[position].title
-        holder.price.text = productList[position].price
+        holder.price.text = productList[position].price.toString()
 
         holder.cardView.setOnClickListener {
-            if(position==0) {
-                val int = Intent(getActivity, Cpu_no1_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position==1){
-                val int = Intent(getActivity, Mobo_no1_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position==2){
-                val int = Intent(getActivity, Gpu_no1_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position==3){
-                val int = Intent(getActivity, Ram_no1_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position==4){
-                val int = Intent(getActivity, Psu_no1_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position==5){
-                val int = Intent(getActivity, Hdd_no6_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position==6){
-                val int = Intent(getActivity, Ssd_no11_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position==7){
-                val int = Intent(getActivity, Monitor_no18_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position==8){
-                val int = Intent(getActivity, Mobo_no1_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }else if(position==9){
-                val int = Intent(getActivity, Mobo_no1_info::class.java)
-                getActivity.startActivity(int)
-                getActivity.finish()
-            }
+            val selectedGpu = productList[position]
+
+            // Create an intent to start the new activity
+            val intent = Intent(getActivity, selectedGpu.targetActivity)
+
+            // Pass any additional information if needed
+
+            // Start the new activity
+            getActivity.startActivity(intent)
+            getActivity.finish()
         }
 
     }
@@ -104,6 +73,12 @@ class RecyclerViewApater(private val getActivity: rvHompagee, private val produc
         val price : TextView = itemView.findViewById(R.id.tv_price)
         val cardView : CardView = itemView.findViewById(R.id.cardView)
 
+
+    }
+
+    fun setFilteredListrvHomepage(DataClass : List<Product>){
+        this.productList = DataClass
+        notifyDataSetChanged()
 
     }
 
