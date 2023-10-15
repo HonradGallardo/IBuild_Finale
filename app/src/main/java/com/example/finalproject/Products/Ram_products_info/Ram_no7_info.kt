@@ -17,9 +17,10 @@ class Ram_no7_info : AppCompatActivity() {
         setContentView(R.layout.ram_no7_info)
         val viewPager2: ViewPager2 = findViewById(R.id.viewPager2)
         val images = listOf(
-            R.drawable.ram_info1_img1,
-            R.drawable.ram_info1_img2,
-            R.drawable.ram_info1_img3
+            R.drawable.ram_img7,
+            R.drawable.ram_info7_img1,
+            R.drawable.ram_info7_img2,
+            R.drawable.ram_info7_img3
         )
 
         viewPager2.adapter = ViewPager_Adapter(images)

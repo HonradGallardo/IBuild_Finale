@@ -18,9 +18,8 @@ class Ram_no3_info : AppCompatActivity() {
         val viewPager2: ViewPager2 = findViewById(R.id.viewPager2)
         val images = listOf(
             R.drawable.ram_img3,
-            R.drawable.ram_info1_img1,
-            R.drawable.ram_info1_img2,
-            R.drawable.ram_info1_img3
+            R.drawable.ram_info3_img1,
+            R.drawable.ram_info3_img2
         )
 
         viewPager2.adapter = ViewPager_Adapter(images)
