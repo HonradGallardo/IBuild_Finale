@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.AmdBuild.amd_build
 import com.example.finalproject.AmdBuild.amd_build_Data_Class
+import com.example.finalproject.Cart_Activity.Cart
 import com.example.finalproject.IntelBuild.IntelBuild
 import com.example.finalproject.Products.Cpu_products_info.Cpu_no1_info
 import com.example.finalproject.Products.Gpu_products_info.Gpu_no1_info
@@ -43,6 +44,7 @@ class rvHompagee : AppCompatActivity() {
     private lateinit var bottomNaviation : BottomNavigationView
     private lateinit var searchView : SearchView
 
+    private lateinit var Cart_hompage : ImageView
 
 
     @SuppressLint("MissingInflatedId")
@@ -62,6 +64,13 @@ class rvHompagee : AppCompatActivity() {
             }
 
         })
+
+        Cart_hompage = findViewById(R.id.img_cart_homepage)
+        Cart_hompage.setOnClickListener {
+            val int = Intent(this, Cart::class.java)
+            startActivity(int)
+            finish()
+        }
 
         categories_dataClass = ArrayList()
 

@@ -13,60 +13,74 @@
         android:theme="@style/Theme.FinalProject"
         tools:targetApi="31">
 
+
+        <activity
+            android:name=".Cart_Activity.Cart"
+            android:screenOrientation="portrait"
+            android:exported="false" />
         <activity
             android:name=".Products.Case_products_info.Case_no10_info"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Products.Case_products_info.Case_no9_info"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Products.Case_products_info.Case_no8_info"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Products.Case_products_info.Case_no7_info"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Products.Case_products_info.Case_no6_info"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Products.Case_products_info.Case_no5_info"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Products.Case_products_info.Case_no4_info"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Products.Case_products_info.Case_no3_info"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Products.Case_products_info.Case_no2_info"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Products.Case_products_info.Case_no1_info"
             android:exported="false" />
         <activity
             android:name=".AmdBuilderRecyclerView"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MotherboardProducts"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Categories.Case_Category.Case_product_holder"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".AmdProcessorProducts"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".AmdBuild.amd_build"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".IntelBuild.IntelBuild"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".rvHompagee"
             android:exported="false"
@@ -97,193 +111,161 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Categories.Cpu_Category.Cpu_products_holder"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Categories.MoBo_Category.Mobo_products_holder"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Categories.Hdd_Category.Hdd_products_holder"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Categories.Ssd_Category.Ssd_products_holder"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Categories.Psu_Category.Psu_products_holder"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Categories.Monitor_Category.Monitor_products_holder"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Categories.Ram_Category.Ram_products_holder"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Categories.Gpu_Category.Gpu_products_holder"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no1_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no2_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no3_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no4_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no5_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no6_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no7_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no8_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no9_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no10_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no11_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no12_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no13_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no14_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no15_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no16_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no17_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no18_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no19_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Cpu_products_info.Cpu_no20_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Gpu_products_info.Gpu_no1_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Gpu_products_info.Gpu_no2_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Gpu_products_info.Gpu_no3_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Gpu_products_info.Gpu_no4_info"
             android:exported="false"
@@ -369,13 +351,11 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Hdd_products_info.Hdd_no1_info"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Hdd_products_info.Hdd_no2_info"
             android:exported="false"
@@ -411,8 +391,6 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
-
         <activity
             android:name=".Products.MoBo_products_info.Mobo_no1_info"
             android:exported="false"
@@ -513,7 +491,6 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Monitor_products_info.Monitor_no1_info"
             android:exported="false"
@@ -614,7 +591,6 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Psu_products_info.Psu_no1_info"
             android:exported="false"
@@ -815,7 +791,6 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Products.Ssd_products_info.Ssd_no1_info"
             android:exported="false"
@@ -916,9 +891,6 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
-
-
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -49,16 +49,16 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="61dp"
         android:layout_marginBottom="80dp"
-        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/divider3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.436">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -117,7 +117,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
-                android:textSize="12sp"
                 android:layout_marginEnd="31dp"
                 android:layout_marginBottom="0dp"
                 android:gravity="start"
@@ -167,6 +166,7 @@
 \nSMP # CPUs:	1
 \nIntegrated Graphics:	N/A"
                 android:textColor="@color/black"
+                android:textSize="12sp"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

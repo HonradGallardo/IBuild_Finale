@@ -12,10 +12,12 @@ import android.widget.Toast
 
 class CreateAccountPage : AppCompatActivity() {
 
-    private lateinit var username : EditText
-    private lateinit var password : EditText
-    private lateinit var createAccount : Button
-    private lateinit var alreadyHaveAnAccountLogIn : TextView
+    private lateinit var username: EditText
+    private lateinit var email: EditText
+    private lateinit var password: EditText
+    private lateinit var confirmPassword: EditText
+    private lateinit var createAccount: Button
+    private lateinit var alreadyHaveAnAccountLogIn: TextView
     private lateinit var databaseHelper: DatabaseHelper
 
     @SuppressLint("MissingInflatedId")
@@ -27,56 +29,59 @@ class CreateAccountPage : AppCompatActivity() {
         databaseHelper = DatabaseHelper(this)
 
         username = findViewById(R.id.et_username_createAccountPage)
+        email = findViewById(R.id.et_email_createAccountPage)
         password = findViewById(R.id.et_password_createAccountPage)
+        confirmPassword = findViewById(R.id.et_Confirmpassword_createAccountPage)
         createAccount = findViewById(R.id.bt_createAccount)
         alreadyHaveAnAccountLogIn = findViewById(R.id.tv_already_have_an_account_logIn)
 
-
-
-        //DAPAT ITO MAPUPUNTA SA LANDING PAGE/HOMEPAGE
-//        createAccount.setOnClickListener {
-//            val int = Intent(this, LogInPage::class.java)
-//            startActivity(int)
-//            finish()
-//        }
-
         createAccount.setOnClickListener {
             val signUpUsername = username.text.toString()
+            val signUpEmail = email.text.toString()
             val signUpPassword = password.text.toString()
+            val signUpConfirmPassword = confirmPassword.text.toString()
 
-            if (isUsernameAndPasswordValid(signUpUsername, signUpPassword)) {
-                signUpDatabase(signUpUsername, signUpPassword)
-            } else {
-                Toast.makeText(this, "Username & Password should contain at least 10 characters", Toast.LENGTH_SHORT).show()
+            if (isEmailAndPasswordValid(signUpUsername, signUpEmail, signUpPassword, signUpConfirmPassword)) {
+                signUpDatabase(signUpUsername, signUpEmail, signUpPassword)
             }
         }
 
-        alreadyHaveAnAccountLogIn.setOnClickListener{
+        alreadyHaveAnAccountLogIn.setOnClickListener {
             val int = Intent(this, LogInPage::class.java)
             startActivity(int)
             finish()
         }
     }
-    private fun isUsernameAndPasswordValid(username: String, password: String): Boolean {
-        val USERNAME_MIN_LENGTH = 10
-        val USERNAME_MAX_LENGTH = 20
-        val PASSWORD_MAX_LENGTH = 10
 
-        val isUsernameValid = username.length in USERNAME_MIN_LENGTH..USERNAME_MAX_LENGTH
-        val isPasswordValid = password.length >= PASSWORD_MAX_LENGTH
+    private fun isEmailAndPasswordValid(username: String, email: String, password: String, confirmPassword: String): Boolean {
+        val isEmailValid = isValidEmail(email)
+        val isConfirmPasswordValid = confirmPassword == password
 
-        return isUsernameValid && isPasswordValid
+        if (!isEmailValid) {
+            Toast.makeText(this, "Invalid email format. Please include '@' in the email.", Toast.LENGTH_SHORT).show()
+        }
+
+        if (!isConfirmPasswordValid) {
+            Toast.makeText(this, "Password does not match", Toast.LENGTH_SHORT).show()
+        }
+
+        return isEmailValid && isConfirmPasswordValid
     }
-    private fun signUpDatabase(username : String, password : String){
-        val insertedRowId = databaseHelper.insertUser(username, password)
-        if (insertedRowId != -1L){
+
+    private fun isValidEmail(email: String): Boolean {
+        val emailRegex = "^[A-Za-z0-9+_.-]+@(.+)$"
+        return email.matches(emailRegex.toRegex())
+    }
+
+    private fun signUpDatabase(username: String, email: String, password: String) {
+        val insertedRowId = databaseHelper.insertUser(username, email, password)
+        if (insertedRowId != -1L) {
             Toast.makeText(this, "Signup Successful", Toast.LENGTH_SHORT).show()
-            val int = Intent(this, LogInPage::class.java)
-            startActivity(int)
+            val intent = Intent(this, LogInPage::class.java)
+            startActivity(intent)
             finish()
-        }else{
+        } else {
             Toast.makeText(this, "Signup Failed", Toast.LENGTH_SHORT).show()
         }
-
     }
 }

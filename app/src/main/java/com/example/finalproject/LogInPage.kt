@@ -15,7 +15,7 @@ import kotlin.math.log
 
 class LogInPage : AppCompatActivity() {
 
-    private lateinit var username: EditText
+    private lateinit var email: EditText
     private lateinit var password: EditText
     private lateinit var logIn: Button
     private lateinit var createAccount: TextView
@@ -30,7 +30,7 @@ class LogInPage : AppCompatActivity() {
 
         databaseHelper = DatabaseHelper(this)
 
-        username = findViewById(R.id.et_username_logInPage)
+        email = findViewById(R.id.et_email_logInPage)
         password = findViewById(R.id.et_passwordLogIn)
         logIn = findViewById(R.id.bt_logIn)
         createAccount = findViewById(R.id.tv_createAcc)
@@ -41,9 +41,11 @@ class LogInPage : AppCompatActivity() {
 
 
         logIn.setOnClickListener {
-            val logInUsername = username.text.toString()
+            val logInUsername = String()
+            val logInEmail = email.text.toString()
             val logInPassword = password.text.toString()
-            logInDatabase(logInUsername, logInPassword)
+            val logInconfirmPassword = String()
+            logInDatabase(logInEmail, logInPassword)
         }
 
 
@@ -58,8 +60,8 @@ class LogInPage : AppCompatActivity() {
 //        }
     }
 
-    private fun logInDatabase(username : String, password : String){
-        val userExists = databaseHelper.readUser(username, password)
+    private fun logInDatabase(email: String, password: String){
+        val userExists = databaseHelper.readUser(email, password)
         if (userExists){
             Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
             val int = Intent(this, rvHompagee::class.java)
