@@ -83,6 +83,7 @@ class Cpu_products_holder : AppCompatActivity() {
         backbt.setOnClickListener{
             val intent = Intent(this, rvHompagee::class.java)
             startActivityWithAnimation(intent)
+            finish()
         }
     }
 

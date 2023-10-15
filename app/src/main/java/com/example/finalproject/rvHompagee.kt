@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.AmdBuild.amd_build
 import com.example.finalproject.AmdBuild.amd_build_Data_Class
+import com.example.finalproject.IntelBuild.IntelBuild
 import com.example.finalproject.Products.Cpu_products_info.Cpu_no1_info
 import com.example.finalproject.Products.Gpu_products_info.Gpu_no1_info
 import com.example.finalproject.Products.Hdd_products_info.Hdd_no6_info
@@ -33,6 +34,7 @@ class rvHompagee : AppCompatActivity() {
     private lateinit var recyclerViewAdapter : RecyclerViewApater
     private var productList = mutableListOf<Product>()
     private lateinit var amdBuilder : ImageView
+    private lateinit var  intelbuild : ImageView
 
     private lateinit var homepagecategoriesRecyclerView : RecyclerView
     private var categories_dataClass = mutableListOf<HomepageCategoriesDataClass>()
@@ -74,6 +76,8 @@ class rvHompagee : AppCompatActivity() {
 
         amdBuilder = findViewById(R.id.img_amd_builder)
 
+        intelbuild = findViewById(R.id.img_intel_builder)
+
         bottomNaviation = findViewById(R.id.btnav_bottomNavigation)
 
         productList = ArrayList()
@@ -107,6 +111,10 @@ class rvHompagee : AppCompatActivity() {
 
         amdBuilder.setOnClickListener {
             val int = Intent(this, amd_build::class.java)
+            startActivity(int)
+        }
+        intelbuild.setOnClickListener {
+            val int = Intent(this, IntelBuild::class.java)
             startActivity(int)
         }
     }
