@@ -11,6 +11,20 @@ import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.Categories.Cpu_Category.Cpu_Data_Class
+import com.example.finalproject.Products.Cpu_products_info.Cpu_no1_info
+import com.example.finalproject.Products.Cpu_products_info.Cpu_no4_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no1_info
+import com.example.finalproject.Products.Gpu_products_info.Gpu_no8_info
+import com.example.finalproject.Products.Hdd_products_info.Hdd_no1_info
+import com.example.finalproject.Products.Hdd_products_info.Hdd_no2_info
+import com.example.finalproject.Products.MoBo_products_info.Mobo_no2_info
+import com.example.finalproject.Products.MoBo_products_info.Mobo_no3_info
+import com.example.finalproject.Products.Monitor_products_info.Monitor_no11_info
+import com.example.finalproject.Products.Monitor_products_info.Monitor_no12_info
+import com.example.finalproject.Products.Psu_products_info.Psu_no1_info
+import com.example.finalproject.Products.Psu_products_info.Psu_no3_info
+import com.example.finalproject.Products.Ram_products_info.Ram_no4_info
+import com.example.finalproject.Products.Ram_products_info.Ram_no8_info
 import com.example.finalproject.R
 import com.example.finalproject.rvHompagee
 import java.util.Locale
@@ -76,52 +90,52 @@ class amd_build : AppCompatActivity() {
     }
 
     private fun AmdCompatibleProducts(){
-        var products = amd_build_Data_Class("AMD RYZEN 5 5600", 8150.00, R.drawable.cpu_img1)
+        var products = amd_build_Data_Class("AMD RYZEN 5 5600", 8150.00, R.drawable.cpu_img1, Cpu_no1_info::class.java)
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("ASRock B450M STEEL LEGEND",5650.00, R.drawable.mobo_img3)
+        products = amd_build_Data_Class("ASRock B450M STEEL LEGEND",5650.00, R.drawable.mobo_img3, Mobo_no3_info::class.java)
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("GIGABYTE GTX 1660 SUPER GAMING OC",15500.00, R.drawable.gpu_img1)
+        products = amd_build_Data_Class("GIGABYTE GTX 1660 SUPER GAMING OC",15500.00, R.drawable.gpu_img1, Gpu_no1_info::class.java)
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("Kingston HyperX Fury 2x8", 3450.00, R.drawable.ram_img4)
+        products = amd_build_Data_Class("Kingston HyperX Fury 2x8", 3450.00, R.drawable.ram_img4, Ram_no4_info::class.java)
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("Seasonic Focus GX-650",5106.03, R.drawable.psu_img3)
+        products = amd_build_Data_Class("Seasonic Focus GX-650",5106.03, R.drawable.psu_img3, Psu_no3_info::class.java)
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("WD Black HDD 1TB",1699.00, R.drawable.hdd_img2)
+        products = amd_build_Data_Class("WD Black HDD 1TB",1699.00, R.drawable.hdd_img2, Hdd_no2_info::class.java)
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("WD Blue 3D NAND 1TB SSD", 5690.00, R.drawable.ssd_img3)
+        products = amd_build_Data_Class("WD Blue 3D NAND 1TB SSD", 5690.00, R.drawable.ssd_img3, Hdd_no2_info::class.java)//PAPALITAN NG DESTINATION
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("ASUS VS239H-P",7374.90, R.drawable.monitor_img12)
+        products = amd_build_Data_Class("ASUS VS239H-P",7374.90, R.drawable.monitor_img12, Monitor_no12_info::class.java)
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("AMD RYZEN 5 3400G", 4350.00, R.drawable.cpu_img4)
+        products = amd_build_Data_Class("AMD RYZEN 5 3400G", 4350.00, R.drawable.cpu_img4, Cpu_no4_info::class.java)
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("MSI B450M Mortar MAX",5565.00, R.drawable.mobo_img2)
+        products = amd_build_Data_Class("MSI B450M Mortar MAX",5565.00, R.drawable.mobo_img2, Mobo_no2_info::class.java)
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("MSI RX 580 GAMING X 8 GB",12130.00, R.drawable.gpu_img8)
+        products = amd_build_Data_Class("MSI RX 580 GAMING X 8 GB",12130.00, R.drawable.gpu_img8, Gpu_no8_info::class.java)
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("Corsair Dominator Platinum RGB", 6716.00, R.drawable.ram_img8)
+        products = amd_build_Data_Class("Corsair Dominator Platinum RGB", 6716.00, R.drawable.ram_img8, Ram_no8_info::class.java)
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("EVGA SuperNOVA 650 G5",6240.83, R.drawable.psu_img1)
+        products = amd_build_Data_Class("EVGA SuperNOVA 650 G5",6240.83, R.drawable.psu_img1, Psu_no1_info::class.java)
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("Seagate FireCuda HDD",6190.00, R.drawable.hdd_img1)
+        products = amd_build_Data_Class("Seagate FireCuda HDD",6190.00, R.drawable.hdd_img1, Hdd_no1_info::class.java)
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("Samsung 970 EVO Plus", 8550.00, R.drawable.ssd_img11)
+        products = amd_build_Data_Class("Samsung 970 EVO Plus", 8550.00, R.drawable.ssd_img11, Hdd_no1_info::class.java)//PAPALITAN NG DESTINATIO
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("Samsung SF350",6055.00, R.drawable.monitor_img11)
+        products = amd_build_Data_Class("Samsung SF350",6055.00, R.drawable.monitor_img11, Monitor_no11_info::class.java)
         Data_Class.add(products)
 
 

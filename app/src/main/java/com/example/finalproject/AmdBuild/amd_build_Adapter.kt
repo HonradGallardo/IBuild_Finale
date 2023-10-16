@@ -1,5 +1,6 @@
 package com.example.finalproject.AmdBuild
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,6 +29,14 @@ class amd_build_Adapter(private val getActivity: amd_build, private var DataClas
         holder.cpuModel.text = DataClass[position].title
         holder.cpuPrice.text = DataClass[position].price.toString()
         holder.imageView.setImageResource(DataClass[position].images)
+        holder.cardViewer.setOnClickListener{
+            val selectedProduct = DataClass[position]
+
+            val intent = Intent(getActivity, selectedProduct.targetActivity)
+
+            getActivity.startActivity(intent)
+            getActivity.finish()
+        }
     }
 
     class MyViewHolder (itemView : View) : RecyclerView.ViewHolder(itemView){

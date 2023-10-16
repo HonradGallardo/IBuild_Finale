@@ -23,9 +23,8 @@
 
             <TextView
                 android:id="@+id/tv_item_model"
-                android:layout_width="wrap_content"
+                android:layout_width="210dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:text="AMD Processor"
                 android:textColor="@color/black"
@@ -36,17 +35,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/img_add_processor_amdbuilder"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="end"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:src="@drawable/baseline_add_24"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-
-            <ImageView
                 android:id="@+id/item_image"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
@@ -54,6 +42,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/tv_item_model" />
+
+            <ImageView
+                android:id="@+id/trashIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/trashicon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/item_description"
