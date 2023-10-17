@@ -19,6 +19,7 @@ class CartDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         private const val COLUMN_PRICE = "price"
         private const val COLUMN_IMAGE_RES_ID = "image_res_id"
         private const val COLUMN_DESCRIPTION = "description"
+        private const val COLUMN_QUANTITY = "quantity"
 
 
     }
@@ -30,7 +31,8 @@ class CartDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
                 "$COLUMN_PRODUCT_NAME TEXT, " +
                 "$COLUMN_PRICE REAL, " +
                 "$COLUMN_IMAGE_RES_ID INTEGER, " +
-                "$COLUMN_DESCRIPTION TEXT)"
+                "$COLUMN_DESCRIPTION TEXT, "+
+                "$COLUMN_QUANTITY)"
 
         db.execSQL(createTableQuery)
     }
@@ -45,6 +47,7 @@ class CartDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
             put(COLUMN_PRICE, cartItem.price)
             put(COLUMN_IMAGE_RES_ID, cartItem.imageResource)
             put(COLUMN_DESCRIPTION, cartItem.description)
+            put(COLUMN_QUANTITY, cartItem.quantity)
         }
 
         val db = writableDatabase
@@ -73,7 +76,8 @@ class CartDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
                 val price = cursor.getDouble(cursor.getColumnIndex(COLUMN_PRICE))
                 val image = cursor.getInt(cursor.getColumnIndex(COLUMN_IMAGE_RES_ID))
                 val description = cursor.getString(cursor.getColumnIndex(COLUMN_DESCRIPTION))
-                cartItems.add(Cart_Data_Class(id, productName, price, description, image))
+                val quantity = cursor.getInt(cursor.getColumnIndex(COLUMN_QUANTITY))
+                cartItems.add(Cart_Data_Class(id, productName, price, description, image, quantity))
             }
         }
 

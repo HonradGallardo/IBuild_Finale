@@ -43,15 +43,6 @@ class Cpu_no1_info : AppCompatActivity() {
 
         Cpu_cart = findViewById(R.id.Cpu_Cart)
         Cpu_addToCart = findViewById(R.id.Cpu_addTo_Cart_button)
-        Cpu_addToCart.setOnClickListener {
-            val databaseHelper = CartDatabaseHelper(this)
-            val cartItem = Cart_Data_Class(2, "Ryzen", 1650.00, "RYZEN", R.drawable.cpu_img1)
-            val insertedRowId = databaseHelper.insertCartItem(cartItem)
-
-
-            val int = Intent(this, Cart::class.java)
-            startActivity(int)
-        }
 
 
     }

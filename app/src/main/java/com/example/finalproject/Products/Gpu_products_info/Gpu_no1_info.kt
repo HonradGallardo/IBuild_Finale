@@ -3,8 +3,12 @@ package com.example.finalproject.Products.Gpu_products_info
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.viewpager2.widget.ViewPager2
+import com.example.finalproject.Cart.Cart
+import com.example.finalproject.Cart.CartDatabaseHelper
+import com.example.finalproject.Cart.Cart_Data_Class
 import com.example.finalproject.Categories.Cpu_Category.Cpu_products_holder
 import com.example.finalproject.Categories.Gpu_Category.Gpu_products_holder
 import com.example.finalproject.Categories.Hdd_Category.Hdd_products_holder
@@ -14,6 +18,7 @@ import com.example.finalproject.R
 class Gpu_no1_info : AppCompatActivity() {
 
     private lateinit var backbt : ImageView
+    private lateinit var Cart_button_gpu : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.gpu_no1_info)
@@ -35,6 +40,9 @@ class Gpu_no1_info : AppCompatActivity() {
             val intent = Intent(this, Gpu_products_holder::class.java)
             startActivityWithAnimation(intent)
         }
+
+        Cart_button_gpu = findViewById(R.id.cart_button_gpu)
+
     }
 
     override fun onBackPressed() {

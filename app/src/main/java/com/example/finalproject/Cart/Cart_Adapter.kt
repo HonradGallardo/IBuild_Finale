@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.R
 
-class Cart_Adapter constructor(private val context: Context, private val DataClass : List<Cart_Data_Class>) : RecyclerView.Adapter<Cart_Adapter.MyViewHolder>(){
+class Cart_Adapter constructor(private val context: Context, private val DataClass : MutableList<Cart_Data_Class>, private val onItemRemoved: (List<Cart_Data_Class>) -> Unit, private val cartActivity: Cart) : RecyclerView.Adapter<Cart_Adapter.MyViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.cart_item_layout, parent, false)
@@ -26,6 +26,25 @@ class Cart_Adapter constructor(private val context: Context, private val DataCla
         holder.itemDescription.text = DataClass[position].description
         holder.itemPrice.text = DataClass[position].price.toString()
         holder.itemImage.setImageResource(DataClass[position].imageResource)
+        holder.quantityNumber.text = DataClass[position].quantity.toString()
+
+
+        holder.minusIcon.setOnClickListener {
+            if (DataClass[position].quantity > 1) {
+                DataClass[position].quantity--
+                updatePrice(holder, DataClass[position])
+                cartActivity.updateTotalPrice(DataClass)
+            }
+
+        }
+
+        holder.plusIcon.setOnClickListener {
+            DataClass[position].quantity++
+            updatePrice(holder, DataClass[position])
+            cartActivity.updateTotalPrice(DataClass)
+
+        }
+
         holder.trashIcon.setOnClickListener{
 
             val productId = DataClass[position].productId
@@ -34,13 +53,25 @@ class Cart_Adapter constructor(private val context: Context, private val DataCla
             val rowsDeleted = databaseHelper.deleteCartItem(productId)
 
             if (rowsDeleted > 0) {
-                Toast.makeText(context, "Item removed from the cart", Toast.LENGTH_SHORT).show()
                 // The item was successfully removed
+                DataClass.removeAt(position) // Remove the item from the list
+                notifyItemRemoved(position) // Notify the adapter that an item has been removed
+                notifyItemRangeChanged(position, DataClass.size) // Notify the adapter that data has changed
+                onItemRemoved(DataClass) // Notify the activity of the change
+
+
             } else {
                 Toast.makeText(context, "Reload the Page", Toast.LENGTH_SHORT).show()
             }
         }
     }
+
+    private fun updatePrice(holder: MyViewHolder, item: Cart_Data_Class) {
+        holder.quantityNumber.text = item.quantity.toString()
+        val totalPrice = item.price * item.quantity
+        holder.itemPrice.text = totalPrice.toString()
+    }
+
 
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         val itemModel : TextView = itemView.findViewById(R.id.tv_item_model)
@@ -48,6 +79,9 @@ class Cart_Adapter constructor(private val context: Context, private val DataCla
         val itemPrice : TextView = itemView.findViewById(R.id.item_price)
         val itemImage : ImageView = itemView.findViewById(R.id.item_image)
         val trashIcon : ImageView = itemView.findViewById(R.id.trashIcon)
+        val minusIcon : ImageView = itemView.findViewById(R.id.minus_icon)
+        val plusIcon : ImageView = itemView.findViewById(R.id.plus_icon)
+        val quantityNumber : TextView = itemView.findViewById(R.id.quantity_textView)
 
 
     }

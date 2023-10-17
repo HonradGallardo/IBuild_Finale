@@ -44,7 +44,7 @@ class Case_no1_info : AppCompatActivity() {
         addToCart = findViewById(R.id.addToCart_button)
         addToCart.setOnClickListener {
             val databaseHelper = CartDatabaseHelper(this)
-            val cartItem = Cart_Data_Class(1, "Tecware NexusAirm2", 1650.00, "CASE", R.drawable.tecwarenexusairm2)
+            val cartItem = Cart_Data_Class(1, "Tecware NexusAirm2", 1650.00, "CASE", R.drawable.tecwarenexusairm2, 1)
             val insertedRowId = databaseHelper.insertCartItem(cartItem)
 
 
