@@ -82,7 +82,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif-light"
-                android:text="ASUS ROG Strix B450-F Gaming"
+                android:text="PNY CS900 1TB"
                 android:textColor="@color/navy"
                 android:textSize="22.5dp"
                 android:textStyle="bold"
@@ -97,7 +97,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:text="Price: ₱7,850.00"
+                android:text="Price: ₱1,299.00"
                 android:textColor="@color/navy"
                 android:textSize="15sp"
                 android:textStyle="italic"
@@ -121,14 +121,49 @@
                 android:textSize="12sp"
                 android:layout_marginBottom="0dp"
                 android:gravity="start"
-                android:text="AM4 socket: Ready for AMD Ryzen™ processors
-\nFast memory and storage: Dual-channel DDR4 4400MHz (OC) and NVM Express® RAID supported.\n
-\nAura Sync RGB: Synchronize LED lighting with a vast portfolio of compatible PC gear.\n
-\nGaming connectivity: Dual M.2 and USB 3.1 Gen 2 Type-A connectors.\n
-\nGaming networking: Intel Gigabit Ethernet, plus ASUS LANGuard and GameFirst technologies.\n
-\n5-Way Optimization: Automated system-wide tuning, providing overclocking and cooling profiles that are tailor-made for your rig.\n
-\nGaming audio: SupremeFX S1220A teams with Sonic Studio III to create an aural landscape that draws you deeper into the action.\n
-\nGamer’s Guardian: Pre-mounted I/O shield, ASUS SafeSlot and premium components for maximum endurance.\n"
+                android:text="Form Factor:
+\n              2.5-inch SATA III
+
+\nCapacity: 1TB\n
+
+Interface:
+\n              SATA III (6.0 Gb/s)\n
+
+\nController:
+\n              Phison S11\n
+
+\nNAND Flash:
+\n              TLC (Triple-Level Cell)\n
+
+\nSequential Read Speed:
+\n              Up to 535 MB/s\n
+
+\nSequential Write Speed:
+\n              Up to 515 MB/s\n
+
+\nRandom Read IOPS:
+\n              Not always specified, but typical for SSDs,
+\n              it's in the range of tens of thousands.\n
+
+\nRandom Write IOPS:
+\n              Not always specified, but typical for SSDs,
+\n              it's in the range of tens of thousands.\n
+
+\nMTBF (Mean Time Between Failures):
+\n              Not always specified, but typical for SSDs,
+\n              it's in the range of millions of hours.\n
+
+\nEndurance (TBW - Terabytes Written):
+\n              Varies based on capacity. For 1TB, it's
+\n              typically around 100TBW.\n
+
+\nOperating Temperature:
+\n              Not always specified, but typically
+\n              within 0°C to 70°C.\n
+
+\nFeatures:
+\n              TRIM Support, Wear Leveling, ECC (Error-
+\n              Correcting Code), S.M.A.R.T. Support etc."
                 android:textColor="@color/black"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -82,7 +82,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif-light"
-                android:text="ASUS ROG Strix B450-F Gaming"
+                android:text="Kingston KC400 1TB"
                 android:textColor="@color/navy"
                 android:textSize="22.5dp"
                 android:textStyle="bold"
@@ -97,7 +97,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:text="Price: ₱7,850.00"
+                android:text="Price: ₱2,200.00"
                 android:textColor="@color/navy"
                 android:textSize="15sp"
                 android:textStyle="italic"
@@ -121,14 +121,32 @@
                 android:textSize="12sp"
                 android:layout_marginBottom="0dp"
                 android:gravity="start"
-                android:text="AM4 socket: Ready for AMD Ryzen™ processors
-\nFast memory and storage: Dual-channel DDR4 4400MHz (OC) and NVM Express® RAID supported.\n
-\nAura Sync RGB: Synchronize LED lighting with a vast portfolio of compatible PC gear.\n
-\nGaming connectivity: Dual M.2 and USB 3.1 Gen 2 Type-A connectors.\n
-\nGaming networking: Intel Gigabit Ethernet, plus ASUS LANGuard and GameFirst technologies.\n
-\n5-Way Optimization: Automated system-wide tuning, providing overclocking and cooling profiles that are tailor-made for your rig.\n
-\nGaming audio: SupremeFX S1220A teams with Sonic Studio III to create an aural landscape that draws you deeper into the action.\n
-\nGamer’s Guardian: Pre-mounted I/O shield, ASUS SafeSlot and premium components for maximum endurance.\n"
+                android:text="Form Factor:
+\n              2.5-inch\n
+\n              Interface: SATA III 6Gb/s (backward compatible
+\n              with SATA II)\n
+\nCapacity: 1TB\n
+\nSequential Read Speed:
+\n              Up to 550 MB/s\n
+\nSequential Write Speed:
+\n              Up to 530 MB/s\n
+\nRandom Read (4KB, QD32):
+\n              Up to 99,000 IOPS\n
+\nRandom Write (4KB, QD32):
+\n              Up to 88,000 IOPS\n
+\nNAND Type:
+\n              MLC (Multi-Level Cell) NAND flash memory\n
+\nController:
+\n              Phison PS3110-S10\n
+\nEndurance (TBW - Terabytes Written):
+\n              Varies by capacity, typically ranging from 600TBW
+\n              for the 128GB model to 1,400TBW for the 1TB model.\n
+\nMTBF (Mean Time Between Failures):
+\n              1 million hours\n
+\nForm Factor:
+\n              7mm, 2.5
+\n              Operating Temperature: 0°C to 70°C
+\nShock Resistance: 1500G"
                 android:textColor="@color/black"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"

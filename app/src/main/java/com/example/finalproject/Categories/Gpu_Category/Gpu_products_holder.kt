@@ -105,64 +105,64 @@ class Gpu_products_holder : AppCompatActivity() {
     }
 
     private fun gpuProducts() {
-        var gpuModels = Gpu_Data_Class("GIGABYTE GTX 1660 SUPER GAMING OC",15500.00, R.drawable.gpu_img1, Gpu_no1_info::class.java)
+        var gpuModels = Gpu_Data_Class("GIGABYTE GTX 1660 SUPER GAMING OC GPU",15500.00, R.drawable.gpu_img1, Gpu_no1_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("MSI RX 5600 XT MECH OC",23750.00, R.drawable.gpu_img2, Gpu_no2_info::class.java)
+        gpuModels = Gpu_Data_Class("MSI RX 5600 XT MECH OC GPU",23750.00, R.drawable.gpu_img2, Gpu_no2_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("GIGABYTE RTX 3060 GAMING OC",22950.00, R.drawable.gpu_img3, Gpu_no3_info::class.java)
+        gpuModels = Gpu_Data_Class("GIGABYTE RTX 3060 GAMING OC GPU",22950.00, R.drawable.gpu_img3, Gpu_no3_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("MSI RX 5700 XT MECH OC",24461.00, R.drawable.gpu_img4, Gpu_no4_info::class.java)
+        gpuModels = Gpu_Data_Class("MSI RX 5700 XT MECH OC GPU",24461.00, R.drawable.gpu_img4, Gpu_no4_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("GIGABYTE RTX 3070 GAMING OC",29500.00, R.drawable.gpu_img5, Gpu_no5_info::class.java)
+        gpuModels = Gpu_Data_Class("GIGABYTE RTX 3070 GAMING OC GPU",29500.00, R.drawable.gpu_img5, Gpu_no5_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("ASUS DUAL RX 6600 XT OC",19306.00, R.drawable.gpu_img6, Gpu_no6_info::class.java)
+        gpuModels = Gpu_Data_Class("ASUS DUAL RX 6600 XT OC GPU",19306.00, R.drawable.gpu_img6, Gpu_no6_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("PNY GTX 1050",12945.00, R.drawable.gpu_img7, Gpu_no7_info::class.java)
+        gpuModels = Gpu_Data_Class("PNY GTX 1050 GPU",12945.00, R.drawable.gpu_img7, Gpu_no7_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("MSI RX 580 GAMING X 8 GB",12130.00, R.drawable.gpu_img8, Gpu_no8_info::class.java)
+        gpuModels = Gpu_Data_Class("MSI RX 580 GAMING X 8 GB GPU",12130.00, R.drawable.gpu_img8, Gpu_no8_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("NVIDIA GeForce RTX 3080",29500.00, R.drawable.gpu_img9, Gpu_no9_info::class.java)
+        gpuModels = Gpu_Data_Class("NVIDIA GeForce RTX 3080 GPU",29500.00, R.drawable.gpu_img9, Gpu_no9_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("GIGABYTE RX 6700 XT GAMING OC",23234.00, R.drawable.gpu_img10, Gpu_no10_info::class.java)
+        gpuModels = Gpu_Data_Class("GIGABYTE RX 6700 XT GAMING OC GPU",23234.00, R.drawable.gpu_img10, Gpu_no10_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("ASUS TUF GTX 1660 Ti GAMING OC",16999.00, R.drawable.gpu_img11, Gpu_no11_info::class.java)
+        gpuModels = Gpu_Data_Class("ASUS TUF GTX 1660 Ti GAMING OC GPU",16999.00, R.drawable.gpu_img11, Gpu_no11_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("ASRock RX 5500 XT 8 GB BIOS",10960.00, R.drawable.gpu_img12, Gpu_no12_info::class.java)
+        gpuModels = Gpu_Data_Class("ASRock RX 5500 XT 8 GB BIOS GPU",10960.00, R.drawable.gpu_img12, Gpu_no12_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("ASUS ROG STRIX RTX 3050 GAMING OC",15000.00, R.drawable.gpu_img13, Gpu_no13_info::class.java)
+        gpuModels = Gpu_Data_Class("ASUS ROG STRIX RTX 3050 GAMING OC GPU",15000.00, R.drawable.gpu_img13, Gpu_no13_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("GIGABYTE RX 590 GAMING Rev. 1.0",15500.00, R.drawable.gpu_img14, Gpu_no14_info::class.java)
+        gpuModels = Gpu_Data_Class("GIGABYTE RX 590 GAMING Rev. 1.0 GPU",15500.00, R.drawable.gpu_img14, Gpu_no14_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("MSI GTX 1650 GAMING X",12320.00, R.drawable.gpu_img15, Gpu_no15_info::class.java)
+        gpuModels = Gpu_Data_Class("MSI GTX 1650 GAMING X GPU",12320.00, R.drawable.gpu_img15, Gpu_no15_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("ASUS RX 6800",33681.00, R.drawable.gpu_img16, Gpu_no16_info::class.java)
+        gpuModels = Gpu_Data_Class("ASUS RX 6800 GPU",33681.00, R.drawable.gpu_img16, Gpu_no16_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("GIGABYTE GTX 1660 OC",11500.00, R.drawable.gpu_img17, Gpu_no17_info::class.java)
+        gpuModels = Gpu_Data_Class("GIGABYTE GTX 1660 OC GPU",11500.00, R.drawable.gpu_img17, Gpu_no17_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("ASRock Phantom Gaming X Vega 56",25199.50, R.drawable.gpu_img18, Gpu_no18_info::class.java)
+        gpuModels = Gpu_Data_Class("ASRock Phantom Gaming X Vega 56 GPU",25199.50, R.drawable.gpu_img18, Gpu_no18_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("GIGABYTE RTX 3060 Ti EAGLE OC",28990.00, R.drawable.gpu_img19, Gpu_no19_info::class.java)
+        gpuModels = Gpu_Data_Class("GIGABYTE RTX 3060 Ti EAGLE OC GPU",28990.00, R.drawable.gpu_img19, Gpu_no19_info::class.java)
         data.add(gpuModels)
 
-        gpuModels = Gpu_Data_Class("GIGABYTE AORUS RX 6700 XT ELITE",29950.00, R.drawable.gpu_img20, Gpu_no20_info::class.java)
+        gpuModels = Gpu_Data_Class("GIGABYTE AORUS RX 6700 XT ELITE GPU",29950.00, R.drawable.gpu_img20, Gpu_no20_info::class.java)
         data.add(gpuModels)
 
         cartAdapter!!.notifyDataSetChanged()

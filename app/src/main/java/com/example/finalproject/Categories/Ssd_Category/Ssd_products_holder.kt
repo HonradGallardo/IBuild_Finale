@@ -108,72 +108,72 @@ class Ssd_products_holder : AppCompatActivity() {
 
     private fun ssdProducts() {
         var ssdModels =
-            Ssd_Data_Class("Samsung 860 EVO", 4160.00, R.drawable.ssd_img1, Ssd_no1_info::class.java)
+            Ssd_Data_Class("Samsung 860 EVO 500GB SATA III SSD", 2540.00, R.drawable.ssd_img1, Ssd_no1_info::class.java)
         data.add(ssdModels)
 
-        ssdModels = Ssd_Data_Class("Crucial MX500", 2799.00, R.drawable.ssd_img2, Ssd_no2_info::class.java)
+        ssdModels = Ssd_Data_Class("Crucial MX500 500GB SATA III SSD", 2269.43, R.drawable.ssd_img2, Ssd_no2_info::class.java)
         data.add(ssdModels)
 
-        ssdModels = Ssd_Data_Class("WD Blue 3D NAND", 5690.00, R.drawable.ssd_img3, Ssd_no3_info::class.java)
-        data.add(ssdModels)
-
-        ssdModels =
-            Ssd_Data_Class("Sandisk Ultra 3D SSD", 3450.00, R.drawable.ssd_img4, Ssd_no4_info::class.java)
-        data.add(ssdModels)
-
-        ssdModels = Ssd_Data_Class("Kingston A2000", 3795.00, R.drawable.ssd_img5, Ssd_no5_info::class.java)
-        data.add(ssdModels)
-
-        ssdModels = Ssd_Data_Class("ADATA SU800", 4999.00, R.drawable.ssd_img6, Ssd_no6_info::class.java)
-        data.add(ssdModels)
-
-        ssdModels = Ssd_Data_Class("SK hynix Gold S31", 3000.00, R.drawable.ssd_img7, Ssd_no7_info::class.java)
-        data.add(ssdModels)
-
-        ssdModels = Ssd_Data_Class("Seagate Barracuda SSD", 6716.00, R.drawable.ssd_img8, Ssd_no8_info::class.java)
-        data.add(ssdModels)
-
-        ssdModels = Ssd_Data_Class("Toshiba TR200", 2799.00, R.drawable.ssd_img9, Ssd_no9_info::class.java)
-        data.add(ssdModels)
-
-        ssdModels = Ssd_Data_Class("Teamgroup GX2", 3199.00, R.drawable.ssd_img10, Ssd_no10_info::class.java)
-        data.add(ssdModels)
-
-        ssdModels = Ssd_Data_Class("Samsung 970 EVO Plus", 8550.00, R.drawable.ssd_img11, Ssd_no11_info::class.java)
+        ssdModels = Ssd_Data_Class("WD Blue 3D NAND 500GB SATA III SSD", 3850.00, R.drawable.ssd_img3, Ssd_no3_info::class.java)
         data.add(ssdModels)
 
         ssdModels =
-            Ssd_Data_Class("WD Black SN750 NVMe SSD", 5655.00, R.drawable.ssd_img12, Ssd_no12_info::class.java)
+            Ssd_Data_Class("Sandisk Ultra 3D SSD 1TB SATA III SSD", 5450.00, R.drawable.ssd_img4, Ssd_no4_info::class.java)
+        data.add(ssdModels)
+
+        ssdModels = Ssd_Data_Class("Kingston KC400 1TB SATA III SSD", 2200.00, R.drawable.ssd_img5, Ssd_no5_info::class.java)
+        data.add(ssdModels)
+
+        ssdModels = Ssd_Data_Class("ADATA SU800 SATA 1TB III SSD", 3950.00, R.drawable.ssd_img6, Ssd_no6_info::class.java)
+        data.add(ssdModels)
+
+        ssdModels = Ssd_Data_Class("PNY CS900 1TB SATA III SSD", 1299.00, R.drawable.ssd_img7, Ssd_no7_info::class.java)
+        data.add(ssdModels)
+
+        ssdModels = Ssd_Data_Class("Seagate Barracuda 1TB SATA III SSD", 2429.00, R.drawable.ssd_img8, Ssd_no8_info::class.java)
+        data.add(ssdModels)
+
+        ssdModels = Ssd_Data_Class("Team Group L5 LITE 3D SATA III SSD", 2799.75, R.drawable.ssd_img9, Ssd_no9_info::class.java)
+        data.add(ssdModels)
+
+        ssdModels = Ssd_Data_Class("Teamgroup GX2 SATA III SSD", 1475.00, R.drawable.ssd_img10, Ssd_no10_info::class.java)
+        data.add(ssdModels)
+
+        ssdModels = Ssd_Data_Class("Samsung 970 EVO Plus 500GB M.2 NVMe SSD", 4550.00, R.drawable.ssd_img11, Ssd_no11_info::class.java)
         data.add(ssdModels)
 
         ssdModels =
-            Ssd_Data_Class("Crucial P1 NVMe SSD", 5951.11, R.drawable.ssd_img13, Ssd_no13_info::class.java)
+            Ssd_Data_Class("WD Black SN750 500GB M.2 NVMe SSD", 1985.00, R.drawable.ssd_img12, Ssd_no12_info::class.java)
         data.add(ssdModels)
 
         ssdModels =
-            Ssd_Data_Class("Intel 660p NVMe SSD", 10740.86, R.drawable.ssd_img14, Ssd_no14_info::class.java)
+            Ssd_Data_Class("Crucial P1 500GB M.2 NVMe SSD", 3981.11, R.drawable.ssd_img13, Ssd_no13_info::class.java)
         data.add(ssdModels)
 
         ssdModels =
-            Ssd_Data_Class("Adata XPG SX8200 Pro NVMe SSD", 6234.23, R.drawable.ssd_img15, Ssd_no15_info::class.java)
-        data.add(ssdModels)
-
-        ssdModels = Ssd_Data_Class("Corsair Force MP510 NVMe SSD", 3695.00, R.drawable.ssd_img16, Ssd_no16_info::class.java)
+            Ssd_Data_Class("Intel 660p 500GB M.2 NVMe SSD", 3650.00, R.drawable.ssd_img14, Ssd_no14_info::class.java)
         data.add(ssdModels)
 
         ssdModels =
-            Ssd_Data_Class("Kingston A2000 NVMe SSD", 3695.00, R.drawable.ssd_img17, Ssd_no17_info::class.java)
+            Ssd_Data_Class("Adata XPG SX8200 Pro 500GB M.2 NVMe SSD", 4199.23, R.drawable.ssd_img15, Ssd_no15_info::class.java)
+        data.add(ssdModels)
+
+        ssdModels = Ssd_Data_Class("Corsair Force MP510 500GB M.2 NVMe SSD", 5695.00, R.drawable.ssd_img16, Ssd_no16_info::class.java)
         data.add(ssdModels)
 
         ssdModels =
-            Ssd_Data_Class("Sabrent Rocket NVMe SSD", 3695.00, R.drawable.ssd_img18, Ssd_no18_info::class.java)
-        data.add(ssdModels)
-
-        ssdModels = Ssd_Data_Class("HP EX920 NVMe SSD", 3695.00, R.drawable.ssd_img19, Ssd_no19_info::class.java)
+            Ssd_Data_Class("Kingston A2000 500GB M.2 NVMe SSD", 4695.00, R.drawable.ssd_img17, Ssd_no17_info::class.java)
         data.add(ssdModels)
 
         ssdModels =
-            Ssd_Data_Class("Toshiba XG5-P NVMe SSD", 3695.00, R.drawable.ssd_img20, Ssd_no20_info::class.java)
+            Ssd_Data_Class("Sabrent Rocket 500GB M.2 NVMe SSD", 4495.00, R.drawable.ssd_img18, Ssd_no18_info::class.java)
+        data.add(ssdModels)
+
+        ssdModels = Ssd_Data_Class("HP EX920 500GB M.2 NVMe SSD", 5695.00, R.drawable.ssd_img19, Ssd_no19_info::class.java)
+        data.add(ssdModels)
+
+        ssdModels =
+            Ssd_Data_Class("Toshiba XG5-P 500GB M.2 NVMe SSD", 2295.00, R.drawable.ssd_img20, Ssd_no20_info::class.java)
         data.add(ssdModels)
 
         cartAdapter!!.notifyDataSetChanged()

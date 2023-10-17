@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.finalproject.Categories.MoBo_Category.Mobo_products_holder
+import com.example.finalproject.Categories.Ssd_Category.Ssd_products_holder
 import com.example.finalproject.Products.Cpu_products_info.ViewPager_Adapter
 import com.example.finalproject.R
 
@@ -16,23 +17,23 @@ class Ssd_no19_info : AppCompatActivity() {
         setContentView(R.layout.ssd_no19_info)
         val viewPager2: ViewPager2 = findViewById(R.id.viewPager2)
         val images = listOf(
-            R.drawable.mobo_img1,
-            R.drawable.mobo_info1_img3,
-            R.drawable.mobo_info1_img1,
-            R.drawable.mobo_info1_img2
+            R.drawable.ssd_img19,
+            R.drawable.ssd_info19_img1,
+            R.drawable.ssd_info19_img2,
+            R.drawable.ssd_info19_img3
         )
 
         viewPager2.adapter = ViewPager_Adapter(images)
 
         backbt = findViewById(R.id.Ssd_Products_Back_to_Category)
         backbt.setOnClickListener {
-            val intent = Intent(this, Mobo_products_holder::class.java)
+            val intent = Intent(this, Ssd_products_holder::class.java)
             startActivityWithAnimation(intent)
         }
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this, Mobo_products_holder::class.java)
+        val intent = Intent(this, Ssd_products_holder::class.java)
         startActivityWithAnimation(intent)
     }
 
