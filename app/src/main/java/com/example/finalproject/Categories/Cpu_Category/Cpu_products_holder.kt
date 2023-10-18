@@ -115,22 +115,22 @@ class Cpu_products_holder : AppCompatActivity() {
 
 
     private fun cpuProducts() {
-        var cpuModels = Cpu_Data_Class("AMD RYZEN 5 5600", 8150.00, R.drawable.cpu_img1, Cpu_no1_info::class.java)
+        var cpuModels = Cpu_Data_Class("AMD RYZEN 5 5600 cpu", 8150.00, R.drawable.cpu_img1, Cpu_no1_info::class.java)
         data.add(cpuModels)
 
-        cpuModels = Cpu_Data_Class("Intel Core i5-10400", 8950.00, R.drawable.cpu_img2, Cpu_no2_info::class.java)
+        cpuModels = Cpu_Data_Class("Intel Core i5-10400 cpu", 8950.00, R.drawable.cpu_img2, Cpu_no2_info::class.java)
         data.add(cpuModels)
-        cpuModels = Cpu_Data_Class("Intel Core i3-10100", 8499.00, R.drawable.cpu_img3, Cpu_no3_info::class.java)
-        data.add(cpuModels)
-
-        cpuModels = Cpu_Data_Class("AMD RYZEN 5 3400G", 4350.00, R.drawable.cpu_img4, Cpu_no4_info::class.java)
-        data.add(cpuModels)
-        cpuModels = Cpu_Data_Class("AMD RYZEN 5 5600G", 8699.00, R.drawable.cpu_img5, Cpu_no5_info::class.java)
+        cpuModels = Cpu_Data_Class("Intel Core i3-10100 cpu", 8499.00, R.drawable.cpu_img3, Cpu_no3_info::class.java)
         data.add(cpuModels)
 
-        cpuModels = Cpu_Data_Class("Intel Pentium Gold G6400", 4199.00, R.drawable.cpu_img6, Cpu_no6_info::class.java)
+        cpuModels = Cpu_Data_Class("AMD RYZEN 5 3400G cpu", 4350.00, R.drawable.cpu_img4, Cpu_no4_info::class.java)
         data.add(cpuModels)
-        cpuModels = Cpu_Data_Class("Intel Core i5-11400", 7995.00, R.drawable.cpu_img7, Cpu_no7_info::class.java)
+        cpuModels = Cpu_Data_Class("AMD RYZEN 5 5600G cpu", 8699.00, R.drawable.cpu_img5, Cpu_no5_info::class.java)
+        data.add(cpuModels)
+
+        cpuModels = Cpu_Data_Class("Intel Pentium Gold G6400 cpu", 4199.00, R.drawable.cpu_img6, Cpu_no6_info::class.java)
+        data.add(cpuModels)
+        cpuModels = Cpu_Data_Class("Intel Core i5-11400 cpu", 7995.00, R.drawable.cpu_img7, Cpu_no7_info::class.java)
         data.add(cpuModels)
 
         cpuModels = Cpu_Data_Class("AMD RYZEN 5 3600", 4151.00, R.drawable.cpu_img8, Cpu_no8_info::class.java)

@@ -109,7 +109,7 @@ class Ram_products_holder : AppCompatActivity() {
 
     private fun ramProducts() {
         var ramModels = Ram_Data_Class(
-            "Corsair Vengeance LPX", 4160.00, R.drawable.ram_img1, Ram_no1_info::class.java)
+            "Corsair Vengeance LPX", 2660.00, R.drawable.ram_img1, Ram_no1_info::class.java)
         data.add(ramModels)
 
         ramModels = Ram_Data_Class(
@@ -117,18 +117,18 @@ class Ram_products_holder : AppCompatActivity() {
         data.add(ramModels)
 
         ramModels = Ram_Data_Class(
-            "Crucial Ballistix Sport LT", 5690.00, R.drawable.ram_img3, Ram_no3_info::class.java)
+            "Crucial Ballistix Sport LT", 3290.00, R.drawable.ram_img3, Ram_no3_info::class.java)
         data.add(ramModels)
 
         ramModels = Ram_Data_Class(
-            "Kingston HyperX Fury RGB", 3450.00, R.drawable.ram_img4, Ram_no4_info::class.java)
+            "Kingston HyperX Fury RGB", 2935.00, R.drawable.ram_img4, Ram_no4_info::class.java)
         data.add(ramModels)
 
         ramModels = Ram_Data_Class("ADATA XPG Spectrix D80", 4950.00, R.drawable.ram_img5, Ram_no5_info::class.java)
         data.add(ramModels)
 
         ramModels = Ram_Data_Class(
-            "Team Group T-Force Vulcan Z", 4999.00, R.drawable.ram_img6, Ram_no6_info::class.java)
+            "Team Group T-Force Vulcan Z", 2899.00, R.drawable.ram_img6, Ram_no6_info::class.java)
         data.add(ramModels)
 
         ramModels = Ram_Data_Class(
@@ -159,11 +159,11 @@ class Ram_products_holder : AppCompatActivity() {
         data.add(ramModels)
 
         ramModels = Ram_Data_Class(
-            "Patriot Viper 4 Blackout", 10740.86, R.drawable.ram_img14, Ram_no14_info::class.java)
+            "Patriot Viper 4 Blackout", 2740.86, R.drawable.ram_img14, Ram_no14_info::class.java)
         data.add(ramModels)
 
         ramModels = Ram_Data_Class(
-            "ADATA XPG Spectrix D41", 6234.23, R.drawable.ram_img15, Ram_no15_info::class.java)
+            "ADATA XPG Spectrix D41", 2234.23, R.drawable.ram_img15, Ram_no15_info::class.java)
         data.add(ramModels)
 
         ramModels = Ram_Data_Class("GeIL Evo X II", 3695.00, R.drawable.ram_img16, Ram_no16_info::class.java)
@@ -172,13 +172,13 @@ class Ram_products_holder : AppCompatActivity() {
         ramModels = Ram_Data_Class("G.Skill Trident Z Neo", 3695.00, R.drawable.ram_img17, Ram_no17_info::class.java)
         data.add(ramModels)
 
-        ramModels = Ram_Data_Class("Crucial Ballistix Tactical Tracer RGB", 3695.00, R.drawable.ram_img18, Ram_no18_info::class.java)
+        ramModels = Ram_Data_Class("Crucial Ballistix Tactical Tracer RGB", 4395.00, R.drawable.ram_img18, Ram_no18_info::class.java)
         data.add(ramModels)
 
-        ramModels = Ram_Data_Class("Kingston HyperX Predator Black", 3695.00, R.drawable.ram_img19, Ram_no19_info::class.java)
+        ramModels = Ram_Data_Class("Kingston HyperX Predator Black", 5695.00, R.drawable.ram_img19, Ram_no19_info::class.java)
         data.add(ramModels)
 
-        ramModels = Ram_Data_Class("Corsair Vengeance LPX Low Profile", 3695.00, R.drawable.ram_img20, Ram_no20_info::class.java)
+        ramModels = Ram_Data_Class("G.Skill's Premium Trident Z Royal", 7695.00, R.drawable.ram_img20, Ram_no20_info::class.java)
         data.add(ramModels)
 
         cartAdapter!!.notifyDataSetChanged()
