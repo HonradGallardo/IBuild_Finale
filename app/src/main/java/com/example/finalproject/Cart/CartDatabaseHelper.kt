@@ -1,4 +1,4 @@
-package com.example.finalproject.Cart_Activity
+package com.example.finalproject.Cart
 
 import android.annotation.SuppressLint
 import android.content.ContentValues
@@ -17,7 +17,11 @@ class CartDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         private const val COLUMN_ID = "id"
         private const val COLUMN_PRODUCT_NAME = "product_name"
         private const val COLUMN_PRICE = "price"
-        private const val COLUMN_USER_ID = "user_id"
+        private const val COLUMN_IMAGE_RES_ID = "image_res_id"
+        private const val COLUMN_DESCRIPTION = "description"
+        private const val COLUMN_QUANTITY = "quantity"
+
+
     }
 
     override fun onCreate(db: SQLiteDatabase) {
@@ -26,7 +30,9 @@ class CartDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
                 "$COLUMN_ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "$COLUMN_PRODUCT_NAME TEXT, " +
                 "$COLUMN_PRICE REAL, " +
-                "$COLUMN_USER_ID TEXT)"
+                "$COLUMN_IMAGE_RES_ID INTEGER, " +
+                "$COLUMN_DESCRIPTION TEXT, "+
+                "$COLUMN_QUANTITY)"
 
         db.execSQL(createTableQuery)
     }
@@ -35,16 +41,26 @@ class CartDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         // Handle database schema changes here if needed
     }
 
-    fun insertCartItem(cartItem: Cart_Data_Class, user_id: String): Long {
+    fun insertCartItem(cartItem: Cart_Data_Class): Long {
         val values = ContentValues().apply {
             put(COLUMN_PRODUCT_NAME, cartItem.productName)
             put(COLUMN_PRICE, cartItem.price)
-            put(COLUMN_USER_ID, user_id)
+            put(COLUMN_IMAGE_RES_ID, cartItem.imageResource)
+            put(COLUMN_DESCRIPTION, cartItem.description)
+            put(COLUMN_QUANTITY, cartItem.quantity)
         }
 
         val db = writableDatabase
         return db.insert(TABLE_NAME, null, values)
     }
+
+    fun deleteCartItem(productId: Int): Int {
+        val db = writableDatabase
+        val whereClause = "$COLUMN_ID = ?"
+        val whereArgs = arrayOf(productId.toString())
+        return db.delete(TABLE_NAME, whereClause, whereArgs)
+    }
+
 
     @SuppressLint("Range")
     fun getAllCartItems(): List<Cart_Data_Class> {
@@ -58,7 +74,10 @@ class CartDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
                 val id = cursor.getInt(cursor.getColumnIndex(COLUMN_ID))
                 val productName = cursor.getString(cursor.getColumnIndex(COLUMN_PRODUCT_NAME))
                 val price = cursor.getDouble(cursor.getColumnIndex(COLUMN_PRICE))
-                cartItems.add(Cart_Data_Class(id, productName, price, null, null))
+                val image = cursor.getInt(cursor.getColumnIndex(COLUMN_IMAGE_RES_ID))
+                val description = cursor.getString(cursor.getColumnIndex(COLUMN_DESCRIPTION))
+                val quantity = cursor.getInt(cursor.getColumnIndex(COLUMN_QUANTITY))
+                cartItems.add(Cart_Data_Class(id, productName, price, description, image, quantity))
             }
         }
 

@@ -9,14 +9,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.AmdBuild.amd_build
-import com.example.finalproject.AmdBuild.amd_build_Data_Class
-import com.example.finalproject.Cart_Activity.Cart
+import com.example.finalproject.Cart.Cart
 import com.example.finalproject.IntelBuild.IntelBuild
 import com.example.finalproject.Products.Cpu_products_info.Cpu_no1_info
 import com.example.finalproject.Products.Gpu_products_info.Gpu_no1_info
@@ -68,6 +66,7 @@ class rvHompagee : AppCompatActivity() {
         Cart_hompage = findViewById(R.id.img_cart_homepage)
         Cart_hompage.setOnClickListener {
             val int = Intent(this, Cart::class.java)
+            int.putExtra("previousActivity", "rvHomepage")
             startActivity(int)
             finish()
         }
