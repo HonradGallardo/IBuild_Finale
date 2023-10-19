@@ -1,9 +1,11 @@
 package com.example.finalproject.Database
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 
 class DatabaseHelper(private val context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
@@ -17,7 +19,7 @@ class DatabaseHelper(private val context: Context) : SQLiteOpenHelper(context, D
         private const val COLUMN_PASSWORD = "password"
         private const val COLUMN_CONFIRM_PASSWORD = "confirm_password"
 
-        private const val USERNAME_MIN_LENGTH = 10
+        private const val USERNAME_MIN_LENGTH = 5
         private const val USERNAME_MAX_LENGTH = 20
         private const val PASSWORD_MIN_LENGTH = 6
         private const val PASSWORD_MAX_LENGTH = 30
@@ -68,4 +70,57 @@ class DatabaseHelper(private val context: Context) : SQLiteOpenHelper(context, D
         cursor.close()
         return userExists
     }
+
+
+    fun updateUsername(userId: Long, newUsername: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_USERNAME, newUsername)
+        }
+
+        val db = writableDatabase
+        db.update(TABLE_NAME, values, "$COLUMN_ID = ?", arrayOf(userId.toString()))
+    }
+
+    fun updateEmail(userId: Long, newEmail: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_EMAIL, newEmail)
+        }
+
+        val db = writableDatabase
+        db.update(TABLE_NAME, values, "$COLUMN_ID = ?", arrayOf(userId.toString()))
+    }
+
+    fun updatePassword(userId: Long, newPassword: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_PASSWORD, newPassword)
+        }
+
+        val db = writableDatabase
+        db.update(TABLE_NAME, values, "$COLUMN_ID = ?", arrayOf(userId.toString()))
+    }
+
+    @SuppressLint("Range")
+    fun getCurrentUserPassword(userId: Long): String? {
+        val db = readableDatabase
+        val selection = "$COLUMN_ID = ?"
+        val selectionArgs = arrayOf(userId.toString())
+        val columns = arrayOf(COLUMN_PASSWORD)
+
+        val cursor = db.query(TABLE_NAME, columns, selection, selectionArgs, null, null, null)
+
+        var currentPassword: String? = null // Initialize as null
+
+        if (cursor.moveToFirst()) {
+            currentPassword = cursor.getString(cursor.getColumnIndex(COLUMN_PASSWORD))
+        }
+
+        cursor.close()
+
+        // Debugging: Print the user ID and the retrieved current password
+        Log.d("PasswordDebug", "User ID: $userId")
+        Log.d("PasswordDebug", "User's Current Password: $currentPassword")
+
+        return currentPassword
+    }
+
 }

@@ -2,6 +2,7 @@ package com.example.finalproject
 
 import com.example.finalproject.Database.DatabaseHelper
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -77,6 +78,13 @@ class CreateAccountPage : AppCompatActivity() {
         val insertedRowId = databaseHelper.insertUser(username, email, password)
         if (insertedRowId != -1L) {
             Toast.makeText(this, "Signup Successful", Toast.LENGTH_SHORT).show()
+
+            val sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+            val editor = sharedPrefs.edit()
+            editor.putString("username", username)
+            editor.putString("email", email)
+            editor.apply()
+
             val intent = Intent(this, LogInPage::class.java)
             startActivity(intent)
             finish()

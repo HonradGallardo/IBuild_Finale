@@ -8,36 +8,59 @@
     tools:context=".CreateAccountPage">
 
 
-    <EditText
-        android:id="@+id/et_password_createAccountPage"
-        android:layout_width="325dp"
-        android:layout_height="63dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_Password_LogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@drawable/custom_background_for_edittext"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:paddingLeft="15dp"
-        android:textSize="18sp"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="@+id/et_email_createAccountPage"
         app:layout_constraintStart_toStartOf="@+id/et_email_createAccountPage"
-        app:layout_constraintTop_toBottomOf="@+id/et_email_createAccountPage" />
+        app:layout_constraintTop_toBottomOf="@+id/et_email_createAccountPage"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/et_password_createAccountPage"
+            android:layout_width="325dp"
+            android:layout_height="63dp"
+            android:background="@drawable/custom_background_for_edittext"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="44dp"
+            tools:layout_editor_absoluteY="421dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-    <EditText
-        android:id="@+id/et_Confirmpassword_createAccountPage"
-        android:layout_width="325dp"
-        android:layout_height="63dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_ConfirmPassword_LogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@drawable/custom_background_for_edittext"
-        android:ems="10"
-        android:hint="Confirm Password"
-        android:inputType="textPassword"
-        android:paddingLeft="15dp"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/et_password_createAccountPage"
-        app:layout_constraintStart_toStartOf="@+id/et_password_createAccountPage"
-        app:layout_constraintTop_toBottomOf="@+id/et_password_createAccountPage" />
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@+id/til_Password_LogIn"
+        app:layout_constraintStart_toStartOf="@+id/til_Password_LogIn"
+        app:layout_constraintTop_toBottomOf="@+id/til_Password_LogIn"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/et_Confirmpassword_createAccountPage"
+            android:layout_width="325dp"
+            android:layout_height="63dp"
+            android:background="@drawable/custom_background_for_edittext"
+            android:ems="10"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="489dp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/tv_createAccount"
@@ -130,8 +153,9 @@
         android:text="CONFIRM"
         android:textColor="@color/white"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/et_Confirmpassword_createAccountPage"
-        app:layout_constraintStart_toStartOf="@+id/et_Confirmpassword_createAccountPage"
-        app:layout_constraintTop_toBottomOf="@+id/et_Confirmpassword_createAccountPage" />
+        app:layout_constraintEnd_toEndOf="@+id/til_ConfirmPassword_LogIn"
+        app:layout_constraintStart_toStartOf="@+id/til_ConfirmPassword_LogIn"
+        app:layout_constraintTop_toBottomOf="@+id/til_ConfirmPassword_LogIn" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

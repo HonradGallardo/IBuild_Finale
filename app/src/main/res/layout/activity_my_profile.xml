@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyProfile.MyProfile"
+    android:background="@drawable/gradient_color"
+    >
+
+    <ImageView
+        android:id="@+id/my_profile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/baseline_profile_24"
+        app:layout_constraintBottom_toTopOf="@+id/Account_MyProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/circular_background"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/Username_MyProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="Username"
+        android:textColor="@color/gray"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/my_profile"
+        app:layout_constraintStart_toStartOf="@+id/my_profile"
+        app:layout_constraintTop_toBottomOf="@+id/my_profile" />
+
+    <TextView
+        android:id="@+id/Email_MyProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Email"
+        android:textColor="@color/gray"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/Username_MyProfile"
+        app:layout_constraintStart_toStartOf="@+id/Username_MyProfile"
+        app:layout_constraintTop_toBottomOf="@+id/Username_MyProfile" />
+
+    <Button
+        android:id="@+id/Orders_MyProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/navyblue"
+        android:fontFamily="sans-serif-light"
+        android:text="Orders"
+        android:textColor="@color/white"
+        android:textSize="22.5dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/Account_MyProfile"
+        app:layout_constraintStart_toStartOf="@+id/Account_MyProfile"
+        app:layout_constraintTop_toBottomOf="@+id/Account_MyProfile" />
+
+    <Button
+        android:id="@+id/Account_MyProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/navyblue"
+        android:fontFamily="sans-serif-light"
+        android:text="Account"
+        android:textColor="@color/white"
+        android:textSize="22.5dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/Address_MyProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/navyblue"
+        android:fontFamily="sans-serif-light"
+        android:text="Address"
+        android:textColor="@color/white"
+        android:textSize="22.5dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/Orders_MyProfile"
+        app:layout_constraintStart_toStartOf="@+id/Orders_MyProfile"
+        app:layout_constraintTop_toBottomOf="@+id/Orders_MyProfile" />
+
+    <Button
+        android:id="@+id/MyProducts_MyProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/navyblue"
+        android:fontFamily="sans-serif-light"
+        android:text="My Products"
+        android:textColor="@color/white"
+        android:textSize="22.5dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/Address_MyProfile"
+        app:layout_constraintStart_toStartOf="@+id/Address_MyProfile"
+        app:layout_constraintTop_toBottomOf="@+id/Address_MyProfile" />
+
+    <TextView
+        android:id="@+id/LogOut_MyProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="LOG OUT"
+        android:textColor="@color/navyblue"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnav_bottomNavigation_MyProfile"
+        app:layout_constraintEnd_toEndOf="@+id/MyProducts_MyProfile"
+        app:layout_constraintStart_toStartOf="@+id/MyProducts_MyProfile"
+        app:layout_constraintTop_toBottomOf="@+id/MyProducts_MyProfile" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btnav_bottomNavigation_MyProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/navyblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
