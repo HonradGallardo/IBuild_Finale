@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyProfile.Account">
+
+    <TextView
+        android:id="@+id/tv_Account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Account"
+        android:textColor="@color/navyblue"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/BackButton_Account"
+        android:layout_width="41dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.014"
+        app:srcCompat="@drawable/back_arrow_back_24"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/materialDivider_account"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        app:dividerColor="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Account" />
+
+    <TextView
+        android:id="@+id/tv_Username_Account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="290dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Username"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialDivider_account" />
+
+
+    <EditText
+            android:id="@+id/et_username_account"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/custom_background_for_edittext"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Username_Account" />
+
+
+    <TextView
+        android:id="@+id/tv_Email_Account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Email"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_Username_Account"
+        app:layout_constraintTop_toBottomOf="@+id/et_username_account" />
+
+    <EditText
+        android:id="@+id/et_email_account"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/custom_background_for_edittext"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="15dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Email_Account" />
+
+    <TextView
+        android:id="@+id/tv_CurrentPassword_Account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Current Password"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_Email_Account"
+        app:layout_constraintTop_toBottomOf="@+id/et_email_account" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_CurrentPassword_Account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_CurrentPassword_Account"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/et_CurrentPassword_account"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:background="@drawable/custom_background_for_edittext"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_NewPassword_Account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_NewPassword_Account"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/et_NewPassword_account"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:background="@drawable/custom_background_for_edittext"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="466dp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_ConfirmPassword_Account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ConfirmPassword_Account"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/et_ConfirmPassword_account"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:background="@drawable/custom_background_for_edittext"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="580dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_NewPassword_Account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-light"
+        android:text="New Password"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_CurrentPassword_Account"
+        app:layout_constraintTop_toBottomOf="@+id/til_CurrentPassword_Account" />
+
+
+    <TextView
+        android:id="@+id/tv_ConfirmPassword_Account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Confirm Password"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_NewPassword_Account"
+        app:layout_constraintTop_toBottomOf="@+id/til_NewPassword_Account" />
+
+    <TextView
+        android:id="@+id/tv_SaveButton_Account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="Save"
+        android:textColor="@color/navyblue"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/til_ConfirmPassword_Account"
+        app:layout_constraintStart_toStartOf="@+id/til_ConfirmPassword_Account"
+        app:layout_constraintTop_toBottomOf="@+id/til_ConfirmPassword_Account" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

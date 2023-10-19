@@ -1,6 +1,7 @@
 package com.example.finalproject
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -23,10 +24,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Handler().postDelayed({startActivity(Intent(this, LogInPage::class.java))
-        finish()}, 2000)
 
+        val sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        val isLoggedIn = sharedPrefs.getBoolean("isLoggedIn", false)
 
+        if (isLoggedIn) {
+            Handler().postDelayed({val intent = Intent(this, rvHompagee::class.java)
+                startActivity(intent)
+                finish()}, 2000)
+        } else {
+            // Continue showing the login or registration screen
+            Handler().postDelayed({val intent = Intent(this, LogInPage::class.java)
+                startActivity(intent)
+                finish()}, 2000)
+        }
 
 
 

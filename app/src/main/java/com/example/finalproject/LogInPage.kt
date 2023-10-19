@@ -2,6 +2,7 @@ package com.example.finalproject
 
 import com.example.finalproject.Database.DatabaseHelper
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -63,6 +64,11 @@ class LogInPage : AppCompatActivity() {
     private fun logInDatabase(email: String, password: String){
         val userExists = databaseHelper.readUser(email, password)
         if (userExists){
+            val sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+            val editor = sharedPrefs.edit()
+            editor.putBoolean("isLoggedIn", true)
+            editor.apply()
+
             Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
             val int = Intent(this, rvHompagee::class.java)
             startActivity(int)

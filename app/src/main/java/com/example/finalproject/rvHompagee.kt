@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.AmdBuild.amd_build
 import com.example.finalproject.Cart.Cart
 import com.example.finalproject.IntelBuild.IntelBuild
+import com.example.finalproject.MyProfile.MyProfile
 import com.example.finalproject.Products.Cpu_products_info.Cpu_no1_info
 import com.example.finalproject.Products.Gpu_products_info.Gpu_no1_info
 import com.example.finalproject.Products.Hdd_products_info.Hdd_no6_info
@@ -103,15 +104,17 @@ class rvHompagee : AppCompatActivity() {
 
         bottomNaviation.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.home -> {val intent = Intent(this, rvHompagee::class.java)
-                    startActivity(intent)
-                    finish()}
+//                R.id.home -> {val intent = Intent(this, rvHompagee::class.java)
+//                    startActivity(intent)
+//                    finish()}
 
 //                R.id.marketplace ->{val intent = Intent(this, Marketplace::class.java)
 //                startActivity(intent)
 //                finish()}
 
-
+                R.id.me_profile -> {val  intent = Intent(this, MyProfile::class.java)
+                    startActivity(intent)
+                    finish()}
             }
             true
         }
