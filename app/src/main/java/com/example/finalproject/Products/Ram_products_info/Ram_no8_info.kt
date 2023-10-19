@@ -3,8 +3,12 @@ package com.example.finalproject.Products.Ram_products_info
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.viewpager2.widget.ViewPager2
+import com.example.finalproject.Cart.Cart
+import com.example.finalproject.Cart.CartDatabaseHelper
+import com.example.finalproject.Cart.Cart_Data_Class
 import com.example.finalproject.Categories.MoBo_Category.Mobo_products_holder
 import com.example.finalproject.Categories.Ram_Category.Ram_products_holder
 import com.example.finalproject.Products.Cpu_products_info.ViewPager_Adapter
@@ -12,6 +16,8 @@ import com.example.finalproject.R
 
 class Ram_no8_info : AppCompatActivity() {
     private lateinit var backbt : ImageView
+    private lateinit var addToCart : Button
+    private lateinit var RamCart : ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ram_no8_info)
@@ -30,6 +36,24 @@ class Ram_no8_info : AppCompatActivity() {
         backbt.setOnClickListener {
             val intent = Intent(this, Ram_products_holder::class.java)
             startActivityWithAnimation(intent)
+        }
+        addToCart = findViewById(R.id.addToCart_button)
+        addToCart.setOnClickListener {
+            val databaseHelper = CartDatabaseHelper(this)
+            val cartItem = Cart_Data_Class(126, "Corsair Dominator Platinum RGB", 6716.00, "Ram", R.drawable.ram_img8, 1)
+            val insertedRowId = databaseHelper.insertCartItem(cartItem)
+
+            val int = Intent(this, Cart::class.java)
+            int.putExtra("previousActivity", "Ram8")
+            startActivity(int)
+        }
+
+        RamCart = findViewById(R.id.Ram_Cart)
+        RamCart.setOnClickListener{
+            val int = Intent(this, Cart::class.java)
+            int.putExtra("previousActivity", "Ram8")
+            startActivity(int)
+            finish()
         }
     }
 

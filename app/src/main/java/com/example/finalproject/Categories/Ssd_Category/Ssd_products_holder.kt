@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.finalproject.Cart.Cart
 import com.example.finalproject.Categories.MoBo_Category.Mobo_Data_Class
 import com.example.finalproject.Products.Ram_products_info.Ram_no1_info
 import com.example.finalproject.Products.Ssd_products_info.Ssd_no10_info
@@ -43,6 +44,7 @@ class Ssd_products_holder : AppCompatActivity() {
     private var data = mutableListOf<Ssd_Data_Class>()
 
     private lateinit var searchView : SearchView
+    private lateinit var caseCart : ImageView
 
 
     @SuppressLint("MissingInflatedId")
@@ -79,6 +81,13 @@ class Ssd_products_holder : AppCompatActivity() {
         backbt.setOnClickListener{
             val intent = Intent(this, rvHompagee::class.java)
             startActivityWithAnimation(intent)
+        }
+        caseCart = findViewById(R.id.ssd_cart)
+        caseCart.setOnClickListener{
+            val int = Intent(this, Cart::class.java)
+            int.putExtra("previousActivity", "Ssd_product_holder")
+            startActivity(int)
+            finish()
         }
     }
 
@@ -118,13 +127,13 @@ class Ssd_products_holder : AppCompatActivity() {
         data.add(ssdModels)
 
         ssdModels =
-            Ssd_Data_Class("Sandisk Ultra 3D SSD 1TB SATA III SSD", 5450.00, R.drawable.ssd_img4, Ssd_no4_info::class.java)
+            Ssd_Data_Class("Sandisk Ultra 3D 1TB SATA III SSD", 5450.00, R.drawable.ssd_img4, Ssd_no4_info::class.java)
         data.add(ssdModels)
 
         ssdModels = Ssd_Data_Class("Kingston KC400 1TB SATA III SSD", 2200.00, R.drawable.ssd_img5, Ssd_no5_info::class.java)
         data.add(ssdModels)
 
-        ssdModels = Ssd_Data_Class("ADATA SU800 SATA 1TB III SSD", 3950.00, R.drawable.ssd_img6, Ssd_no6_info::class.java)
+        ssdModels = Ssd_Data_Class("ADATA SU800 1TB SATA III SSD", 3950.00, R.drawable.ssd_img6, Ssd_no6_info::class.java)
         data.add(ssdModels)
 
         ssdModels = Ssd_Data_Class("PNY CS900 1TB SATA III SSD", 1299.00, R.drawable.ssd_img7, Ssd_no7_info::class.java)

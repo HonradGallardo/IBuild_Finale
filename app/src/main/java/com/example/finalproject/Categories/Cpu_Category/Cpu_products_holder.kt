@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.finalproject.Cart.Cart
 import com.example.finalproject.Products.Cpu_products_info.Cpu_no10_info
 import com.example.finalproject.Products.Cpu_products_info.Cpu_no11_info
 import com.example.finalproject.Products.Cpu_products_info.Cpu_no12_info
@@ -16,6 +17,7 @@ import com.example.finalproject.Products.Cpu_products_info.Cpu_no14_info
 import com.example.finalproject.Products.Cpu_products_info.Cpu_no15_info
 import com.example.finalproject.Products.Cpu_products_info.Cpu_no16_info
 import com.example.finalproject.Products.Cpu_products_info.Cpu_no17_info
+import com.example.finalproject.Products.Cpu_products_info.Cpu_no18_info
 import com.example.finalproject.Products.Cpu_products_info.Cpu_no19_info
 import com.example.finalproject.Products.Cpu_products_info.Cpu_no1_info
 import com.example.finalproject.Products.Cpu_products_info.Cpu_no20_info
@@ -41,6 +43,7 @@ class Cpu_products_holder : AppCompatActivity() {
 
     //SEARCH BAR
     private lateinit var searchView : SearchView
+    private lateinit var caseCart : ImageView
 
 
 
@@ -83,6 +86,13 @@ class Cpu_products_holder : AppCompatActivity() {
         backbt.setOnClickListener{
             val intent = Intent(this, rvHompagee::class.java)
             startActivityWithAnimation(intent)
+            finish()
+        }
+        caseCart = findViewById(R.id.cpu_cart)
+        caseCart.setOnClickListener{
+            val int = Intent(this, Cart::class.java)
+            int.putExtra("previousActivity", "Cpu_product_holder")
+            startActivity(int)
             finish()
         }
     }
@@ -158,7 +168,7 @@ class Cpu_products_holder : AppCompatActivity() {
         cpuModels = Cpu_Data_Class("AMD Ryzen 5 5600x", 8799.00, R.drawable.cpu_img17, Cpu_no17_info::class.java)
         data.add(cpuModels)
 
-        cpuModels = Cpu_Data_Class("Intel Core i5-10500", 12299.00, R.drawable.cpu_img18, Cpu_no16_info::class.java)
+        cpuModels = Cpu_Data_Class("Intel Core i5-10500", 12299.00, R.drawable.cpu_img18, Cpu_no18_info::class.java)
         data.add(cpuModels)
         cpuModels = Cpu_Data_Class("Intel Core i3-8100", 9699.03, R.drawable.cpu_img19, Cpu_no19_info::class.java)
         data.add(cpuModels)

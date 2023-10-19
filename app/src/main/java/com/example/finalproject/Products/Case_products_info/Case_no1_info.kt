@@ -49,6 +49,7 @@ class Case_no1_info : AppCompatActivity() {
 
 
             val int = Intent(this, Cart::class.java)
+            int.putExtra("previousActivity", "Case1")
             startActivity(int)
         }
 

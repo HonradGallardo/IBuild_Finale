@@ -28,6 +28,24 @@ class Cart_Adapter constructor(private val context: Context, private val DataCla
         holder.itemImage.setImageResource(DataClass[position].imageResource)
         holder.quantityNumber.text = DataClass[position].quantity.toString()
 
+        holder.trashIcon.setOnClickListener{
+            val productId = DataClass[position].productId
+            val databaseHelper = CartDatabaseHelper(context)
+
+            // Delete the item from the database
+            val rowsDeleted = databaseHelper.deleteCartItem(productId)
+
+            if (rowsDeleted > 0) {
+                // The item was successfully removed
+                DataClass.removeAt(position)
+                notifyItemRemoved(position)
+                notifyItemRangeChanged(position, DataClass.size)
+                onItemRemoved(DataClass)
+            } else {
+                Toast.makeText(context, "Reload the Page", Toast.LENGTH_SHORT).show()
+            }
+        }
+
 
         holder.minusIcon.setOnClickListener {
             if (DataClass[position].quantity > 1) {
@@ -70,7 +88,12 @@ class Cart_Adapter constructor(private val context: Context, private val DataCla
         holder.quantityNumber.text = item.quantity.toString()
         val totalPrice = item.price * item.quantity
         holder.itemPrice.text = totalPrice.toString()
+
+        // Update the quantity in the database
+        val databaseHelper = CartDatabaseHelper(holder.itemView.context)
+        databaseHelper.updateCartItem(item)
     }
+
 
 
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){

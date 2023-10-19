@@ -18,8 +18,8 @@ import com.example.finalproject.rvHompagee
 
 class Cpu_no1_info : AppCompatActivity() {
     private lateinit var backbt : ImageView
-    private lateinit var Cpu_cart : ImageView
-    private lateinit var Cpu_addToCart : Button
+    private lateinit var addToCart : Button
+    private lateinit var cpuCart : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,11 +40,25 @@ class Cpu_no1_info : AppCompatActivity() {
             val intent = Intent(this, Cpu_products_holder::class.java)
             startActivityWithAnimation(intent)
         }
+        addToCart = findViewById(R.id.addToCart_button)
+        addToCart.setOnClickListener {
+            val databaseHelper = CartDatabaseHelper(this)
+            val cartItem = Cart_Data_Class(11, "AMD RYZEN 5 5600 cpu", 8150.00, "CPU", R.drawable.cpu_img1, 1)
+            val insertedRowId = databaseHelper.insertCartItem(cartItem)
 
-        Cpu_cart = findViewById(R.id.Cpu_Cart)
-        Cpu_addToCart = findViewById(R.id.Cpu_addTo_Cart_button)
 
+            val int = Intent(this, Cart::class.java)
+            int.putExtra("previousActivity", "Cpu1")
+            startActivity(int)
+        }
 
+        cpuCart = findViewById(R.id.Cpu_Cart)
+        cpuCart.setOnClickListener{
+            val int = Intent(this, Cart::class.java)
+            int.putExtra("previousActivity", "Cpu1")
+            startActivity(int)
+            finish()
+        }
     }
 
     override fun onBackPressed() {

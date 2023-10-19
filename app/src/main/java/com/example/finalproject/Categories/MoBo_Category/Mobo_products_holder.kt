@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.finalproject.Cart.Cart
 import com.example.finalproject.Categories.Cpu_Category.Cpu_Data_Class
 import com.example.finalproject.Products.MoBo_products_info.Mobo_no10_info
 import com.example.finalproject.Products.MoBo_products_info.Mobo_no11_info
@@ -42,6 +43,7 @@ class Mobo_products_holder : AppCompatActivity() {
     private var data = mutableListOf<Mobo_Data_Class>()
 
     private lateinit var searchView : SearchView
+    private lateinit var caseCart : ImageView
 
 
     @SuppressLint("MissingInflatedId")
@@ -79,6 +81,13 @@ class Mobo_products_holder : AppCompatActivity() {
         backbt.setOnClickListener{
             val intent = Intent(this, rvHompagee::class.java)
             startActivityWithAnimation(intent)
+        }
+        caseCart = findViewById(R.id.mobo_cart)
+        caseCart.setOnClickListener{
+            val int = Intent(this, Cart::class.java)
+            int.putExtra("previousActivity", "Mobo_product_holder")
+            startActivity(int)
+            finish()
         }
     }
 

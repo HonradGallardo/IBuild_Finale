@@ -22,7 +22,7 @@
         tools:ignore="ContentDescription" />
 
     <ImageView
-        android:id="@+id/Cpu_Cart"
+        android:id="@+id/Case_Cart"
         android:layout_width="40dp"
         android:layout_height="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -151,7 +151,7 @@ Cooling Systems:\n Front 120mm*2 Support Rear 120mm*1 Support Top 120mm*2\n Supp
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/addToCart_button"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -179,7 +179,7 @@ Cooling Systems:\n Front 120mm*2 Support Rear 120mm*1 Support Top 120mm*2\n Supp
         android:layout_width="125dp"
         android:layout_height="40dp"
         app:layout_constraintBottom_toTopOf="@+id/divider"
-        app:layout_constraintEnd_toStartOf="@+id/Cpu_Cart"
+        app:layout_constraintEnd_toStartOf="@+id/Case_Cart"
         app:layout_constraintStart_toEndOf="@+id/Case_Products_Back_to_Category"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logonamin" />

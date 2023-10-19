@@ -3,6 +3,7 @@ package com.example.finalproject.Database
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
@@ -11,7 +12,7 @@ class DatabaseHelper(private val context: Context) : SQLiteOpenHelper(context, D
 
     companion object {
         private const val DATABASE_NAME = "UserDatabase.db"
-        private const val DATABASE_VERSION = 1
+        private const val DATABASE_VERSION = 2  // Increment version when making schema changes
         private const val TABLE_NAME = "UserTable"
         private const val COLUMN_ID = "id"
         private const val COLUMN_USERNAME = "username"
@@ -25,30 +26,31 @@ class DatabaseHelper(private val context: Context) : SQLiteOpenHelper(context, D
         private const val PASSWORD_MAX_LENGTH = 30
     }
 
-    override fun onCreate(db: SQLiteDatabase?) {
+    override fun onCreate(db: SQLiteDatabase) {
         val createTableQuery = ("CREATE TABLE $TABLE_NAME (" +
                 "$COLUMN_ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "$COLUMN_USERNAME TEXT, " +
                 "$COLUMN_EMAIL TEXT, " +  // Added email column
                 "$COLUMN_PASSWORD TEXT, " +
                 "$COLUMN_CONFIRM_PASSWORD TEXT)")  // Added confirm_password column
-        db?.execSQL(createTableQuery)
+        db.execSQL(createTableQuery)
     }
 
-    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        val dropTableQuery = "DROP TABLE IF EXISTS $TABLE_NAME"
-        db?.execSQL(dropTableQuery)
-        onCreate(db)
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+        if (oldVersion < 2) {
+            // Add the email column if the old version is less than 2
+            db.execSQL("ALTER TABLE $TABLE_NAME ADD COLUMN $COLUMN_EMAIL TEXT")
+        }
     }
 
     fun insertUser(username: String, email: String, password: String): Long {
-//        if (username.length < USERNAME_MIN_LENGTH || username.length > USERNAME_MAX_LENGTH) {
-//            throw IllegalArgumentException("Username must be between $USERNAME_MIN_LENGTH and $USERNAME_MAX_LENGTH characters.")
-//        }
-//
-//        if (password.length < PASSWORD_MIN_LENGTH || password.length > PASSWORD_MAX_LENGTH) {
-//            throw IllegalArgumentException("Password must be between $PASSWORD_MIN_LENGTH and $PASSWORD_MAX_LENGTH characters.")
-//        }
+        if (username.length !in USERNAME_MIN_LENGTH..USERNAME_MAX_LENGTH) {
+            throw IllegalArgumentException("Username must be between $USERNAME_MIN_LENGTH and $USERNAME_MAX_LENGTH characters.")
+        }
+
+        if (password.length !in PASSWORD_MIN_LENGTH..PASSWORD_MAX_LENGTH) {
+            throw IllegalArgumentException("Password must be between $PASSWORD_MIN_LENGTH and $PASSWORD_MAX_LENGTH characters.")
+        }
 
         val values = ContentValues().apply {
             put(COLUMN_USERNAME, username)
@@ -64,7 +66,7 @@ class DatabaseHelper(private val context: Context) : SQLiteOpenHelper(context, D
         val db = readableDatabase
         val selection = "$COLUMN_EMAIL = ? AND $COLUMN_PASSWORD = ?"
         val selectionArgs = arrayOf(email, password)
-        val cursor = db.query(TABLE_NAME, null, selection, selectionArgs, null, null, null)
+        val cursor: Cursor = db.query(TABLE_NAME, null, selection, selectionArgs, null, null, null)
 
         val userExists = cursor.count > 0
         cursor.close()
