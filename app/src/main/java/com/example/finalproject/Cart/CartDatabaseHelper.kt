@@ -20,8 +20,6 @@ class CartDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         private const val COLUMN_IMAGE_RES_ID = "image_res_id"
         private const val COLUMN_DESCRIPTION = "description"
         private const val COLUMN_QUANTITY = "quantity"
-
-
     }
 
     override fun onCreate(db: SQLiteDatabase) {
@@ -42,16 +40,29 @@ class CartDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
     }
 
     fun insertCartItem(cartItem: Cart_Data_Class): Long {
-        val values = ContentValues().apply {
-            put(COLUMN_PRODUCT_NAME, cartItem.productName)
-            put(COLUMN_PRICE, cartItem.price)
-            put(COLUMN_IMAGE_RES_ID, cartItem.imageResource)
-            put(COLUMN_DESCRIPTION, cartItem.description)
-            put(COLUMN_QUANTITY, cartItem.quantity)
-        }
-
         val db = writableDatabase
-        return db.insert(TABLE_NAME, null, values)
+
+        // Check if the item already exists in the cart
+        val existingCartItem = getCartItem(cartItem.productId)
+
+        return if (existingCartItem != null) {
+            // If the item exists, update the quantity
+            existingCartItem.quantity += 1
+            updateCartItem(existingCartItem)
+            existingCartItem.productId.toLong() // Return the ID of the existing item
+        } else {
+            // If the item doesn't exist, insert a new row
+            val values = ContentValues().apply {
+                put(COLUMN_ID, cartItem.productId)
+                put(COLUMN_PRODUCT_NAME, cartItem.productName)
+                put(COLUMN_PRICE, cartItem.price)
+                put(COLUMN_IMAGE_RES_ID, cartItem.imageResource)
+                put(COLUMN_DESCRIPTION, cartItem.description)
+                put(COLUMN_QUANTITY, 1) // Default quantity is 1 when inserting a new item
+            }
+
+            db.insert(TABLE_NAME, null, values)
+        }
     }
 
     fun deleteCartItem(productId: Int): Int {
@@ -60,7 +71,6 @@ class CartDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         val whereArgs = arrayOf(productId.toString())
         return db.delete(TABLE_NAME, whereClause, whereArgs)
     }
-
 
     @SuppressLint("Range")
     fun getAllCartItems(): List<Cart_Data_Class> {
@@ -82,5 +92,48 @@ class CartDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         }
 
         return cartItems
+    }
+
+    fun updateCartItem(cartItem: Cart_Data_Class): Int {
+        val db = writableDatabase
+        val values = ContentValues().apply {
+            put(COLUMN_QUANTITY, cartItem.quantity)
+        }
+
+        val whereClause = "$COLUMN_ID = ?"
+        val whereArgs = arrayOf(cartItem.productId.toString())
+
+        return db.update(TABLE_NAME, values, whereClause, whereArgs)
+    }
+
+    @SuppressLint("Range")
+    fun getCartItem(itemId: Int): Cart_Data_Class? {
+        val db = readableDatabase
+        val selection = "$COLUMN_ID = ?"
+        val selectionArgs = arrayOf(itemId.toString())
+
+        val cursor = db.query(
+            TABLE_NAME,
+            null,
+            selection,
+            selectionArgs,
+            null,
+            null,
+            null
+        )
+
+        return if (cursor !=null && cursor.moveToFirst()) {
+            val id = cursor.getInt(cursor.getColumnIndex(COLUMN_ID))
+            val productName = cursor.getString(cursor.getColumnIndex(COLUMN_PRODUCT_NAME))
+            val price = cursor.getDouble(cursor.getColumnIndex(COLUMN_PRICE))
+            val image = cursor.getInt(cursor.getColumnIndex(COLUMN_IMAGE_RES_ID))
+            val description = cursor.getString(cursor.getColumnIndex(COLUMN_DESCRIPTION))
+            val quantity = cursor.getInt(cursor.getColumnIndex(COLUMN_QUANTITY))
+            cursor.close()
+
+            Cart_Data_Class(id, productName, price, description, image, quantity)
+        } else {
+            null
+        }
     }
 }

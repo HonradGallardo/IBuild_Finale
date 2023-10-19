@@ -25,6 +25,8 @@ import com.example.finalproject.Products.Psu_products_info.Psu_no1_info
 import com.example.finalproject.Products.Psu_products_info.Psu_no3_info
 import com.example.finalproject.Products.Ram_products_info.Ram_no4_info
 import com.example.finalproject.Products.Ram_products_info.Ram_no8_info
+import com.example.finalproject.Products.Ssd_products_info.Ssd_no1_info
+import com.example.finalproject.Products.Ssd_products_info.Ssd_no3_info
 import com.example.finalproject.R
 import com.example.finalproject.rvHompagee
 import java.util.Locale
@@ -108,7 +110,7 @@ class amd_build : AppCompatActivity() {
         products = amd_build_Data_Class("WD Black HDD 1TB",1699.00, R.drawable.hdd_img2, Hdd_no2_info::class.java)
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("WD Blue 3D NAND 1TB SSD", 5690.00, R.drawable.ssd_img3, Hdd_no2_info::class.java)//PAPALITAN NG DESTINATION
+        products = amd_build_Data_Class("WD Blue 3D NAND 1TB SSD", 5690.00, R.drawable.ssd_img3, Ssd_no3_info::class.java)
         Data_Class.add(products)
 
         products = amd_build_Data_Class("ASUS VS239H-P",7374.90, R.drawable.monitor_img12, Monitor_no12_info::class.java)
@@ -132,7 +134,7 @@ class amd_build : AppCompatActivity() {
         products = amd_build_Data_Class("Seagate FireCuda HDD",6190.00, R.drawable.hdd_img1, Hdd_no1_info::class.java)
         Data_Class.add(products)
 
-        products = amd_build_Data_Class("Samsung 970 EVO Plus", 8550.00, R.drawable.ssd_img11, Hdd_no1_info::class.java)//PAPALITAN NG DESTINATIO
+        products = amd_build_Data_Class("Samsung 970 EVO Plus", 8550.00, R.drawable.ssd_img11, Ssd_no1_info::class.java)
         Data_Class.add(products)
 
         products = amd_build_Data_Class("Samsung SF350",6055.00, R.drawable.monitor_img11, Monitor_no11_info::class.java)

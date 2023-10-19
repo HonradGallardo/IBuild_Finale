@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">iBuild</string>
-    <string name="price_format">₱%.2f</string>
+    <string name="price_format">₱%s</string>
 </resources>

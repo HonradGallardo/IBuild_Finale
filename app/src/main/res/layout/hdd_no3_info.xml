@@ -22,7 +22,7 @@
         tools:ignore="ContentDescription" />
 
     <ImageView
-        android:id="@+id/Gpu_Cart"
+        android:id="@+id/Hdd_Cart"
         android:layout_width="40dp"
         android:layout_height="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -152,7 +152,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/addToCart_button"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -180,7 +180,7 @@
         android:layout_width="125dp"
         android:layout_height="40dp"
         app:layout_constraintBottom_toTopOf="@+id/divider"
-        app:layout_constraintEnd_toStartOf="@+id/Gpu_Cart"
+        app:layout_constraintEnd_toStartOf="@+id/Hdd_Cart"
         app:layout_constraintStart_toEndOf="@+id/Gpu_Products_Back_to_Category"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logonamin" />

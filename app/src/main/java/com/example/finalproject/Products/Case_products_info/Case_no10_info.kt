@@ -3,14 +3,20 @@ package com.example.finalproject.Products.Case_products_info
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.viewpager2.widget.ViewPager2
+import com.example.finalproject.Cart.Cart
+import com.example.finalproject.Cart.CartDatabaseHelper
+import com.example.finalproject.Cart.Cart_Data_Class
 import com.example.finalproject.Categories.Case_Category.Case_product_holder
 import com.example.finalproject.Products.Cpu_products_info.ViewPager_Adapter
 import com.example.finalproject.R
 
 class Case_no10_info : AppCompatActivity() {
     private lateinit var backBt : ImageView
+    private lateinit var addToCart : Button
+    private lateinit var caseCart : ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.case_no10_info)
@@ -30,6 +36,25 @@ class Case_no10_info : AppCompatActivity() {
         backBt.setOnClickListener {
             val int = Intent(this, Case_product_holder::class.java)
             startActivityWithAnimation(int)
+            finish()
+        }
+        addToCart = findViewById(R.id.addToCart_button)
+        addToCart.setOnClickListener {
+            val databaseHelper = CartDatabaseHelper(this)
+            val cartItem = Cart_Data_Class(10, "Gigabyte AORUS C300 Glass ATX Gaming Case AC300G", 7500.00, "CASE", R.drawable.gigabyteaorusc300, 1)
+            val insertedRowId = databaseHelper.insertCartItem(cartItem)
+
+
+            val int = Intent(this, Cart::class.java)
+            int.putExtra("previousActivity", "Case10")
+            startActivity(int)
+        }
+
+        caseCart = findViewById(R.id.Case_Cart)
+        caseCart.setOnClickListener{
+            val int = Intent(this, Cart::class.java)
+            int.putExtra("previousActivity", "Case10")
+            startActivity(int)
             finish()
         }
 

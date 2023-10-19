@@ -80,7 +80,7 @@
         tools:ignore="HardcodedText,MissingConstraints,SpUsage" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/hdd_cart"
         android:layout_width="40dp"
         android:layout_height="35dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -18,7 +18,8 @@ import com.example.finalproject.R
 class Gpu_no1_info : AppCompatActivity() {
 
     private lateinit var backbt : ImageView
-    private lateinit var Cart_button_gpu : Button
+    private lateinit var addToCart : Button
+    private lateinit var cpuCart : ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.gpu_no1_info)
@@ -40,9 +41,25 @@ class Gpu_no1_info : AppCompatActivity() {
             val intent = Intent(this, Gpu_products_holder::class.java)
             startActivityWithAnimation(intent)
         }
+        addToCart = findViewById(R.id.addToCart_button)
+        addToCart.setOnClickListener {
+            val databaseHelper = CartDatabaseHelper(this)
+            val cartItem = Cart_Data_Class(31, "GIGABYTE GTX 1660 SUPER GAMING OC", 15500.00, "GPU", R.drawable.gpu_img1, 1)
+            val insertedRowId = databaseHelper.insertCartItem(cartItem)
 
-        Cart_button_gpu = findViewById(R.id.cart_button_gpu)
 
+            val int = Intent(this, Cart::class.java)
+            int.putExtra("previousActivity", "Gpu1")
+            startActivity(int)
+        }
+
+        cpuCart = findViewById(R.id.Gpu_Cart)
+        cpuCart.setOnClickListener{
+            val int = Intent(this, Cart::class.java)
+            int.putExtra("previousActivity", "Gpu1")
+            startActivity(int)
+            finish()
+        }
     }
 
     override fun onBackPressed() {

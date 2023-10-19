@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.finalproject.Cart.Cart
 import com.example.finalproject.Categories.Cpu_Category.Cpu_Data_Class
 import com.example.finalproject.Products.Hdd_products_info.Hdd_no1_info
 import com.example.finalproject.Products.Hdd_products_info.Hdd_no2_info
@@ -30,6 +31,7 @@ class Hdd_products_holder : AppCompatActivity() {
     private var data = mutableListOf<Hdd_Data_Class>()
 
     private lateinit var searchView : SearchView
+    private lateinit var caseCart : ImageView
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,6 +68,13 @@ class Hdd_products_holder : AppCompatActivity() {
         backbt.setOnClickListener{
             val intent = Intent(this, rvHompagee::class.java)
             startActivityWithAnimation(intent)
+        }
+        caseCart = findViewById(R.id.hdd_cart)
+        caseCart.setOnClickListener{
+            val int = Intent(this, Cart::class.java)
+            int.putExtra("previousActivity", "Hdd_product_holder")
+            startActivity(int)
+            finish()
         }
     }
 

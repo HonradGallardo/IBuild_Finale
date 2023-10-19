@@ -1,5 +1,6 @@
 package com.example.finalproject.Categories.Case_Category
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.widget.ImageView
 import android.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.finalproject.Cart.Cart
 import com.example.finalproject.Categories.Cpu_Category.Cpu_Adapter
 import com.example.finalproject.Categories.Cpu_Category.Cpu_Data_Class
 import com.example.finalproject.Products.Case_products_info.Case_no10_info
@@ -34,6 +36,8 @@ class Case_product_holder : AppCompatActivity() {
     private lateinit var backButton : ImageView
     private lateinit var searchView: androidx.appcompat.widget.SearchView
 
+    private lateinit var caseCart : ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.case_product_holder)
@@ -49,6 +53,13 @@ class Case_product_holder : AppCompatActivity() {
         backButton = findViewById(R.id.Case_Back_to_Home)
         backButton.setOnClickListener {
             val int = Intent(this, rvHompagee::class.java)
+            startActivity(int)
+            finish()
+        }
+        caseCart = findViewById(R.id.case_cart)
+        caseCart.setOnClickListener{
+            val int = Intent(this, Cart::class.java)
+            int.putExtra("previousActivity", "Case_product_holder")
             startActivity(int)
             finish()
         }
@@ -70,6 +81,7 @@ class Case_product_holder : AppCompatActivity() {
 
     }
 
+    @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
         val intent = Intent(this, rvHompagee::class.java)
         startActivityWithAnimation(intent)
