@@ -71,6 +71,10 @@ class CartDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         val whereArgs = arrayOf(productId.toString())
         return db.delete(TABLE_NAME, whereClause, whereArgs)
     }
+    fun deleteAllItems(): Int {
+        val db = writableDatabase
+        return db.delete(TABLE_NAME, null, null)
+    }
 
     @SuppressLint("Range")
     fun getAllCartItems(): List<Cart_Data_Class> {

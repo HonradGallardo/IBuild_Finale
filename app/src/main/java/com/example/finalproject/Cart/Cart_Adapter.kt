@@ -20,6 +20,9 @@ class Cart_Adapter constructor(private val context: Context, private val DataCla
     override fun getItemCount(): Int {
         return  DataClass.size
     }
+    fun clearCart() {
+        DataClass.clear()
+    }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.itemModel.text = DataClass[position].productName

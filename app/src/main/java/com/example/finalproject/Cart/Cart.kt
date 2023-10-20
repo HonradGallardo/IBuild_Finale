@@ -189,12 +189,14 @@ class Cart : AppCompatActivity() {
     private lateinit var tv_Price : TextView
     private lateinit var checkOut_Button : Button
     private lateinit var cartAdapter: Cart_Adapter
+    private lateinit var deleteAllInCart : ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cart)
         tv_Total = findViewById(R.id.tv_totalCart)
         tv_Price = findViewById(R.id.tv_totalPriceCart)
         checkOut_Button = findViewById(R.id.checkOut_Button)
+        deleteAllInCart = findViewById(R.id.trashIcon_All)
 
         Cart_backButton = findViewById(R.id.Cart_backButton)
         Cart_backButton.setOnClickListener{
@@ -212,7 +214,22 @@ class Cart : AppCompatActivity() {
 
 
         updateTotalPrice(cartItems)
+        DeleteallItem()
+    }
+    private fun DeleteallItem() {
+        deleteAllInCart.setOnClickListener {
+            val databaseHelper = CartDatabaseHelper(this)
 
+            // Call the function to delete all items from the cart
+            databaseHelper.deleteAllItems()
+
+            // Clear the list in your adapter and notify the adapter of the change
+            cartAdapter.clearCart()
+            cartAdapter.notifyDataSetChanged()
+
+            // Update the total price (assuming you have a function for it)
+            updateTotalPrice(emptyList())
+        }
     }
 
     private fun calculateTotalPrice(cartItems: List<Cart_Data_Class>): Double {
