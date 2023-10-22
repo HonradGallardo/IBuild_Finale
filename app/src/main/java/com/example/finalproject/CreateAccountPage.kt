@@ -59,7 +59,7 @@ class CreateAccountPage : AppCompatActivity() {
         val isConfirmPasswordValid = confirmPassword == password
 
         if (!isEmailValid) {
-            Toast.makeText(this, "Invalid email format. Please include '@' in the email.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Invalid email format. Please include '@' in the email and at least one '.' in the domain.", Toast.LENGTH_SHORT).show()
         }
 
         if (!isConfirmPasswordValid) {
@@ -70,7 +70,7 @@ class CreateAccountPage : AppCompatActivity() {
     }
 
     private fun isValidEmail(email: String): Boolean {
-        val emailRegex = "^[A-Za-z0-9+_.-]+@(.+)$"
+        val emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}\$"
         return email.matches(emailRegex.toRegex())
     }
 

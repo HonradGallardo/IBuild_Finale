@@ -12,7 +12,7 @@ class DatabaseHelper(private val context: Context) : SQLiteOpenHelper(context, D
 
     companion object {
         private const val DATABASE_NAME = "UserDatabase.db"
-        private const val DATABASE_VERSION = 1  // Increment version when making schema changes
+        private const val DATABASE_VERSION = 2  // Increment version when making schema changes
         private const val TABLE_NAME = "UserTable"
         private const val COLUMN_ID = "id"
         private const val COLUMN_USERNAME = "username"

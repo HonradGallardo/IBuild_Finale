@@ -1,12 +1,14 @@
 package com.example.finalproject.Cart
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.Categories.Case_Category.Case_product_holder
@@ -18,6 +20,8 @@ import com.example.finalproject.Categories.Monitor_Category.Monitor_products_hol
 import com.example.finalproject.Categories.Psu_Category.Psu_products_holder
 import com.example.finalproject.Categories.Ram_Category.Ram_products_holder
 import com.example.finalproject.Categories.Ssd_Category.Ssd_products_holder
+import com.example.finalproject.CheckOut.CheckOut
+import com.example.finalproject.MyProfile.Address.Address
 import com.example.finalproject.Products.Case_products_info.Case_no10_info
 import com.example.finalproject.Products.Case_products_info.Case_no1_info
 import com.example.finalproject.Products.Case_products_info.Case_no2_info
@@ -178,6 +182,7 @@ import com.example.finalproject.Products.Ssd_products_info.Ssd_no8_info
 import com.example.finalproject.Products.Ssd_products_info.Ssd_no9_info
 import com.example.finalproject.R
 import com.example.finalproject.rvHompagee
+import com.google.gson.Gson
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -213,9 +218,53 @@ class Cart : AppCompatActivity() {
         cartRecyclerView.adapter = cartAdapter
 
 
+        checkOutButton_Function()
         updateTotalPrice(cartItems)
         DeleteallItem()
     }
+
+    private fun checkOutButton_Function() {
+        checkOut_Button.setOnClickListener {
+            val databaseHelper = CartDatabaseHelper(this)
+            val cartItems = databaseHelper.getAllCartItems()
+
+            if (cartItems.isEmpty()) {
+                // Display a message to inform the user that the cart is empty
+                Toast.makeText(this, "Your cart is empty.", Toast.LENGTH_SHORT).show()
+            } else {
+                // Check if the user has selected an address
+                val prefs = getSharedPreferences("AddressPreferences", Context.MODE_PRIVATE)
+                val selectedAddressPosition = prefs.getInt("selectedAddressPosition", -1)
+
+                if (selectedAddressPosition == -1) {
+                    // Display a message to inform the user that they need to select an address
+                    Toast.makeText(this, "Please select an address before checking out.", Toast.LENGTH_SHORT).show()
+                } else {
+                    // User has items in the cart and has selected an address
+                    val sharedPreferences = getSharedPreferences("CartItems", Context.MODE_PRIVATE)
+                    val editor = sharedPreferences.edit()
+                    val cartItemsJson = Gson().toJson(cartItems)
+                    editor.putString("cart_items", cartItemsJson)
+                    editor.apply()
+
+                    val int = Intent(this, CheckOut::class.java)
+                    startActivity(int)
+                    finish()
+                }
+            }
+        }
+    }
+
+    override fun onBackPressed() {
+        goBackToPreviousActivity()
+    }
+
+    fun startActivityWithAnimation(intent: Intent) {
+        startActivity(intent)
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+        finish()
+    }
+
     private fun DeleteallItem() {
         deleteAllInCart.setOnClickListener {
             val databaseHelper = CartDatabaseHelper(this)
@@ -390,7 +439,6 @@ class Cart : AppCompatActivity() {
             val int = Intent(this, Cpu_products_holder::class.java)
             startActivity(int)
             finish()
-
 
 
 
@@ -788,11 +836,6 @@ class Cart : AppCompatActivity() {
             val int = Intent(this, Psu_products_holder::class.java)
             startActivity(int)
             finish()
-
-
-
-
-
         }else if (previousActivity == "Ram1"){
             val int = Intent(this, Ram_no1_info::class.java)
             startActivity(int)
@@ -963,6 +1006,10 @@ class Cart : AppCompatActivity() {
             finish()
         }else if (previousActivity == "Ssd_product_holder"){
             val int = Intent(this, Ssd_products_holder::class.java)
+            startActivity(int)
+            finish()
+        }else if (previousActivity == "CheckOut"){
+            val int = Intent(this, rvHompagee::class.java)
             startActivity(int)
             finish()
         }

@@ -6,10 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.example.finalproject.Database.DatabaseHelper
 import com.example.finalproject.R
+import com.example.finalproject.rvHompagee
 
 class Account : AppCompatActivity() {
 
@@ -19,6 +21,7 @@ class Account : AppCompatActivity() {
     private lateinit var et_newPassword : EditText
     private lateinit var et_confirmPassword : EditText
     private lateinit var saveButton : TextView
+    private lateinit var backButton : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,12 +33,33 @@ class Account : AppCompatActivity() {
         et_newPassword = findViewById(R.id.et_NewPassword_account)
         et_confirmPassword = findViewById(R.id.et_ConfirmPassword_account)
         saveButton = findViewById(R.id.tv_SaveButton_Account)
+        backButton = findViewById(R.id.BackButton_Account)
 
 
 
-
+        BackButton()
         saveInformation()
         UsernameAndEmail()
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, MyProfile::class.java)
+        startActivityWithAnimation(intent)
+        finish()
+    }
+
+    fun startActivityWithAnimation(intent: Intent) {
+        startActivity(intent)
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+        finish()
+    }
+
+    private fun BackButton(){
+        backButton.setOnClickListener {
+            val int = Intent(this, MyProfile::class.java)
+            startActivityWithAnimation(int)
+            finish()
+        }
     }
 
     private fun UsernameAndEmail(){
