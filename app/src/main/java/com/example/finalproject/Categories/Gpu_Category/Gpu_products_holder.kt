@@ -43,6 +43,8 @@ class Gpu_products_holder : AppCompatActivity() {
 
     private lateinit var searchView : SearchView
     private lateinit var caseCart : ImageView
+    private lateinit var sortUp: ImageView
+    private lateinit var sortDown : ImageView
 
 
     @SuppressLint("MissingInflatedId")
@@ -89,8 +91,29 @@ class Gpu_products_holder : AppCompatActivity() {
             startActivity(int)
             finish()
         }
+        sortUp = findViewById(R.id.sort_up)
+        sortDown = findViewById(R.id.sort_down)
+
+
+        sortUp.setOnClickListener {
+            sortDataDescending()
+        }
+
+        sortDown.setOnClickListener {
+            sortDataAscending()
+        }
+    }
+    private fun sortDataDescending() {
+        data.sortByDescending { it.gpuPricet }
+        cartAdapter?.setFilteredListCpu(data)
     }
 
+    private fun sortDataAscending() {
+        data.sortBy { it.gpuPricet }
+        cartAdapter?.setFilteredListCpu(data)
+    }
+
+    @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
         val intent = Intent(this, rvHompagee::class.java)
         startActivityWithAnimation(intent)

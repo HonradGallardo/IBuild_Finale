@@ -44,6 +44,8 @@ class Cpu_products_holder : AppCompatActivity() {
     //SEARCH BAR
     private lateinit var searchView : SearchView
     private lateinit var caseCart : ImageView
+    private lateinit var sortUp: ImageView
+    private lateinit var sortDown : ImageView
 
 
 
@@ -95,6 +97,25 @@ class Cpu_products_holder : AppCompatActivity() {
             startActivity(int)
             finish()
         }
+        sortUp = findViewById(R.id.sort_up)
+        sortDown = findViewById(R.id.sort_down)
+
+        sortUp.setOnClickListener {
+            sortDataDescending()
+        }
+
+        sortDown.setOnClickListener {
+            sortDataAscending()
+        }
+    }
+    private fun sortDataDescending() {
+        data.sortByDescending { it.cpuPricet }
+        cartAdapter?.setFilteredListCpu(data)
+    }
+
+    private fun sortDataAscending() {
+        data.sortBy { it.cpuPricet }
+        cartAdapter?.setFilteredListCpu(data)
     }
 
     override fun onBackPressed() {

@@ -1,5 +1,6 @@
 package com.example.finalproject.Products.Case_products_info
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,6 +13,7 @@ import com.example.finalproject.Cart.Cart_Data_Class
 import com.example.finalproject.Categories.Case_Category.Case_product_holder
 import com.example.finalproject.Products.Cpu_products_info.ViewPager_Adapter
 import com.example.finalproject.R
+import com.example.finalproject.rvHompagee
 
 class Case_no1_info : AppCompatActivity() {
 
@@ -51,6 +53,7 @@ class Case_no1_info : AppCompatActivity() {
             val int = Intent(this, Cart::class.java)
             int.putExtra("previousActivity", "Case1")
             startActivity(int)
+            finish()
         }
 
         caseCart = findViewById(R.id.Case_Cart)
@@ -59,13 +62,16 @@ class Case_no1_info : AppCompatActivity() {
             int.putExtra("previousActivity", "Case1")
             startActivity(int)
             finish()
+
+
         }
 
     }
 
+    @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
-        val intent = Intent(this, Case_product_holder::class.java)
-        startActivityWithAnimation(intent)
+        val int = Intent(this, Case_product_holder::class.java)
+        startActivityWithAnimation(int)
         finish()
     }
 

@@ -44,6 +44,8 @@ class Mobo_products_holder : AppCompatActivity() {
 
     private lateinit var searchView : SearchView
     private lateinit var caseCart : ImageView
+    private lateinit var sortUp: ImageView
+    private lateinit var sortDown : ImageView
 
 
     @SuppressLint("MissingInflatedId")
@@ -89,8 +91,27 @@ class Mobo_products_holder : AppCompatActivity() {
             startActivity(int)
             finish()
         }
+        sortUp = findViewById(R.id.sort_up)
+        sortDown = findViewById(R.id.sort_down)
+
+
+        sortUp.setOnClickListener {
+            sortDataDescending()
+        }
+        sortDown.setOnClickListener {
+            sortDataAscending()
+        }
+    }
+    private fun sortDataDescending() {
+        data.sortByDescending { it.moboPricet }
+        cartAdapter?.setFilteredListCpu(data)
     }
 
+    private fun sortDataAscending() {
+        data.sortBy { it.moboPricet }
+        cartAdapter?.setFilteredListCpu(data)
+    }
+    @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
         val intent = Intent(this, rvHompagee::class.java)
         startActivityWithAnimation(intent)
@@ -116,7 +137,7 @@ class Mobo_products_holder : AppCompatActivity() {
     }
 
     private fun moboProducts() {
-        var moboModels = Mobo_Data_Class("ASUS ROG Strix B450-F Gaming ATX",7850.00, R.drawable.mobo_img1, Mobo_no1_info::class.java)
+        var moboModels = Mobo_Data_Class("ASRock B450M pro4 Micro-ATX(mATX)",7850.00, R.drawable.mobo_img1, Mobo_no1_info::class.java)
         data.add(moboModels)
 
         moboModels = Mobo_Data_Class("MSI B450M Mortar MAX Micro-ATX(mATX)",5565.00, R.drawable.mobo_img2, Mobo_no2_info::class.java)
@@ -164,16 +185,16 @@ class Mobo_products_holder : AppCompatActivity() {
         moboModels = Mobo_Data_Class("ASUS ROG Strix Z590-E Gaming WiFi 6E ATX",19490.00, R.drawable.mobo_img16, Mobo_no16_info::class.java)
         data.add(moboModels)
 
-        moboModels = Mobo_Data_Class("MSI MAG B550 TOMAHAWK ATX",10690.00, R.drawable.mobo_img17,Mobo_no17_info::class.java)
+        moboModels = Mobo_Data_Class("GIGABYTE Z590 AORUS PRO AX",10690.00, R.drawable.mobo_img17,Mobo_no17_info::class.java)
         data.add(moboModels)
 
-        moboModels = Mobo_Data_Class("ASUS PRIME B550-PLUS ATX",9600.00, R.drawable.mobo_img18,Mobo_no18_info::class.java)
+        moboModels = Mobo_Data_Class("MSI MPG B550 Gaming Edge WiFi",9600.00, R.drawable.mobo_img18,Mobo_no18_info::class.java)
         data.add(moboModels)
 
         moboModels = Mobo_Data_Class("MSI B550-A PRO ATX",7295.00, R.drawable.mobo_img19, Mobo_no19_info::class.java)
         data.add(moboModels)
 
-        moboModels = Mobo_Data_Class("MSI B450 GAMING PLUS Motherboard ATX",7558.39, R.drawable.mobo_img20, Mobo_no20_info::class.java)
+        moboModels = Mobo_Data_Class("EVGA Z590 FTW WiFi",7558.39, R.drawable.mobo_img20, Mobo_no20_info::class.java)
         data.add(moboModels)
 
         cartAdapter!!.notifyDataSetChanged()

@@ -41,19 +41,19 @@ class Case_no5_info : AppCompatActivity() {
         addToCart = findViewById(R.id.addToCart_button)
         addToCart.setOnClickListener {
             val databaseHelper = CartDatabaseHelper(this)
-            val cartItem = Cart_Data_Class(4, "Tecware VXM TG/Mesh mATX Dual Chamber Chassis WHITE", 2590.00, "CASE", R.drawable.vmx2, 1)
+            val cartItem = Cart_Data_Class(5, "Tecware VXM TG/Mesh mATX Dual Chamber Chassis Black", 2590.00, "CASE", R.drawable.tecwarevxm, 1)
             val insertedRowId = databaseHelper.insertCartItem(cartItem)
 
 
             val int = Intent(this, Cart::class.java)
-            int.putExtra("previousActivity", "Case4")
+            int.putExtra("previousActivity", "Case5")
             startActivity(int)
         }
 
         caseCart = findViewById(R.id.Case_Cart)
         caseCart.setOnClickListener{
             val int = Intent(this, Cart::class.java)
-            int.putExtra("previousActivity", "Case4")
+            int.putExtra("previousActivity", "Case5")
             startActivity(int)
             finish()
         }

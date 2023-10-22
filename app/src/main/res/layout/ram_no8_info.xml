@@ -97,7 +97,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:text="Price: ₱6,716.00"
+                android:text="Price: ₱4,450.00"
                 android:textColor="@color/navy"
                 android:textSize="15sp"
                 android:textStyle="italic"

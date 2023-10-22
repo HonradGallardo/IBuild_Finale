@@ -97,8 +97,6 @@ class Cart_Adapter constructor(private val context: Context, private val DataCla
         databaseHelper.updateCartItem(item)
     }
 
-
-
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         val itemModel : TextView = itemView.findViewById(R.id.tv_item_model)
         val itemDescription : TextView = itemView.findViewById(R.id.item_description)
@@ -108,7 +106,6 @@ class Cart_Adapter constructor(private val context: Context, private val DataCla
         val minusIcon : ImageView = itemView.findViewById(R.id.minus_icon)
         val plusIcon : ImageView = itemView.findViewById(R.id.plus_icon)
         val quantityNumber : TextView = itemView.findViewById(R.id.quantity_textView)
-
 
     }
 }

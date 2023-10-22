@@ -82,7 +82,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif-light"
-                android:text="MSI MAG B550 TOMAHAWK"
+                android:text="GIGABYTE Z590 AORUS PRO AX"
                 android:textColor="@color/navy"
                 android:textSize="22.5dp"
                 android:textStyle="bold"
@@ -121,63 +121,52 @@
                 android:textSize="12sp"
                 android:layout_marginBottom="0dp"
                 android:gravity="start"
-                android:text="Chipset: AMD B550 Chipset\n
-\nCPU Socket: AM4 socket for 3rd Gen AMD Ryzen
-\n          processors and future AMD Ryzen processors
-\n          with BIOS update\n
+                android:text="Socket Type:
+\n              LGA1200\n
+\nChipset:
+\n              Intel Z590\n
+\nForm Factor:
+\n              ATX\n
 \nMemory:
-\n          4 x DDR4 memory slots,
-\n              supporting up to 128GB\n
-\n          Supports DDR4 1866/2133/2400/2667/2800/2933/
-\n              3000/3066/3200/3466/3600/3733/3866/4000/
-\n              4133/4266/4400/4533/4600/4733/4800/4866/
-\n              5000/5066/5133/5200 MHz by JEDEC and
-\n              A-XMP OC MODE\n
-\n          Dual channel memory architecture
-\n          Supports non-ECC UDIMM memory
-\n          Supports ECC UDIMM memory (non-ECC mode)
-\n          Supports un-buffered memory\n
-
-\nMulti-GPU Support:
-\n          Supports 2-Way AMD CrossFire Technology\n
-
+\n              4 x DDR4 DIMM slots
+\n              Supports DDR4 5400(OC)/5333/5200/5000/4866/4700
+\n              4600/4500/4400/4266/4133/4000/3866/3800/3733/
+\n              3600/3466/3400/3333/3300/3200/3000/2933/2800/
+\n              2666/2400/2133 MHz memory modules\n
+\n              Max. capacity of system memory: 128GB\n
 \nExpansion Slots:
-\n          1 x PCIe 4.0/3.0 x16 slot (PCI_E1)
-\n          1 x PCIe 3.0 x16 slot (PCI_E3, supports x4 mode)
-\n          2 x PCIe 3.0 x1 slots\n
-
+\n              1 x PCIe 4.0/3.0 x16 slot (x16 mode)
+\n              1 x PCIe 3.0 x16 slot (x8 mode)
+\n              1 x PCIe 3.0 x16 slot (x4 mode)
+\n              3 x PCIe 3.0 x1 slots\n
 \nStorage:
-\n          1 x M.2 slot (Key M)
-\n          6 x SATA 6Gb/s ports\n
-
-\nNetworking:
-\n          Realtek® RTL8125B 2.5G LAN
-\n          Intel® Wi-Fi 6 AX200
-\n          Bluetooth 5.1\n
-
-\nAudio:
-\n          Realtek® ALC1200 Codec
-\n          7.1-Channel High Definition Audio
-\n          Supports optical S/PDIF output\n
-
+\n              6 x SATA 6Gb/s connectors
+\n              3 x M.2 connectors (Socket 3, M key, type 2242
+\n              2260/2280/22110 SATA and PCIe 3.0 x4/x2
+\n              SSD support)\n
 \nUSB:
-\n          1 x USB 3.2 Gen 2 10Gbps Type-C port (back panel)
-\n          1 x USB 3.2 Gen 2 10Gbps Type-A port (back panel)
-\n          2 x USB 3.2 Gen 1 5Gbps ports (back panel)
-\n          2 x USB 3.2 Gen 1 5Gbps ports available through
-\n              the internal USB 3.2 Gen 1 connector
-\n          6 x USB 2.0 ports (2 Type-A ports on the back panel,
-\n              4 ports available through the
-\n              internal USB 2.0 connectors)\n
-
-\nWireless LAN and Bluetooth:
-\n          Intel® Wi-Fi 6 AX200 module
-\n          Supports Wi-Fi 802.11 a/b/g/n/ac/ax,
-\n              dual band (2.4GHz, 5GHz) up to 2.4 Gbps speed
-\n          Supports Bluetooth 5.1\n
-\nRGB Lighting:
-\n          Mystic Light RGB LED lighting control\n
-\nForm Factor: ATX Form Factor (12 in. x 9.6 in.)"
+\n              1 x USB Type-C port-back panel
+\n              1 x USB 3.2 Gen 2 Type-A port (red)-back panel
+\n              2 x USB 3.2 Gen 2 Type-A ports-back panel
+\n              4 x USB 3.2 Gen 1 ports available through
+\n              internal USB headers
+\n              4 x USB 2.0/1.1 ports available through
+\n              internal USB headers\n
+\nNetworking:
+\n              Intel GbE LAN chip (10/100/1000 Mbit)
+\n              Intel WiFi 6 AX200
+\n              Bluetooth 5.1\n
+\nAudio:
+\n              Realtek ALC1220-VB codec
+\n              High Definition Audio
+\n              2/4/5.1/7.1-channel\n
+\nForm Factor:
+\n              ATX Form Factor; 30.5cm x 24.4cm\n
+\nPower Delivery:
+\n              12+1+1 phases direct power delivery with DrMOS\n
+\nRGB Fusion 2.0:
+\n              Multi-Zone Addressable LED Light Show Design
+\n              Addressable LED and RGB LED Strips Support"
                 android:textColor="@color/black"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"
