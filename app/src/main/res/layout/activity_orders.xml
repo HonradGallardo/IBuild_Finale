@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-light"
-        android:text="To receive"
+        android:text="Pending"
         android:textColor="@color/navyblue"
         android:textSize="20sp"
         android:textStyle="bold"

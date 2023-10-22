@@ -46,21 +46,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_Account" />
 
+
     <TextView
         android:id="@+id/tv_Username_Account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="290dp"
         android:fontFamily="sans-serif-light"
         android:text="Username"
         android:textColor="@color/gray"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.003"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialDivider_account" />
-
 
     <EditText
             android:id="@+id/et_username_account"
@@ -86,11 +87,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-light"
+        android:layout_marginStart="15dp"
         android:text="Email"
         android:textColor="@color/gray"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tv_Username_Account"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_username_account" />
 
     <EditText
@@ -118,10 +120,11 @@
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-light"
         android:text="Current Password"
+        android:layout_marginStart="15dp"
         android:textColor="@color/gray"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tv_Email_Account"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_email_account" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -215,10 +218,11 @@
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-light"
         android:text="New Password"
+        android:layout_marginStart="15dp"
         android:textColor="@color/gray"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tv_CurrentPassword_Account"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/til_CurrentPassword_Account" />
 
 
@@ -229,10 +233,11 @@
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-light"
         android:text="Confirm Password"
+        android:layout_marginStart="15dp"
         android:textColor="@color/gray"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tv_NewPassword_Account"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/til_NewPassword_Account" />
 
     <TextView

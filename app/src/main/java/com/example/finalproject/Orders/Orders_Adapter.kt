@@ -27,7 +27,7 @@ class Orders_Adapter constructor(private val context: Context, private val cartI
         val item = cartItems[position]
         holder.itemName.text = item.productName
         holder.itemPrice.text = "₱${item.price}"
-        holder.textViewQuantity.text = "Quantity: ${item.quantity}"
+        holder.textViewQuantity.text = "${item.quantity}"
         holder.itemImage.setImageResource(item.imageResource)
     }
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

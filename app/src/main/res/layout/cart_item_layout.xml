@@ -25,20 +25,19 @@
 
             <TextView
                 android:id="@+id/tv_item_model"
-                android:layout_width="150dp"
+                android:layout_width="135dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="16dp"
                 android:text="AMD Processor"
                 android:textColor="@color/black"
-                android:textSize="17.5sp"
+                android:textSize="12.5sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/trashIcon"
-                app:layout_constraintStart_toEndOf="@+id/item_image"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/item_image"
-                android:layout_width="150dp"
+                android:layout_width="125dp"
                 android:padding="5dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/amdbuilderimage"
@@ -60,10 +59,13 @@
                 android:id="@+id/minus_icon"
                 android:layout_width="30dp"
                 android:layout_height="20dp"
-                android:layout_marginBottom="10dp"
                 android:src="@drawable/minusicon"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/item_price" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.803"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.923" />
 
             <ImageView
                 android:id="@+id/trashIcon"
@@ -76,14 +78,15 @@
             <TextView
                 android:id="@+id/item_description"
                 android:layout_width="140dp"
-                android:layout_height="wrap_content"
+                android:layout_height="16dp"
                 android:text="DESCRIPTION"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="italic"
-                app:layout_constraintBottom_toTopOf="@+id/item_price"
-                app:layout_constraintStart_toStartOf="@+id/tv_item_model"
-                app:layout_constraintTop_toBottomOf="@+id/tv_item_model" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/item_image"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/quantity_textView"
@@ -100,7 +103,9 @@
 
             <TextView
                 android:id="@+id/item_price"
+                FinalProject_LatestFile_10_23_2023
                 android:layout_width="60dp"
+
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:text="PRICE"

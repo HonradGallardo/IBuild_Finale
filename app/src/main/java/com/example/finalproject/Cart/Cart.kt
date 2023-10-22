@@ -255,7 +255,10 @@ class Cart : AppCompatActivity() {
         }
     }
 
-    @Deprecated("Deprecated in Java")
+
+   
+
+    Categories_Branch_Latest
     @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
         goBackToPreviousActivity()
@@ -301,7 +304,7 @@ class Cart : AppCompatActivity() {
         // Set the formatted price to tv_Price.text
         tv_Price.text = getString(R.string.price_format, formattedPrice)
     }
-
+    
     private fun goBackToPreviousActivity() {
         val previousActivity = intent.getStringExtra("previousActivity")
         if (previousActivity == "rvHomepage") {

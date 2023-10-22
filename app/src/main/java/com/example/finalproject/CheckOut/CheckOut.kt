@@ -1,6 +1,7 @@
 package com.example.finalproject.CheckOut
 
 import CheckOut_Adapter
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +19,7 @@ import com.example.finalproject.Orders.Orders
 import com.example.finalproject.R
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import java.util.Locale
 
 
 class CheckOut : AppCompatActivity() {
@@ -106,6 +108,7 @@ class CheckOut : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
         val int = Intent(this, Cart::class.java)
         int.putExtra("previousActivity", "CheckOut")
@@ -120,15 +123,16 @@ class CheckOut : AppCompatActivity() {
     }
 
     private fun updateTotalPrice() {
-        var total_Price = 0.0
+        var total_Price = 0.00
 
         for (item in cartItems) {
             total_Price += item.price * item.quantity
         }
 
-        // Find the total price TextView in your layout by its ID
+        // Format the total price with two decimal places and a comma as a thousands separator
+        val formattedTotalPrice = String.format(Locale.getDefault(), "₱%,.2f", total_Price)
 
-        // Update the text of the total price TextView
-        totalPrice.text = "₱${total_Price}"
+        // Find the total price TextView in your layout by its ID
+        totalPrice.text = formattedTotalPrice
     }
 }
