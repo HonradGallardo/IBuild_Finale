@@ -11,6 +11,8 @@
         android:layout_margin="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="9dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +51,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginEnd="10dp"
-                android:layout_marginBottom="14dp"
+                android:layout_marginBottom="7dp"
                 android:src="@drawable/plusicon"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
@@ -58,8 +60,7 @@
                 android:id="@+id/minus_icon"
                 android:layout_width="30dp"
                 android:layout_height="20dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginBottom="19dp"
+                android:layout_marginBottom="10dp"
                 android:src="@drawable/minusicon"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/item_price" />
@@ -88,7 +89,7 @@
                 android:id="@+id/quantity_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="17dp"
+                android:layout_marginBottom="10dp"
                 android:text="1"
                 android:textColor="@color/navyblue"
                 android:textSize="20sp"
@@ -99,7 +100,9 @@
 
             <TextView
                 android:id="@+id/item_price"
+
                 android:layout_width="60dp"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:text="PRICE"
@@ -110,13 +113,13 @@
 
             <TextView
                 android:id="@+id/Price_Text"
-                android:layout_width="51dp"
-                android:layout_marginStart="15dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginBottom="10dp"
-                android:textStyle="bold"
+                android:text="₱"
                 android:textColor="@color/navy"
-                android:text="Price: ₱"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/item_image" />
 

@@ -6,12 +6,13 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.UserHandle
 import android.provider.MediaStore
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.finalproject.LogInPage
+import com.example.finalproject.MyProfile.Address.Address
+import com.example.finalproject.Orders.Orders
 import com.example.finalproject.R
 import com.example.finalproject.rvHompagee
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -33,6 +34,14 @@ class MyProfile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_profile)
+        orders = findViewById(R.id.Orders_MyProfile)
+        orders.setOnClickListener {
+            val int = Intent(this, Orders::class.java)
+            startActivity(int)
+            finish()
+        }
+
+
 
 
 
@@ -43,13 +52,18 @@ class MyProfile : AppCompatActivity() {
 
 
 
-
-
         toAccount()
+        toAddress()
         UsernameAndEmailTextView()
         logOut()
         bottomNavigation()
     }
+
+
+
+
+
+
 
     private fun openImagePicker() {
         val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
@@ -65,6 +79,15 @@ class MyProfile : AppCompatActivity() {
         }
     }
 
+
+    private fun toAddress(){
+        address = findViewById(R.id.Address_MyProfile)
+        address.setOnClickListener {
+            val int = Intent(this, Address::class.java)
+            startActivity(int)
+            finish()
+        }
+    }
 
     private fun toAccount(){
         account = findViewById(R.id.Account_MyProfile)

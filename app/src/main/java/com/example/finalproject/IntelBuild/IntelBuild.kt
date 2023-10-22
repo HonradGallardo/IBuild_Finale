@@ -208,6 +208,19 @@ class IntelBuild : AppCompatActivity() {
         intelbuildercompatible()
 
     }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, rvHompagee::class.java)
+        startActivityWithAnimation(intent)
+        finish()
+    }
+
+    fun startActivityWithAnimation(intent: Intent) {
+        startActivity(intent)
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+        finish()
+    }
+
     private fun filterList(query : String?){
         if (query != null){
             val filteredList = ArrayList<IntelBuildDataClass>()
