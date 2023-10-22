@@ -13,6 +13,7 @@ import com.example.finalproject.MyProfile.MyProfile
 import com.example.finalproject.R
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import java.util.Locale
 
 class Orders : AppCompatActivity() {
     private lateinit var backButton : ImageView
@@ -57,13 +58,16 @@ class Orders : AppCompatActivity() {
 
 
     private fun updateTotalPrice() {
-        var total_Price = 0.0
+        var total_Price = 0.00
 
         for (item in cartItems) {
             total_Price += item.price * item.quantity
         }
 
+        // Format the total price with two decimal places and a comma as a thousands separator
+        val formattedTotalPrice = String.format(Locale.getDefault(), "₱%,.2f", total_Price)
+
         // Find the total price TextView in your layout by its ID
-        totalPrice.text = "₱${total_Price}"
+        totalPrice.text = formattedTotalPrice
     }
 }

@@ -25,7 +25,7 @@ class CheckOut_Adapter(private val context: Context, private val cartItems: List
         val item = cartItems[position]
         holder.itemName.text = item.productName
         holder.itemPrice.text = "₱${item.price}"
-        holder.textViewQuantity.text = "Quantity: ${item.quantity}"
+        holder.textViewQuantity.text = "${item.quantity}"
         holder.itemImage.setImageResource(item.imageResource)
     }
 
