@@ -11,6 +11,8 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.finalproject.LogInPage
+import com.example.finalproject.MarketPlace_and_SellProduct.AddDetails
+import com.example.finalproject.MarketPlace_and_SellProduct.MarketPlace
 import com.example.finalproject.MyProfile.Address.Address
 import com.example.finalproject.Orders.Orders
 import com.example.finalproject.R
@@ -30,10 +32,11 @@ class MyProfile : AppCompatActivity() {
     private val PICK_IMAGE_REQUEST = 1
 
 
-    private lateinit var bottomNaviation : BottomNavigationView
+    private lateinit var bottomNavigation : BottomNavigationView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_profile)
+        myProducts = findViewById(R.id.MyProducts_MyProfile)
         orders = findViewById(R.id.Orders_MyProfile)
         orders.setOnClickListener {
             val int = Intent(this, Orders::class.java)
@@ -51,19 +54,25 @@ class MyProfile : AppCompatActivity() {
         }
 
 
-
+        toMyProducts()
         toAccount()
         toAddress()
         UsernameAndEmailTextView()
         logOut()
-        bottomNavigation()
+        bottom_Navigation()
     }
 
 
 
 
 
-
+    private fun toMyProducts(){
+        myProducts.setOnClickListener {
+            val int = Intent(this, MarketPlace::class.java)
+            startActivity(int)
+            finish()
+        }
+    }
 
     private fun openImagePicker() {
         val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
@@ -119,22 +128,22 @@ class MyProfile : AppCompatActivity() {
         finish()
     }
 
-    private fun bottomNavigation(){
-        bottomNaviation = findViewById(R.id.btnav_bottomNavigation_MyProfile)
-        bottomNaviation.selectedItemId = R.id.me_profile
-        bottomNaviation.setOnItemSelectedListener {
+    private fun bottom_Navigation(){
+        bottomNavigation = findViewById(R.id.btnav_bottomNavigation_MyProfile)
+        bottomNavigation.selectedItemId = R.id.me_profile
+        bottomNavigation.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.home -> {val intent = Intent(this, rvHompagee::class.java)
                     startActivity(intent)
                     finish()}
 
-//                R.id.marketplace ->{val intent = Intent(this, Marketplace::class.java)
-//                startActivity(intent)
-//                finish()}
+                R.id.marketplace ->{val intent = Intent(this, MarketPlace::class.java)
+                startActivity(intent)
+                finish()}
 
-//                R.id.me_profile -> {val  intent = Intent(this, MyProfile::class.java)
-//                    startActivity(intent)
-//                    finish()}
+                R.id.sell_product -> {val  intent = Intent(this, AddDetails::class.java)
+                    startActivity(intent)
+                    finish()}
             }
             true
         }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories">
+        <item>Categories (Select one)</item>
+        <item>CPU</item>
+        <item>Chassis</item>
+        <item>GPU</item>
+        <item>Monitor</item>
+        <item>Motherboard</item>
+        <item>PSU</item>
+        <item>RAM</item>
+        <item>Storage</item>
+    </string-array>
+
+    <string-array name="conditions">
+        <item>Condition (Select one)</item>
+        <item>Brand New</item>
+        <item>Secondhand</item>
+        <item>1-Year-Old Product</item>
+        <item>Almost 1 Year Above</item>
+    </string-array>
+</resources>
