@@ -1,5 +1,6 @@
 package com.example.finalproject.Orders
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.Cart.Cart_Data_Class
 import com.example.finalproject.MyProfile.MyProfile
 import com.example.finalproject.R
+import com.example.finalproject.rvHompagee
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.util.Locale
@@ -54,6 +56,12 @@ class Orders : AppCompatActivity() {
         updateTotalPrice()
 
 
+    }
+    @SuppressLint("MissingSuperCall")
+    override fun onBackPressed() {
+        val intent = Intent(this, MyProfile::class.java)
+        startActivity(intent)
+        finish()
     }
 
 
