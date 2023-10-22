@@ -82,7 +82,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif-light"
-                android:text="MSI B450 GAMING PLUS Motherboard ATX"
+                android:text="EVGA Z590 FTW WiFi"
                 android:textColor="@color/navy"
                 android:textSize="22.5dp"
                 android:textStyle="bold"
@@ -121,41 +121,22 @@
                 android:layout_marginEnd="31dp"
                 android:layout_marginBottom="0dp"
                 android:gravity="start"
-                android:text="Chipset: AMD B450 Chipset\n
-\nCPU Socket: AM4 socket for AMD Ryzen™ processors and
-\n            Ryzen™ with Radeon™ Vega Graphics processors\n
-\nMemory:
-\n4 x DDR4 memory slots, supporting up to 64GB
-\n          Dual channel memory architecture
-\n          Supports DDR4 1866/ 2133/ 2400/ 2667/ 2800/
-\n              2933/ 3000/ 3066/ 3200/ 3466 MHz
-\n              (by A-XMP OC MODE)
-\n          Supports non-ECC UDIMM memory
-\n          Supports ECC UDIMM memory (non-ECC mode)
-\n          Supports un-buffered memory\n
-\nMulti-GPU Support:
-\n          Supports 2-Way AMD CrossFire Technology\n
-\nExpansion Slots:
-\n          1 x PCIe 3.0 x16 slot (PCI_E1)
-\n          1 x PCIe 2.0 x16 slot (PCI_E4, supports x4 mode)
-\n          4 x PCIe 2.0 x1 slots\n
-\nStorage:
-\n          1 x M.2 slot (Key M)
-\n          6 x SATA 6Gb/s ports\n
-\nNetworking:
-\n          Realtek® 8111H Gigabit LAN\n
-\nAudio:
-\n          Realtek® ALC892 Codec
-\n          7.1-Channel High Definition Audio
-\n          Supports S/PDIF output\n
-\nUSB:
-\n          1 x USB 3.1 Gen1 Type-C port on the back panel
-\n          1 x USB 3.1 Gen2 Type-A port on the back panel
-\n          2 x USB 3.1 Gen1 ports on the back panel
-\n          6 x USB 2.0 ports (2 Type-A ports on the back panel,
-\n              4 ports available through the internal
-\n              USB 2.0 connectors)\n
-\nForm Factor: ATX Form Factor (12 in. x 9.6 in.)"
+                android:text="Socket: LGA 12001\n
+\nChipset: Intel Z5901\n
+\nForm Factor: ATX2\n
+\nVoltage Regulator: 12 Phase (6+2, 90A SPS MOSFETs)2\n
+\nVideo Ports: HDMI, DisplayPort (v1.4)2\n
+\nMemory Support: 4 DIMM Dual-Channel DDR4 5100MHz+ (OC) (up
+\n              to 128GB)1\n
+\nPCI-E Slots: 2x PCIe 4.0 x16 (x16/x8, x8), 1x PCIe x41\n
+\nNVMe Support: Yes (PCIe Gen4, PCIe Gen3, and PCIe + SATA)3\n
+\nSATA: 6 Native SATA 6Gb/s Ports4\n
+\nRAID: RAID 0, 1, 5, 1043\n
+\nUSB: USB 3.2 Gen2x2 port2, USB 3x USB 2.0 (1 SPI to USB port, 2
+\n              from Internal Header)4\n
+\nEthernet: Intel i219V Gigabit NIC43\n
+\nWireless Connectivity: Wi-Fi 62\n
+\nAudio Codec: Premium Realtek audio codec"
                 android:textColor="@color/black"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"

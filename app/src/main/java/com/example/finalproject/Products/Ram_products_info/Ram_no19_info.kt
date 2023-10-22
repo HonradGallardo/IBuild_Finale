@@ -39,7 +39,7 @@ class Ram_no19_info : AppCompatActivity() {
         addToCart = findViewById(R.id.addToCart_button)
         addToCart.setOnClickListener {
             val databaseHelper = CartDatabaseHelper(this)
-            val cartItem = Cart_Data_Class(137, "Kingston HyperX Predator Black", 5695.00, "Ram", R.drawable.ram_img19, 1)
+            val cartItem = Cart_Data_Class(137, "Kingston HyperX Predator Black", 3299.00, "Ram", R.drawable.ram_img19, 1)
             val insertedRowId = databaseHelper.insertCartItem(cartItem)
 
             val int = Intent(this, Cart::class.java)

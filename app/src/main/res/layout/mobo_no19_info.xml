@@ -82,7 +82,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif-light"
-                android:text="MSI B550-A PRO"
+                android:text="ASRock Z590 Extreme WiFi 6E"
                 android:textColor="@color/navy"
                 android:textSize="22.5dp"
                 android:textStyle="bold"
@@ -121,49 +121,46 @@
                 android:textSize="12sp"
                 android:layout_marginBottom="0dp"
                 android:gravity="start"
-                android:text="Chipset: AMD B550 Chipset\n
-\nCPU Socket:
-\n          AM4 socket for 3rd Gen AMD Ryzen processors
-\n          and future AMD Ryzen processors with BIOS update\n
-
+                android:text="Socket Type:
+\n              LGA1200 (Supports 10th and 11th Gen Intel Core,
+\n              Pentium Gold, and Celeron processors)\n
+\nChipset: Intel Z590\n
+\nForm Factor: ATX\n
 \nMemory:
-\n4 x DDR4 memory slots, supporting up to 128GB
-\n          Supports DDR4 1866/2133/2400/2667/2800/
-\n          2933/3000/3066/3200/3466/3600/3733/3866/
-\n          4000/4133/4266/4400/4533/4600/4733/4800/
-\n          4866/5000/5066/5133/5200 MHz by JEDEC and
-\n          A-XMP OC MODE\n
-
-\n          Dual channel memory architecture
-\n          Supports non-ECC UDIMM memory
-\n          Supports ECC UDIMM memory (non-ECC mode)
-\n          Supports un-buffered memory\n
-\nMulti-GPU Support:
-\n          Supports 2-Way AMD CrossFire Technology\n
+\n              4 x DDR4 DIMM slots
+\n              Supports DDR4 3200/3600/3733/3800/3866/4000/4133
+\n              4266/4333/4400/45334600/4733/4800/4866/5000/5133
+\n              5200/5333/5400 MHz by XMP OC\n
+\nMax. capacity of system memory: 128GB\n
 \nExpansion Slots:
-\n          1 x PCIe 4.0/3.0 x16 slot (PCI_E1)
-\n          1 x PCIe 3.0 x16 slot (PCI_E3, supports
+\n              2 x PCIe 4.0/3.0 x16 slots (PCIE1: x16 mode, PCIE3:
 \n              x4 mode)
-\n          2 x PCIe 3.0 x1 slots\n
+\n              1 x PCIe 3.0 x16 slot (PCIE5: x4 mode)
+\n              2 x PCIe 3.0 x1 slots\n
 \nStorage:
-\n          1 x M.2 slot (Key M)
-\n          6 x SATA 6Gb/s ports\n
-\nNetworking:
-\n          Realtek® 8111H Gigabit LAN\n
-\nAudio:
-\n          Realtek® ALC892 Codec
-\n          7.1-Channel High Definition Audio
-\n          Supports S/PDIF output\n
+\n              6 x SATA3 6.0 Gb/s connectors
+\n              3 x M.2 slots (Key M)
+\n              M2_1 supports PCIe 4.0 x4 and SATA3 6Gb/s
+\n              M2_2 supports PCIe 3.0 x4 and SATA3 6Gb/s
+\n              M2_3 supports PCIe 3.0 x4\n
 \nUSB:
-\n          1 x USB 3.2 Gen 2 10Gbps Type-C port (back panel)
-\n          1 x USB 3.2 Gen 2 10Gbps Type-A port (back panel)
-\n          2 x USB 3.2 Gen 1 5Gbps ports (back panel)
-\n          2 x USB 3.2 Gen 1 5Gbps ports available through
-\n              the internal USB 3.2 Gen 1 connector
-\n          6 x USB 2.0 ports (2 Type-A ports (back panel),
-\n              4 ports available through the internal
-\n              USB 2.0 connectors)\n
-\nForm Factor: ATX Form Factor (12 in. x 9.6 in.)"
+\n              2 x USB 3.2 Gen2 (Rear Type-A+C)
+\n              10 x USB 3.2 Gen1 (4 Front, 6 Rear)
+\n              4 x USB 2.0 (2 Front, 2 Rear)\n
+\nNetworking:
+\n              Intel I225V 2.5G LAN
+\n              Intel AX201 WiFi 6E
+\n              Bluetooth 5.2\n
+\nAudio:
+\n              Realtek ALC1220 Codec
+\n              7.1-Channel High Definition Audio
+\n              Nahimic Audio\n
+\nForm Factor:
+\n              ATX Form Factor; 30.5cm x 24.4cm\n
+\nPower Delivery:
+\n              14 Phase Dr.MOS Power Design\n
+\nRGB Polychrome SYNC:
+\n              Supports RGB LED devices"
                 android:textColor="@color/black"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"

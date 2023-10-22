@@ -1,5 +1,6 @@
 package com.example.finalproject.MyProfile
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -110,6 +111,12 @@ class MyProfile : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+    }
+    @SuppressLint("MissingSuperCall")
+    override fun onBackPressed() {
+        val intent = Intent(this, rvHompagee::class.java)
+        startActivity(intent)
+        finish()
     }
 
     private fun bottomNavigation(){

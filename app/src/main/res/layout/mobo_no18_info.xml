@@ -82,7 +82,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif-light"
-                android:text="ASUS PRIME B550-PLUS"
+                android:text="MSI MPG B550 Gaming Edge WiFi"
                 android:textColor="@color/navy"
                 android:textSize="22.5dp"
                 android:textStyle="bold"
@@ -121,49 +121,48 @@
                 android:textSize="12sp"
                 android:layout_marginBottom="0dp"
                 android:gravity="start"
-                android:text="Chipset: AMD B550 Chipset\n
-\nCPU Socket:
-\n          AM4 socket for 3rd Gen AMD Ryzen processors
-\n          and future AMD Ryzen processors with BIOS update\n
-
+                android:text="Socket Type:
+\n              LGA1200 (Supports 10th and 11th Gen Intel Core,
+\n              Pentium Gold, and Celeron processors)\n
+\nChipset: Intel Z590\n
+\nForm Factor: ATX\n
 \nMemory:
-\n4 x DIMM, Max. 128GB, DDR4 4600(O.C)/4400(O.C)/4333(O.C.)/
-\n          4266(O.C.)/4133(O.C.)/4000(O.C.)/3866(O.C.)/
-\n          3733(O.C.)/3600(O.C.)/3466(O.C.)/3333(O.C.)/
-\n          3200/3000/2933/2800/2666/2400/2133 MHz
-\n          Un-buffered Memory\n
-\n          Dual Channel Memory Architecture
-\n          ECC Memory (ECC mode) support varies by CPU.\n
-
-\nMulti-GPU Support:
-\n          Supports AMD CrossFireX Technology\n
+\n              4 x DDR4 DIMM slots
+\n              Supports DDR4 2133/2400/2666/2933/3200/3333/3600
+\n              3733/3866/4000/4133/4266/4400/4600+ MHz by XMP OC
+\n              Max. capacity of system memory: 128GB\n
 \nExpansion Slots:
-\n          1 x PCIe 4.0 x16 (x16 mode)
-\n          1 x PCIe 3.0 x16 (x4 mode)
-\n          3 x PCIe 3.0 x1 slots\n
+\n              1 x PCIe 4.0/3.0 x16 slot (PCI_E1)
+\n              1 x PCIe 3.0 x16 slot (PCI_E3, supports x4 mode)
+\n              2 x PCIe 3.0 x1 slots\n
 \nStorage:
-\n          1 x M.2 Socket 3
-\n          (supports PCIe 4.0 and SATA modes)
-\n          6 x SATA 6Gb/s ports\n
-
-\nNetworking:
-\n          Realtek RTL8111H 1Gb Ethernet\n
-\nAudio:
-\n          Realtek S1200A 8-Channel HD Audio CODEC\n
-
-\nAudio Feature: Optical S/PDIF out port(s) at the back panel\n
-
+\n              6 x SATA 6Gb/s connectors
+\n              3 x M.2 slots (Key M)
+\n              M2_1 slot supports PCIe 4.0/3.0 x4 and SATA 6Gb/s
+\n              M2_2 slot supports PCIe 3.0 x4 and SATA 6Gb/s
+\n              M2_3 slot supports PCIe 3.0 x4\n
 \nUSB:
-\n          Rear USB Ports (Total 8 ports)
-\n              4 x USB 3.2 Gen 2 (up to 10Gbps)
-\n              2 x USB 3.2 Gen 1 (up to 5Gbps)
-\n              2 x USB 2.0\n
-\n          Front USB Ports (Total 7 ports)
-\n              1 x USB 3.2 Gen 1 header (up to 5Gbps)
-\n              2 x USB 2.0 headers (up to 480Mbps)\n
-
-\nAura Sync RGB Lighting: Yes, with RGB headers\n
-\nForm Factor: ATX Form Factor (12 in. x 9.6 in.)"
+\n              1 x USB 3.2 Gen 2x2 Type-C port on the back panel
+\n              1 x USB 3.2 Gen 2 Type-A port on the back panel
+\n              2 x USB 3.2 Gen 1 ports on the back panel
+\n              4 x USB 2.0 ports on the back panel
+\n              6 x USB 2.0 ports available through internal USB
+\n              headers\n
+\nNetworking:
+\n              Intel I225-V 2.5G LAN controller
+\n              Intel Wi-Fi 6E AX201\n
+\nAudio:
+\n              Realtek ALC1200 Codec
+\n              7.1-Channel High Definition Audio\n
+\nForm Factor: ATX Form Factor; 30.4cm x 24.3cm\n
+\nPower Delivery:
+\n              16+1+1 power phases with dual 8-pin power
+\n              connectors\n
+\nRGB Mystic Light:
+\n              Supports 16.8 million colors / 29 effects controlled
+\n              in one click
+\n              Mystic Light Extension supports RGB, Rainbow, and
+\n              Corsair LED strip"
                 android:textColor="@color/black"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"

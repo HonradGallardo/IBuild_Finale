@@ -38,7 +38,7 @@ class Ram_no20_info : AppCompatActivity() {
         addToCart = findViewById(R.id.addToCart_button)
         addToCart.setOnClickListener {
             val databaseHelper = CartDatabaseHelper(this)
-            val cartItem = Cart_Data_Class(138, "G.Skill's Premium Trident Z Royal", 7695.00, "Ram", R.drawable.ram_img20, 1)
+            val cartItem = Cart_Data_Class(138, "G.Skill's Premium Trident Z Royal", 4995.00, "Ram", R.drawable.ram_img20, 1)
             val insertedRowId = databaseHelper.insertCartItem(cartItem)
 
             val int = Intent(this, Cart::class.java)

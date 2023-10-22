@@ -39,7 +39,7 @@ class Mobo_no1_info : AppCompatActivity() {
         addToCart = findViewById(R.id.addToCart_button)
         addToCart.setOnClickListener {
             val databaseHelper = CartDatabaseHelper(this)
-            val cartItem = Cart_Data_Class(59, "ASUS ROG Strix B450-F", 7850.00, "MotherBoard", R.drawable.mobo_img1, 1)
+            val cartItem = Cart_Data_Class(59, "ASRock B450M pro4 Micro-ATX", 7850.00, "MotherBoard", R.drawable.mobo_img1, 1)
             val insertedRowId = databaseHelper.insertCartItem(cartItem)
 
             val int = Intent(this, Cart::class.java)

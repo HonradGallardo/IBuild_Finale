@@ -32,6 +32,8 @@ class Hdd_products_holder : AppCompatActivity() {
 
     private lateinit var searchView : SearchView
     private lateinit var caseCart : ImageView
+    private lateinit var sortUp: ImageView
+    private lateinit var sortDown : ImageView
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,8 +78,28 @@ class Hdd_products_holder : AppCompatActivity() {
             startActivity(int)
             finish()
         }
+        sortUp = findViewById(R.id.sort_up)
+        sortDown = findViewById(R.id.sort_down)
+
+
+        sortUp.setOnClickListener {
+            sortDataDescending()
+        }
+        sortDown.setOnClickListener {
+            sortDataAscending()
+        }
+    }
+    private fun sortDataDescending() {
+        data.sortByDescending { it.hddPricet }
+        cartAdapter?.setFilteredListCpu(data)
     }
 
+    private fun sortDataAscending() {
+        data.sortBy { it.hddPricet }
+        cartAdapter?.setFilteredListCpu(data)
+    }
+
+    @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
         val intent = Intent(this, rvHompagee::class.java)
         startActivityWithAnimation(intent)

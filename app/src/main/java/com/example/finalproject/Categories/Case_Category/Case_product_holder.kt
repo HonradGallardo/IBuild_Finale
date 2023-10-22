@@ -35,9 +35,12 @@ class Case_product_holder : AppCompatActivity() {
 
     private lateinit var backButton : ImageView
     private lateinit var searchView: androidx.appcompat.widget.SearchView
+    private lateinit var sortUp: ImageView
+    private lateinit var sortDown : ImageView
 
     private lateinit var caseCart : ImageView
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.case_product_holder)
@@ -63,6 +66,16 @@ class Case_product_holder : AppCompatActivity() {
             startActivity(int)
             finish()
         }
+        sortUp = findViewById(R.id.sort_up)
+        sortDown = findViewById(R.id.sort_down)
+
+
+        sortUp.setOnClickListener {
+            sortDataClassDescending()
+        }
+        sortDown.setOnClickListener {
+            sortDataClassAscending()
+        }
 
         searchView = findViewById(R.id.case_category_sv)
         searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener{
@@ -78,6 +91,7 @@ class Case_product_holder : AppCompatActivity() {
         })
 
         caseProducts()
+        DataClass.shuffle()
 
     }
 
@@ -106,6 +120,15 @@ class Case_product_holder : AppCompatActivity() {
             caseAdapter?.setFilteredListCase(filteredList)
         }
 
+    }
+    private fun sortDataClassDescending() {
+        DataClass.sortByDescending { it.casePrice }
+        caseAdapter?.setFilteredListCase(DataClass)
+    }
+
+    private fun sortDataClassAscending() {
+        DataClass.sortBy { it.casePrice }
+        caseAdapter?.setFilteredListCase(DataClass)
     }
 
     private fun caseProducts(){

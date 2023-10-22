@@ -39,7 +39,7 @@ class Ram_no12_info : AppCompatActivity() {
         addToCart = findViewById(R.id.addToCart_button)
         addToCart.setOnClickListener {
             val databaseHelper = CartDatabaseHelper(this)
-            val cartItem = Cart_Data_Class(130, "Corsair Vengeance RGB Pro", 5655.00, "Ram", R.drawable.ram_img12, 1)
+            val cartItem = Cart_Data_Class(130, "Corsair Vengeance RGB Pro", 3539.00, "Ram", R.drawable.ram_img12, 1)
             val insertedRowId = databaseHelper.insertCartItem(cartItem)
 
             val int = Intent(this, Cart::class.java)

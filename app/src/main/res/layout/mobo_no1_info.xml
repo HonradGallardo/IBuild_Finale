@@ -82,7 +82,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif-light"
-                android:text="ASUS ROG Strix B450-F Gaming"
+                android:text="ASRock B450M pro4"
                 android:textColor="@color/navy"
                 android:textSize="22.5dp"
                 android:textStyle="bold"
@@ -121,14 +121,42 @@
                 android:textSize="12sp"
                 android:layout_marginBottom="0dp"
                 android:gravity="start"
-                android:text="AM4 socket: Ready for AMD Ryzen™ processors
-\nFast memory and storage: Dual-channel DDR4 4400MHz (OC) and NVM Express® RAID supported.\n
-\nAura Sync RGB: Synchronize LED lighting with a vast portfolio of compatible PC gear.\n
-\nGaming connectivity: Dual M.2 and USB 3.1 Gen 2 Type-A connectors.\n
-\nGaming networking: Intel Gigabit Ethernet, plus ASUS LANGuard and GameFirst technologies.\n
-\n5-Way Optimization: Automated system-wide tuning, providing overclocking and cooling profiles that are tailor-made for your rig.\n
-\nGaming audio: SupremeFX S1220A teams with Sonic Studio III to create an aural landscape that draws you deeper into the action.\n
-\nGamer’s Guardian: Pre-mounted I/O shield, ASUS SafeSlot and premium components for maximum endurance.\n"
+                android:text="Socket Type:
+\n              AM4\n
+\nChipset:
+\n              AMD B450\n
+\nForm Factor:
+\n              Micro-ATX\n
+\nMemory:
+\n              * 4 x DDR4 DIMM slots\n
+\n              * Supports DDR4 3200+ (OC)/2933/2667/2400/2133 ECC
+\n                  and non-ECC un-buffered memory\n
+\n              * Max. capacity of system memory: 64GB\n
+\nExpansion Slots:
+\n              1 x PCI Express 3.0 x16 slot
+\n              1 x PCI Express 2.0 x16 slot (max. at x4 mode)
+\n              1 x PCI Express 2.0 x1 slot\n
+\nStorage:
+\n              4 x SATA3 6.0 Gb/s connectors\
+\n              1 x Ultra M.2 Socket (supports M Key type 2242/2260/
+\n              2280
+\n              M.2 SATA3 6.0 Gb/s module and M.2 PCI Express module
+\n              to Gen3 x4)\n
+\nUSB:
+\n              2 x USB 3.1 Gen2 (Rear Type-A+C)
+\n              6 x USB 3.1 Gen1 (4 Front, 2 Rear)
+\n              6 x USB 2.0 (4 Front, 2 Rear)\n
+\nAudio:
+\n              7.1 CH HD Audio (Realtek ALC892 Audio Codec)\n
+\nLAN:
+\n              Realtek Gigabit LAN\n
+\nGraphics:
+\n              Supports AMD Quad CrossFireX™ and CrossFireX™\n
+\nForm Factor:
+\n              Micro ATX Form Factor: 9.6-in x 9.6-in, 24.4 cm
+\n              x 24.4 cm\n
+\nPower Phase Design:
+\n              9 Power Phase design"
                 android:textColor="@color/black"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"
