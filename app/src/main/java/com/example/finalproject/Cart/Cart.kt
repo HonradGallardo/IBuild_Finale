@@ -255,6 +255,8 @@ class Cart : AppCompatActivity() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
+    @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
         goBackToPreviousActivity()
     }
@@ -299,10 +301,6 @@ class Cart : AppCompatActivity() {
         // Set the formatted price to tv_Price.text
         tv_Price.text = getString(R.string.price_format, formattedPrice)
     }
-    override fun onBackPressed() {
-        goBackToPreviousActivity()
-    }
-
 
     private fun goBackToPreviousActivity() {
         val previousActivity = intent.getStringExtra("previousActivity")

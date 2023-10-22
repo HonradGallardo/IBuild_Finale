@@ -8,7 +8,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Im
 import android.widget.ImageView
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
@@ -17,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.AmdBuild.amd_build
 import com.example.finalproject.Cart.Cart
 import com.example.finalproject.IntelBuild.IntelBuild
+import com.example.finalproject.MarketPlace_and_SellProduct.AddDetails
+import com.example.finalproject.MarketPlace_and_SellProduct.MarketPlace
 import com.example.finalproject.MyProfile.MyProfile
 import com.example.finalproject.Products.Case_products_info.Case_no10_info
 import com.example.finalproject.Products.Case_products_info.Case_no1_info
@@ -262,9 +263,13 @@ class rvHompagee : AppCompatActivity() {
 //                    startActivity(intent)
 //                    finish()}
 
-//                R.id.marketplace ->{val intent = Intent(this, Marketplace::class.java)
-//                startActivity(intent)
-//                finish()}
+                R.id.marketplace ->{val intent = Intent(this, MarketPlace::class.java)
+                startActivity(intent)
+                finish()}
+
+                R.id.sell_product ->{val intent = Intent(this, AddDetails::class.java)
+                    startActivity(intent)
+                    finish()}
 
                 R.id.me_profile -> {val  intent = Intent(this, MyProfile::class.java)
                     startActivity(intent)
